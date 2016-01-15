@@ -1,2 +1,0 @@
-# fishmgnt
-Readme file
