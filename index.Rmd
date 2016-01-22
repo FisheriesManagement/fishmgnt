@@ -11,7 +11,7 @@ output: html_document
 
 # Data and metadata standards
 
-
+Data archives must include easily accessible information about data holdings, including quality assessments, supporting ancillary information, and guidance and aids for locating and obtaining data.
 
 
 # Policies for access and sharing
