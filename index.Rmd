@@ -14,16 +14,18 @@ The data is in an excel file, separated by year.
 
 # Data and metadata standards
 
-
+Data archives must include easily accessible information about data holdings, including quality assessments, supporting ancillary information, and guidance and aids for locating and obtaining data.
 
 
 # Policies for access and sharing
+It is the responsibility of researchers and organizations to make results, data, derived data products, and collections available to the research community in a timely manner and at a reasonable cost. In the interest of full and open access, data should be provided at the lowest possible cost to researchers and educators. This cost should, as a first principle, be no more than the marginal cost of filling a specific user request. Data may be made available for secondary use through submission to a national data center, publication in a widely available scientific journal, book or website, through the institutional archives that are standard for a particular discipline (e.g. IRIS for seismological data, UNAVCO for GP data), or through other EAR-specified repositories. Data inventories should be published or entered into a public database periodically and when there is a significant change in type, location or frequency of such observations. Principal Investigators working in coordinated programs may establish (in consultation with other funding agencies and NSF) more stringent data submission procedures.
 
 
 
 
 # Policies and provisions for re-use, re-distribution
 
+<<<<<<< HEAD
 Describe policies surrounding the re-use of your data – the EAR division is specifically interested in how soon you will make your data available. If you will not be making the data available for re-use immediately, explain why. Remember that EAR specifies that you must make your data available no later than two years after your research is complete. If there are other policy issues regarding data access and re-use (ethical or privacy issues, for instance) elaborate on them here. Consider these questions:
 
 When will you make the data available?
@@ -40,6 +42,9 @@ Additional help for: University of California, Santa Barbara
 EZID, a service from the University of California Curation Center, facilitates data sharing, data reuse, data citation, and data attribution, and creates Digital Object Identifiers (DOI) for research data.
 The Merritt Repository can restrict access to data to just the depositor or to a research group, or make data publicly available. Research data and records will be maintained for as long as they are of continuing value to the researchers and project collaborators. Data will be retained subject to the University of California retention policy.
 If you’d like more information about how these tools can meet your data management requirements, contact uc3@ucop.edu
+=======
+For those programs in which selected principle investigators have initial periods of exclusive data use, data should be made openly available as soon as possible, but no later than two (2) years after the data were collected. This period may be extended under exceptional circumstances, but only by agreement between the Principal Investigator and the National Science Foundation. For continuing observations or for long-term (multi-year) projects, data are to be made public annually.
+>>>>>>> a9c5b1cbbfe0a5fca3940b9cae8331e6b428e64a
 
 
 # Plans for archiving and preservation of access
