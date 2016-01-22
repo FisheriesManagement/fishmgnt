@@ -1,0 +1,28 @@
+---
+title: "index"
+author: "Fisheries Management Group"
+date: "January 22, 2016"
+output: html_document
+---
+
+# Types of data
+
+
+
+# Data and metadata standards
+
+
+
+
+# Policies for access and sharing
+
+
+
+
+# Policies and provisions for re-use, re-distribution
+
+
+
+
+# Plans for archiving and preservation of access
+
