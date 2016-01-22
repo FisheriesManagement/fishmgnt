@@ -6,6 +6,10 @@ output: html_document
 ---
 
 # Types of data
+```{r}
+setwd(/Users/julianaherrera/Documents/UCSB/Winter 2016/Informatics/fishmgt.github.io/fishmgt.github.io)
+plot(`fish`)
+```
 
 We will use a time series data of landings in Costa Rica from 1990 until 2013 collected by INCOPESCA, the governmental institution in charge of fisheries management in the country. The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we will focus only in the Guanacaste region, specifically with pargo seda and pargo.  
 
