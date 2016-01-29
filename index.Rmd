@@ -65,6 +65,11 @@ What related information will be deposited?
 
 ```{r}
 library(readxl)
+library(plyr) 
+library(dplyr) 
+library(tidyr)
+library(ggplot2)
+
 snapper <- read_excel('snappermeans.xlsx')
   
 catch <- snapper %>%
