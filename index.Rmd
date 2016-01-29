@@ -1,7 +1,6 @@
 ---
 title: "Fisheries Management Group"
 author: "[Alex Smith](http://ucsb-bren.github.io/env-info/students/alxsmith.html), [Caio Faro](http://ucsb-bren.github.io/env-info/students/caio-faro.html), [Juliana Herrera](http://ucsb-bren.github.io/env-info/students/julianaherrera.html)"
-
 date: "January 22, 2016"
 output: html_document
 ---
