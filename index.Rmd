@@ -8,14 +8,12 @@ output: html_document
 
 # Types of data
 
-We will use a time series data of landings in Costa Rica from 1990 until 2013 collected by INCOPESCA, the governmental institution in charge of fisheries management in the country. The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we will focus only in the Guanacaste region, specifically with pargo seda and pargo.  
+We will use a time series data of landings in Costa Rica collected by INCOPESCA, the governmental institution in charge of fisheries management in the country. The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we will focus only in the Guanacaste region, specifically on snappers.
 
-The data is in an excel file, separated by year. 
-
+The data is in an excel file of monthly catches from 1990 until 2013
 
 # Data and metadata standards
 
-Data archives must include easily accessible information about data holdings, including quality assessments, supporting ancillary information, and guidance and aids for locating and obtaining data.
 
 
 # Policies for access and sharing
@@ -64,4 +62,22 @@ What data will be preserved for the long-term?
 What transformations will be necessary to prepare data for preservation / data sharing?
 What metadata/ documentation will be submitted alongside the data or created on deposit/ transformation in order to make the data reusable?
 What related information will be deposited?
+
+```{r}
+library(readxl)
+library(plyr) 
+library(dplyr) 
+library(tidyr)
+library(ggplot2)
+
+snapper <- read_excel('snappermeans.xlsx')
+  
+catch <- snapper %>%
+  group_by(Year) %>%
+  summarise(sum = sum(catch, na.rm = TRUE)) %>%
+  ggplot(aes(Year, sum)) +
+  theme_bw() +
+  geom_point(alpha = 1, color = 'orange', size = 5)
+catch
+```
 
