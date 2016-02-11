@@ -1,0 +1,35 @@
+---
+title: "wk_05_ggplot_AS"
+author: "Alex Smith"
+date: "February 11, 2016"
+output: html_document
+---
+
+#Catch Data for pargo (*Lutjanus campechanus*) in the Gulf of Nicoya, Costa Rica
+
+```{r import data}
+
+library(plyr)
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+
+getwd()
+
+
+catchBYMonth=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path= 'fm_data/incopesca.xlsx' )) %>%
+  bind_rows()  %>%
+    filter(Region=="Gulf of Nicoya" & Species== "PARGO" | Region== "Golfo de Nicoya"             & Species== "PARGO") %>%
+       gather("Month",  "Catch", 4:16) 
+
+
+
+catchTotals= filter(catchBYMonth, Month=="Total")
+ #Something weird with this data: double values for some years. Ask juliana why       
+        
+      
+
+
+```
