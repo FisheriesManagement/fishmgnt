@@ -19,17 +19,44 @@ library(lubridate)
 getwd()
 
 
-catchBYMonth=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path= 'fm_data/incopesca.xlsx' )) %>%
-  bind_rows()  %>%
-    filter(Region=="Gulf of Nicoya" & Species== "PARGO" | Region== "Golfo de Nicoya"             & Species== "PARGO") %>%
+catchALL=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path='fm_data/incopesca.xlsx' )) %>%
+    bind_rows()  %>%
+    filter(Region=="Gulf of Nicoya" & Species== "PARGO" | Region== "Golfo de Nicoya"& Species== "PARGO") %>%
        gather("Month",  "Catch", 4:16) 
 
+catchMonth=filter(catchALL, !Month=="Total")
 
-
-catchTotals= filter(catchBYMonth, Month=="Total")
+catchTotals= filter(catchALL, Month=="Total") 
+  
  #Something weird with this data: double values for some years. Ask juliana why       
-        
-      
 
 
 ```
+
+```{r boxplots}
+library(ggplot2)
+
+ggplot(data=subset(catchMonth, catchMonth$Year>= 2000), aes(x= Year, y=Catch, group=Year))+
+  geom_boxplot() +
+  labs(x = "Year", y=" monthly catch (kg) pargo")+
+   theme_bw()+
+   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+```
+
+```{r YtY change, include=FALSE}
+
+percentchg=vector(length=length(catchTotals$Catch))
+
+for (i in 1:length(catchTotals$Catch)){
+  
+  percentchg[1]=0
+  percentchg[i]= (catchTotals$Catch[i+1]-catchTotals$Catch[i])/(catchTotals$Catch[i])
+}
+
+new=data.frame(catchTotals,percentchg)
+
+ggplot(subset(new, Year>2000), aes(x=Year, y=percentchg))+
+  geom_point()
+```
+
