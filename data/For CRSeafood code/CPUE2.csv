@@ -1,0 +1,509 @@
+Year,Obs.Type,Trip.Num,Date,Boat,Captain,Inpsector,Location,Method,Hooks,Species,Number,Males,Females,Unknown,Ave.TL,Ave.FL,Ave.TW,Per.Hook
+2007,Onboard,1,7/3/2007,Gaviota,Marcos Medina,Erick,Coyote,Bottom longline,750,Lutjanus guttatus,47,0,0,47,32.98,,,0.062666667
+2007,Onboard,4,7/19/2007,Santa Fe,Amado,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,19,10,9,0,50.13,,,0.012666667
+2007,Onboard,5,7/20/2007,Gaviota,Don Marcos,Balles,Coyote,Bottom longline,600,Lutjanus guttatus,96,2,4,90,35.37,,718.46,0.16
+2007,Onboard,6,7/21/2007,Aguila Negra,Polo,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,97,50,47,0,37.92,,,0.097
+2007,Onboard,7,7/25/2007,Aguila Negra,Polo,Andras,Coyote,Bottom longline,1050,Lutjanus guttatus,32,18,13,1,35.39,,,0.03047619
+2007,Onboard,8,7/26/2007,Noma,AMADO,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,35,18,17,0,40.54,,,0.035
+2007,Onboard,9,8/2/2007,Noma,Luis,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,33,12,21,0,43.59,,,0.033
+2007,Onboard,10,8/6/2007,Noma,Elias,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,23,5,18,0,39.98,,1537.50,0.023
+2007,Onboard,11,8/7/2007,Noma,AMADO,Balles,Coyote,Bottom longline,1400,Lutjanus guttatus,30,0,30,0,52.69,,,0.021428571
+2007,Onboard,12,8/8/2007,Noma,Amadito,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,5,0,5,0,56.50,,,0.005
+2007,Onboard,13,8/9/2007,Santa Fe,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,11,0,11,0,52.95,,,0.011
+2007,Onboard,14,8/17/2007,Alcion,Roy,Erick,Coyote,Bottom longline,1300,Lutjanus guttatus,7,3,4,0,36.00,,,0.005384615
+2007,Onboard,15,8/23/2007,Conchita,Gerardo (Cuajada),Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,83,46,37,0,39.57,,,0.083
+2007,Onboard,16,9/12/2007,Conchita,Gerardo (Cuajada),Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,51,34,17,0,48.14,,,0.051
+2007,Onboard,17,9/17/2007,Conchita,Gerardo (Cuajada),Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,30,18,12,0,50.42,,1670.00,0.03
+2007,Onboard,18,9/24/2007,Noma,Amado,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,35,18,17,0,49.66,,1770.00,0.023333333
+2007,Onboard,19,9/27/2007,Conchita,Gerardo (Cuajada),Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,7,2,5,0,44.00,,1008.33,0.004666667
+2007,Onboard,20,9/28/2007,Nicole,Polo,Erick,Coyote,Bottom longline,1400,Lutjanus guttatus,38,20,18,0,45.84,,,0.027142857
+2007,Onboard,21,10/30/2007,Noma,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,2,1,1,0,48.75,,1250.00,0.002
+2007,Onboard,22,10/31/2007,Nicole,Polo,Erick,Coyote,Bottom longline,1400,Lutjanus guttatus,6,3,3,0,52.33,,1425.00,0.004285714
+2007,Onboard,23,11/2/2007,Evelin,Fidel,Erick,Coyote,Bottom longline,900,Lutjanus guttatus,12,5,7,0,51.04,,1550.00,0.013333333
+2007,Onboard,24,11/14/2007,Karina II,Elias,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,26,10,16,0,34.27,,581.25,0.026
+2007,Onboard,25,11/26/2007,Alcion,Carlos,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,1,0,1,0,55.50,,1850.00,0.001
+2007,Onboard,26,11/30/2007,Alcion,Carlos (tiburon),Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,98,33,65,0,35.60,,,0.098
+2007,Onboard,27,12/3/2007,Noma,Tobias(chovi),Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,16,7,9,0,36.63,,594.17,0.010666667
+2008,Dockside,1,2008,Noma,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,0,0,0,0,,,,0
+2008,Dockside,2,2008,Karina,Amado,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,10,7,3,0,35.80,,487.50,0.009090909
+2008,Dockside,3,2008,,Amado,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,6,0,0,6,33.67,,,0.004
+2008,Dockside,4,2008,Noma,Amado,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,1,0,0,1,27.00,,,0.000666667
+2008,Dockside,5,2008,,,Erick,Coyote,Bottom longline,900,Lutjanus guttatus,6,0,0,6,35.50,,1800.00,0.006666667
+2008,Dockside,6,2008,Mario Jose X,Cola,Erick/Andras/Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,6,0,0,6,33.00,,,0.006
+2008,Dockside,7,2008,Noma,,Erick/Andras/Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,11,0,0,11,40.64,,,0.011
+2008,Dockside,8,2008,Anabel,Jorjon,Erick/Andras/Balles,Coyote,Bottom longline,900,Lutjanus guttatus,11,0,0,11,37.45,,,0.012222222
+2008,Dockside,9,2008,,,Erick/Andras/Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,13,0,0,13,40.42,,,0.013
+2008,Dockside,10,2008,Karina,,Erick/Andras/Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,40,0,1,39,37.18,,,0.04
+2008,Dockside,11,2008,Noma,Amado,Erick y Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,6,2,4,0,38.00,,641.67,0.006
+2008,Dockside,12,2008,Phonix,Chico,Erick y Balles,Coyote,Bottom longline,850,Lutjanus guttatus,17,2,9,6,38.38,,,0.02
+2008,Dockside,13,2008,Noma,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,8,0,0,8,41.88,,,0.008
+2008,Dockside,14,2008,Phonix,Chico,Erick,Coyote,Bottom longline,800,Lutjanus guttatus,16,0,0,16,40.19,,,0.02
+2008,Dockside,15,2008,,Pichi,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,10,0,0,10,38.60,,,0.01
+2008,Dockside,16,2008,,,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,28,4,2,22,39.81,,658.33,0.025454545
+2008,Dockside,17,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,10,0,0,10,38.85,,,0.01
+2008,Dockside,18,2008,,Cuajada,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,10,0,0,10,38.05,,,0.009090909
+2008,Dockside,19,2008,,Joron,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,12,0,0,12,35.13,,,0.012
+2008,Dockside,20,2008,,Chico,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,17,0,0,17,34.41,,,0.017
+2008,Dockside,21,2008,Noma,Amado,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,21,0,0,21,37.07,,,0.019090909
+2008,Dockside,22,2008,,,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,15,0,0,15,35.33,,,0.01
+2008,Dockside,23,2008,,,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,8,0,0,8,39.13,,,0.007272727
+2008,Dockside,24,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,16,0,0,16,39.47,,,0.016
+2008,Dockside,25,2008,,Chico,Erick,Coyote,Bottom longline,1300,Lutjanus guttatus,4,0,0,4,49.50,,,0.003076923
+2008,Dockside,26,2008,Noma,Amado,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,14,0,0,14,45.14,,,0.009333333
+2008,Dockside,27,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,4,1,3,0,47.50,,1550.00,0.004
+2008,Dockside,28,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,29,3,2,24,43.43,,1380.00,0.029
+2008,Dockside,29,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,27,0,0,27,45.57,,,0.027
+2008,Dockside,30,2008,,,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,8,1,3,4,46.38,,,0.007272727
+2008,Dockside,31,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,53,3,2,48,50.90,,1560.00,0.053
+2008,Dockside,32,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,16,3,13,0,54.50,,,0.016
+2008,Dockside,33,2008,,,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,22,18,4,0,46.98,,,0.022
+2008,Onboard,1,1/7/2008,Anabel M,,,Coyote,Bottom longline,800,Lutjanus guttatus,48,26,22,0,39.51,,905.83,0.06
+2008,Onboard,2,1/8/2008,Aguila,,,Coyote,Bottom longline,900,Lutjanus guttatus,174,57,30,87,36.76,,540.00,0.193333333
+2008,Onboard,3,1/10/2008,Evelyn,,,Coyote,Bottom longline,1600,Lutjanus guttatus,128,37,42,49,40.52,,855.00,0.08
+2008,Onboard,4,1/14/2008,Aguila,,,Coyote,Bottom longline,1600,Lutjanus guttatus,83,27,36,20,33.83,,555.56,0.051875
+2008,Onboard,5,1/23/2008,Nicole,,,Coyote,Bottom longline,1150,Lutjanus guttatus,6,3,3,0,28.75,,333.33,0.005217391
+2008,Onboard,6,1/30/2008,Aguila,Tobias(chovi),Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,125,18,24,83,36.40,,629.17,0.125
+2008,Onboard,7,1/31/2008,Noma,AMADO Y AMADILLO,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,86,49,35,2,40.18,,,0.086
+2008,Onboard,8,2/14/2008,Aguila,Tobias(chovi),Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,71,22,23,26,39.31,,1207.14,0.064545455
+2008,Onboard,9,2/21/2008,Aguila,Tobias(chovi),Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,30,9,21,0,49.87,,1612.50,0.027272727
+2008,Onboard,10,3/6/2008,Noma,Polo,Andras,Coyote,Bottom longline,1100,Lutjanus guttatus,0,0,0,0,,,,0
+2008,Onboard,11,3/27/2008,Maricela,Gerald,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,33,12,21,0,36.61,,664.29,0.03
+2008,Onboard,12,4/18/2008,Noma,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,4,2,2,0,46.88,,1150.00,0.004
+2008,Onboard,13,4/24/2008,,Elias,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,51,23,28,0,33.99,,610.00,0.051
+2008,Onboard,18,5/10/2008,Roses P,,Erick,Coyote,Gillnet,,Lutjanus guttatus,40,22,18,0,36.88,,,
+2008,Onboard,19,5/11/2008,Roses P,,Erick,Coyote,Gillnet,,Lutjanus guttatus,49,27,22,0,38.56,,,
+2008,Onboard,20,5/11/2008,Roses P,,Erick,Coyote,Gillnet,,Lutjanus guttatus,14,5,3,6,39.50,,,
+2008,Onboard,14,6/4/2008,Noma,Amado,Erick,Coyote,Bottom longline,1600,Lutjanus guttatus,82,41,28,13,37.97,,900.00,0.05125
+2008,Onboard,15,6/14/2008,Conchita,Alexander,Erick,Coyote,Bottom longline,1040,Lutjanus guttatus,16,8,8,0,46.56,,1526.67,0.015384615
+2008,Onboard,16,6/30/2008,Noma,Amado,Erick,Coyote,Bottom longline,1600,Lutjanus guttatus,49,24,25,0,38.88,,,0.030625
+2008,Onboard,17,7/2/2008,Noma,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,35,11,9,15,44.40,,,0.035
+2008,Onboard,22,7/28/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,45,0,0,45,,,,
+2008,Onboard,23,7/29/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,36,0,0,36,,,,
+2008,Onboard,24,8/6/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,94,0,0,94,,,,
+2008,Onboard,25,8/7/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,19,0,0,19,,,,
+2008,Onboard,26,8/8/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,56,0,0,56,,,,
+2008,Onboard,27,8/13/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,205,0,0,205,,,,
+2008,Onboard,28,8/14/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,36,0,0,36,,,,
+2008,Onboard,29,8/15/2008,,Amado,Erick,Coyote,Bottom longline,,Lutjanus guttatus,9,0,0,9,,,,
+2008,Onboard,34,9/27/2008,,Gerald,Erick,Coyote,Bottom longline,,Lutjanus guttatus,5,0,0,5,,,,
+2008,Onboard,35,11/8/2008,,Ballardo,Erick,Coyote,Bottom longline,,Lutjanus guttatus,22,0,0,22,,,,
+2008,Onboard,36,11/11/2008,,Chicho paisa,Erick,Coyote,Bottom longline,,Lutjanus guttatus,30,0,0,30,,,,
+2008,Onboard,37,11/12/2008,,Chicho paisa,Erick,Coyote,Bottom longline,,Lutjanus guttatus,2,0,0,2,,,,
+2008,Onboard,39,11/17/2008,,Chicho paisa,Erick,Coyote,Bottom longline,,Lutjanus guttatus,6,0,0,6,,,,
+2008,Onboard,40,11/25/2008,,Chicho paisa,Erick,Coyote,Bottom longline,,Lutjanus guttatus,43,0,0,43,,,,
+2009,Onboard,1,1/4/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,72,42,25,5,48.09,36.15,904.00,0.048
+2009,Onboard,2,1/5/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,6,3,2,1,44.80,34.30,,0.006
+2009,Onboard,3,1/6/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,2,0,0,2,,,,0.002
+2009,Dockside,1,1/16/2009,,Tobias,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,78,9,6,63,37.57,,,0.078
+2009,Dockside,2,1/16/2009,Santa Fe,Amado,Erick Lopez,Coyote,Bottom longline,2000,Lutjanus guttatus,105,0,0,105,35.63,,,0.0525
+2009,Dockside,3,1/17/2009,,Alvaro,Erick Lopez,Coyote,Bottom longline,2150,Lutjanus guttatus,89,0,0,89,35.72,,,0.041395349
+2009,Dockside,4,1/22/2009,,Ballardo,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,34,0,0,34,38.50,,,0.034
+2009,Dockside,5,1/24/2009,Alcion,Chico,Erick Lopez,Coyote,Bottom longline,,Lutjanus guttatus,4,0,0,4,,,,
+2009,Dockside,6,1/24/2009,,Alvaro,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,1,0,0,1,31.00,,,0.001
+2009,Onboard,4,1/29/2009,,Ballardo,Erick Lopez,Coyote,Bottom longline,1200,Lutjanus guttatus,48,15,18,15,35.56,,700.00,0.04
+2009,Dockside,7,2/18/2009,,,Erick Lopez,Coyote,Gillnet,,Lutjanus guttatus,451,0,0,451,37.50,,,
+2009,Onboard,5,2/26/2009,Noma,Amado,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,103,47,56,0,32.47,,,0.068666667
+2009,Onboard,6,2/27/2009,Noma,Amado,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,183,67,53,63,32.61,,,0.122
+2009,Onboard,7,2/28/2009,Noma,Amado,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,15,8,7,0,37.73,,,0.015
+2009,Onboard,8,3/6/2009,Santa Fe,Amado,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,34,11,23,0,36.54,,618.00,0.022666667
+2009,Onboard,9,3/7/2009,Santa Fe,Amado,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,56,20,36,0,44.62,,,0.056
+2009,Onboard,10,3/7/2009,Santa Fe,Amado,Erick Lopez,Coyote,Bottom longline,500,Lutjanus guttatus,16,9,7,0,48.09,,1320.00,0.032
+2009,Dockside,8,3/9/2009,,Elias,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,44,0,0,44,39.86,,,0.044
+2009,Dockside,9,3/9/2009,,,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,60,0,0,60,39.77,,,0.06
+2009,Dockside,10,3/10/2009,Santa Fe,Amado,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,73,0,0,73,36.90,,,0.048666667
+2009,Dockside,11,3/10/2009,,Ballardo,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,50,0,0,50,39.85,,,0.05
+2009,Onboard,11,3/21/2009,Noma,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,85,50,35,0,38.23,,,0.056666667
+2009,Onboard,12,3/24/2009,Noma,Amado,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,14,6,8,0,35.43,,557.14,0.009333333
+2009,Onboard,13,3/31/2009,Noma,Amado Quiros,Erick y Jeffrey,Coyote,Bottom longline,1500,Lutjanus guttatus,165,72,87,6,37.75,,891.11,0.11
+2009,Dockside,12,4/4/2009,Anabel,Roy rojas,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,27,0,0,27,35.00,,,0.027
+2009,Dockside,13,4/4/2009,,pito loco,Erick Lopez,Coyote,Bottom longline,800,Lutjanus guttatus,16,0,0,16,35.30,,,0.02
+2009,Dockside,15,4/15/2009,,junior,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,62,0,0,62,36.54,,,0.062
+2009,Dockside,16,4/15/2009,Cabo Cod,Fidel Vega,Erick Lopez,Coyote,Gillnet,,Lutjanus guttatus,12,0,0,12,40.00,,,
+2009,Onboard,14,4/23/2009,Zorra,la zorra,Erick Lopez,Coyote,Gillnet,,Lutjanus guttatus,5,0,5,0,42.40,,,
+2009,Dockside,17,5/10/2009,Noma,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,81,8,14,59,39.32,30.30,690.91,0.054
+2009,Onboard,15,5/12/2009,Karina V,Elias Jarquin,Erick Lopez,Coyote,Bottom longline,1700,Lutjanus guttatus,29,10,16,3,46.16,47.05,1193.00,0.017058824
+2009,Dockside,18,5/12/2009,Karina V,Elias Jarquin,Erick Lopez,Coyote,Bottom longline,1700,Lutjanus guttatus,143,0,0,143,36.15,,,0.084117647
+2009,Dockside,19,5/12/2009,Noma,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,128,0,0,128,40.13,30.06,,0.085333333
+2009,Dockside,20,5/16/2009,Anabel,roy rojas,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,5,0,0,5,47.80,35.90,,0.005
+2009,Onboard,16,6/9/2009,Noma,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,18,5,13,0,51.39,39.25,1437.78,0.012
+2009,Dockside,21,6/12/2009,Noma,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1600,Lutjanus guttatus,21,16,5,0,51.00,38.40,1373.33,0.013125
+2009,Onboard,17,6/20/2009,Mi Rey,Junior,Erick Lopez,Coyote,Bottom longline,,Lutjanus guttatus,7,2,5,0,53.07,45.67,1.00,
+2009,Dockside,22,6/27/2009,Cabo Cod,Fidel Castillo,Erick Lopez/Noelle ,Coyote,Bottom longline,800,Lutjanus guttatus,45,0,0,45,40.04,29.60,,0.05625
+2009,Dockside,23,6/27/2009,,Ronald Rojas,Erick Lopez/Noelle ,Coyote,Bottom longline,1100,Lutjanus guttatus,4,0,0,4,45.75,34.63,,0.003636364
+2009,Onboard,18,7/9/2009,Carolina II,Roy Rojas,Erick Lopez,Coyote,Bottom longline,1100,Lutjanus guttatus,20,8,11,1,40.65,30.83,781.50,0.018181818
+2009,Dockside,24,7/13/2009,,,Erick Lopez/Noelle ,Coyote,Bottom longline,900,Lutjanus guttatus,128,0,0,128,45.45,34.20,,0.142222222
+2009,Dockside,25,7/13/2009,,,Erick Lopez/Noelle van der Straaten,Coyote,Bottom longline,1000,Lutjanus guttatus,22,4,14,4,43.36,32.86,910.00,0.022
+2009,Dockside,26,7/14/2009,,Mario,Erick Lopez/Noelle van der Straaten,Coyote,Bottom longline,1000,Lutjanus guttatus,14,5,9,0,42.79,30.71,961.43,0.014
+2009,Dockside,27,8/4/2009,,Tobias Monge,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,8,4,4,0,43.38,32.38,842.50,0.008
+2009,Dockside,28,8/4/2009,,Ronald Rojas,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,7,2,5,0,44.79,34.21,928.57,0.007
+2009,Dockside,29,8/13/2009,,Mario vega,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,42,8,1,33,38.00,28.44,524.44,0.042
+2009,Onboard,19,8/26/2009,Mi Rey,Roy Rojas,Erick Lopez,Coyote,Bottom longline,,Lutjanus guttatus,21,9,12,0,48.93,36.93,1072.73,
+2009,Onboard,20,9/8/2009,,Elias Jarquin,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,27,8,10,9,36.44,27.17,,0.018
+2009,Onboard,21,9/8/2009,Nani II,Chico Medina,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,25,19,6,0,37.64,28.50,555.85,0.016666667
+2009,Onboard,22,11/18/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,84,54,30,0,37.44,29.04,,0.056
+2009,Onboard,23,11/19/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,133,45,29,59,35.96,27.81,,0.088666667
+2009,Onboard,24,11/27/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,56,16,4,36,33.43,25.10,453.00,0.037333333
+2009,Onboard,25,12/9/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,152,37,34,81,39.43,29.39,,0.152
+2009,Onboard,26,12/10/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,580,Lutjanus guttatus,28,7,4,17,39.95,27.90,540.00,0.048275862
+2009,Onboard,27,12/11/2009,Santa Fe,Amado Quiros,Erick Lopez,Coyote,Bottom longline,1500,Lutjanus guttatus,84,42,25,17,48.09,36.15,904.00,0.056
+2010,Onboard,1,1/10/2010,Gaviota,mario vega,erick lopez,coyote,Bottom longline,1000,Lutjanus guttatus,49,6,3,40,36.61,26.33,,0.049
+2010,Onboard,2,4/9/2010,,tiburon,Erick lopez,coyote,Bottom longline,1000,Lutjanus guttatus,19,11,8,0,34.00,25.26,410.53,0.019
+2010,Onboard,3,5/6/2010,Santa Fe,Amado Quiros,Erick lopez,coyote,Bottom longline,1000,Lutjanus guttatus,71,40,17,14,36.27,26.61,,0.071
+2010,Onboard,20,7/12/2010,Santa Fe,Amado Quiros,Erick lopez/CHRIS,coyote,Bottom longline,1000,Lutjanus guttatus,62,18,23,21,35.01,26.59,433.33,0.062
+2010,Dockside,1,7/14/2010,,,Erick Lopez,coyote,Bottom longline,1000,Lutjanus guttatus,33,0,1,32,42.00,31.50,740.00,0.033
+2010,Onboard,21,7/14/2010,Santa Fe,Amado Quiros,Erick lopez,coyote,Bottom longline,1000,Lutjanus guttatus,34,8,10,16,33.11,25.11,402.78,0.034
+2010,Onboard,22,7/17/2010,,pirucho,Erick lopez,bejuco,Bottom longline,1100,Lutjanus guttatus,30,10,15,5,44.42,33.69,992.31,0.027272727
+2010,Onboard,23,7/18/2010,,juansi,Erick lopez,bejuco,Bottom longline,1100,Lutjanus guttatus,60,16,17,27,38.00,28.35,612.12,0.054545455
+2010,Onboard,4,7/19/2010,,Roldan,Chris Mongeon,Bejuco,Bottom longline,800,Lutjanus guttatus,31,20,0,11,35.43,27.19,514.81,0.03875
+2010,Onboard,5,7/20/2010,,Roldan,Chris Mongeon,Bejuco,Bottom longline,800,Lutjanus guttatus,29,8,0,21,36.83,28.62,744.83,0.03625
+2010,Dockside,1,7/20/2010,,FV Valeria,C Mongeon,bejuco,Bottom longline,,Lutjanus guttatus,37,12,0,25,45.76,35.43,1130.37,
+2010,Onboard,6,7/22/2010,,Gucho,Chris Mongeon,bejuco,Bottom longline,800,Lutjanus guttatus,95,13,0,82,38.96,30.27,,0.11875
+2010,Onboard,7,7/23/2010,,Gucho,Chris Mongeon,Bejuco,Bottom longline,1049,Lutjanus guttatus,30,21,0,9,34.20,26.57,507.86,0.028598665
+2010,Dockside,2,7/25/2010,,FV Valeria,C Mongeon,bejuco,Bottom longline,,Lutjanus guttatus,34,15,0,19,36.18,27.88,635.76,
+2010,Dockside,3,7/25/2010,,,C Mongeon,bejuco,Bottom longline,,Lutjanus guttatus,72,24,0,48,33.88,26.45,440.42,
+2010,Onboard,8,7/26/2010,,Memo,Chris Mongeon,Bejuco,Bottom longline,800,Lutjanus guttatus,48,33,0,15,35.68,27.72,,0.06
+2010,Onboard,9,7/30/2010,,Memo,Chris Mongeon,Bejuco,Bottom longline,800,Lutjanus guttatus,101,34,0,67,34.72,27.06,527.06,0.12625
+2010,Onboard,10,08/03/10,,Michael,Chris Mongeon,Bejuco,Bottom longline,800,Lutjanus guttatus,42,9,0,32,36.06,28.10,737.14,0.0525
+2010,Onboard,11,08/04/10,,Roldan,Tim Wilkinson,Bejuco,Bottom longline,1000,Lutjanus guttatus,24,7,0,17,39.56,30.67,885.88,0.024
+2010,Onboard,12,08/05/10,,Gucho,Chris Mongeon,Bejuco,Bottom longline,800,Lutjanus guttatus,129,21,0,108,31.20,24.32,396.43,0.16125
+2010,Onboard,13,08/06/10,,Gucho,Chris Mongeon,Bejuco,Bottom longline,800,Lutjanus guttatus,20,12,0,8,33.55,25.84,477.89,0.025
+2010,Dockside,4,8/7/2010,,FV Anabel M,C Mongeon,bejuco,Bottom longline,1000,Lutjanus guttatus,22,10,0,12,37.00,28.03,634.21,0.022
+2010,Dockside,5,8/7/2010,,Roldan,C Mongeon y E Lopez,bejuco,Bottom longline,800,Lutjanus guttatus,16,12,0,4,35.47,26.66,550.00,0.02
+2010,Dockside,6,8/7/2010,,FV Sofia Gabriela,C Mongeon,bejuco,Bottom longline,900,Lutjanus guttatus,77,22,0,55,35.88,27.49,616.00,0.085555556
+2010,Dockside,7,8/18/2010,,FV Capitan Gucho,C Mongeon,bejuco,Bottom longline,1000,Lutjanus guttatus,71,25,0,46,36.45,28.19,587.76,0.071
+2010,Dockside,8,8/18/2010,,Gucho (FV Jenny),C Mongeon,bejuco,Bottom longline,1200,Lutjanus guttatus,26,15,0,11,40.79,41.52,821.15,0.021666667
+2010,Onboard,8,9/7/2010,,chico,Erick lopez,coyote,cuerda  mano,1100,Lutjanus guttatus,58,16,18,24,29.64,21.97,240.00,0.052727273
+2010,Onboard,9,9/8/2010,,chico,Erick lopez,coyote,cuerda  mano,1100,Lutjanus guttatus,40,11,7,22,29.80,21.69,343.75,0.036363636
+2010,Onboard,14,9/20/2010,Mariel,Juanci,Allan B.Q.,Bejuco,Bottom longline,2400,Lutjanus guttatus,25,12,13,0,46.64,43.72,1182.00,0.010416667
+2010,Onboard,15,9/22/2010,Yessica Gabriela,,Allan B.Q.,Bejuco,Bottom longline,900,Lutjanus guttatus,13,4,9,0,46.31,43.15,1070.77,0.014444444
+2010,Onboard,16,10/19/2010,Mariel,Juanci,Allan B.Q.,Bejuco,Bottom longline,3000,Lutjanus guttatus,9,6,3,0,39.56,38.33,595.56,0.003
+2010,Onboard,17,10/25/2010,Fransisco,Negro,Allan B.Q.,Bejuco,Bottom longline,1600,Lutjanus guttatus,12,4,8,0,39.00,37.00,721.67,0.0075
+2010,Onboard,24,10/26/2010,Santa Fe,Amado Quiros,Erick lopez,coyote,Bottom longline,500,Lutjanus guttatus,27,18,8,1,44.07,,,0.054
+2010,Onboard,25,11/9/2010,Santa Fe,Amado Quiros,Erick lopez,coyote,Bottom longline,500,Lutjanus guttatus,1,0,1,0,44.00,41.50,,0.002
+2010,Onboard,26,11/11/2010,Santa Fe,Amado Quiros,Erick lopez,coyote,Bottom longline,1000,Lutjanus guttatus,0,0,0,0,,,,0
+2010,Onboard,27,11/14/2010,Santa Fe,Amado Quiros hijo,Erick lopez,coyote,Bottom longline,500,Lutjanus guttatus,16,9,7,0,34.09,31.75,528.57,0.032
+2010,Onboard,28,11/15/2010,Santa Fe,Amado Quiros hijo,Erick lopez,coyote,Bottom longline,1000,Lutjanus guttatus,17,6,3,8,33.94,31.61,,0.017
+2010,Onboard,29,11/16/2010,Santa Fe,Amado Quiros hijo,Erick lopez,coyote,Bottom longline,1000,Lutjanus guttatus,4,3,1,0,32.63,30.25,,0.004
+2010,Onboard,18,11/17/2010,Mariel,Juanci,Allan BolaNos,Bejuco,Bottom longline,1500,Lutjanus guttatus,17,7,10,0,51.35,47.71,143.94,0.011333333
+2010,Onboard,30,11/19/2010,Santa Fe,Amado Quiros,Erick lopez,coyote,Bottom longline,1500,Lutjanus guttatus,60,29,31,0,49.95,46.67,,0.04
+2010,Onboard,31,11/20/2010,Santa Fe,Amado Quiros hijo,Erick lopez,coyote,Bottom longline,1500,Lutjanus guttatus,0,0,0,0,,,,0
+2011,Dockside,1,1/15/2011,Santa Fe,Amado Quiros hijo,Erick Lopez,coyote,Bottom longline,1500,Lutjanus guttatus,22,0,0,22,36.66,33.98,,0.014666667
+2011,Dockside,2,1/15/2011,Carolina,,Erick Lopez,coyote,Bottom longline,1000,Lutjanus guttatus,26,0,0,26,34.65,32.31,467.69,0.026
+2011,Onboard,1,1/18/2011,Aguila,Roldan,Allan BolaNos,Bejuco,Bottom longline,1100,Lutjanus guttatus,1,0,0,1,,,,0.000909091
+2011,Onboard,2,1/20/2011,Aguila,KOKI,Allan BolaNos,Bejuco,Bottom longline,1140,Lutjanus guttatus,15,7,8,0,35.07,32.93,528.00,0.013157895
+2011,Onboard,3,1/25/2011,Mariel,Koki,Allan BolaNos,Bejuco,Bottom longline,1900,Lutjanus guttatus,13,6,7,0,42.04,39.46,912.31,0.006842105
+2011,Onboard,4,2/16/2011,Aguila,Roldan,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,9,0,0,9,46.28,44.00,,
+2011,Onboard,6,2/28/2011,Mariel,Juanci,Allan BolaNos,Bejuco,Bottom longline,2800,Lutjanus guttatus,15,3,12,0,50.67,47.27,1529.33,0.005357143
+2011,Onboard,7,3/2/2011,Aguila,Koki,Allan BolaNos,Bejuco,Bottom longline,2600,Lutjanus guttatus,42,22,20,0,38.86,36.11,691.43,0.016153846
+2011,Dockside,3,3/4/2011,Alexandra,Negro,Allan BolaNos,Bejuco,Bottom longline,,Lutjanus guttatus,51,24,27,0,48.61,45.47,1306.27,
+2011,Dockside,4,3/5/2011,Josefina,,Allan BolaNos,Bejuco,Bottom longline,,Lutjanus guttatus,50,26,24,0,42.04,39.20,850.00,
+2011,Dockside,5,3/6/2011,Aguila,Juanci,Allan BolaNos,Bejuco,Bottom longline,,Lutjanus guttatus,78,47,31,0,37.81,35.36,622.31,
+2011,Onboard,8,3/7/2011,Aguila,Koki,Allan BolaNos,Bejuco,Bottom longline,,Lutjanus guttatus,15,7,8,0,47.13,44.07,1234.67,
+2011,Dockside,6,3/7/2011,Aguila,Juanci,Allan BolaNos,Bejuco,Bottom longline,,Lutjanus guttatus,17,6,11,0,49.65,46.41,1401.18,
+2011,Dockside,7,3/8/2011,,Negro,Allan BolaNos,Bejuco,Bottom longline,,Lutjanus guttatus,54,30,24,0,44.43,41.69,1183.89,
+2011,Dockside,8,3/12/2011,,Radio,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,10,0,1,9,48.40,45.30,1190.00,
+2011,Dockside,9,3/12/2011,,Juanci,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,63,30,33,0,46.75,43.65,1184.92,
+2011,Dockside,10,3/12/2011,,Memo,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,53,28,25,0,36.11,33.79,608.87,
+2011,Dockside,11,3/13/2011,,Freddy,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,79,47,32,0,35.70,33.52,576.96,
+2011,Onboard,9,3/18/2011,Erika,Lesney,Roberto,Bejuco,Bottom longline,900,Lutjanus guttatus,91,0,0,91,36.13,34.16,,0.101111111
+2011,Onboard,10,3/21/2011,Alexandra,Daniel,Roberto,Bejuco,Bottom longline,800,Lutjanus guttatus,28,0,0,28,38.79,36.75,,0.035
+2011,Dockside,12,3/22/2011,Pamela,donald,Erick Lopez,coyote,Bottom longline,1000,Lutjanus guttatus,9,6,1,2,41.11,38.11,,0.009
+2011,Dockside,13,3/22/2011,Karina,la fina,Erick Lopez,coyote,Bottom longline,1000,Lutjanus guttatus,26,0,0,26,39.29,36.94,,0.026
+2011,Dockside,14,3/23/2011,,Daniel,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,21,10,11,0,37.90,35.48,708.57,
+2011,Dockside,15,3/23/2011,,Lesney,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,29,18,11,0,36.24,34.21,638.62,
+2011,Dockside,16,3/29/2011,,Radio,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,6,2,4,0,47.50,44.67,1400.00,
+2011,Dockside,17,3/29/2011,,Daniel,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,30,13,17,0,36.47,34.23,636.00,
+2011,Dockside,18,3/29/2011,,Yanan,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,57,20,37,0,44.54,41.61,1182.46,
+2011,Dockside,19,3/30/2011,,Yanan,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,16,2,14,0,49.31,46.06,1472.50,
+2011,Dockside,20,3/30/2011,,Daneil,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,38,19,19,0,33.24,31.13,488.42,
+2011,Dockside,21,3/30/2011,,Memo,Roberto,Bejuco,Bottom longline,,Lutjanus guttatus,22,5,17,0,50.77,47.59,1585.45,
+2011,Onboard,11,3/31/2011,Capitan Gucho,Conga,Roberto,Bejuco,Bottom longline,600,Lutjanus guttatus,35,0,0,35,34.00,32.29,,0.058333333
+2011,Dockside,22,4/2/2011,Santa Fe,Gerardo (Cuajada),Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,27,0,0,27,42.02,39.13,,0.027
+2011,Dockside,23,4/2/2011,Karherine,Ballardo,Erick Lopez,Coyote,Bottom longline,1300,Lutjanus guttatus,12,6,6,0,38.67,36.79,780.00,0.009230769
+2011,Dockside,24,4/2/2011,,Junior,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,14,0,0,14,39.64,37.29,,0.014
+2011,Dockside,25,4/8/2011,Nani,Chico ,Erick Lopez,Coyote,Bottom longline,1200,Lutjanus guttatus,67,0,0,67,36.63,34.14,,0.055833333
+2011,Dockside,26,4/15/2011,Evelyn,Wicho,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,10,0,0,10,40.45,37.60,,0.01
+2011,Dockside,27,6/10/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,36,3,24,9,50.26,46.50,1400.83,
+2011,Onboard,12,6/23/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,16,1,14,1,32.27,30.01,422.00,
+2011,Onboard,13,6/27/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,4,3,1,0,35.88,33.25,570.00,
+2011,Onboard,14,6/28/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,18,6,10,2,28.44,26.38,281.11,
+2011,Onboard,15,6/30/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,6,3,3,0,29.83,27.83,308.33,
+2011,Onboard,16,7/1/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,7,3,2,2,37.40,34.70,624.00,
+2011,Onboard,17,7/4/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,1,0,1,0,53.50,50.00,1800.00,
+2011,Onboard,18,7/6/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,10,2,3,5,29.61,27.89,374.29,
+2011,Onboard,19,7/18/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,4,2,1,1,40.13,37.25,795.00,
+2011,Onboard,20,7/19/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,25,12,12,1,36.04,33.52,587.08,
+2011,Onboard,21,7/21/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,21,8,13,0,32.45,30.29,462.52,
+2011,Onboard,22,7/23/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,18,10,7,1,34.69,32.39,566.94,
+2011,Onboard,23,7/25/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,39,22,17,0,33.72,31.49,471.13,
+2011,Onboard,24,7/26/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,34,18,16,0,36.65,34.15,600.18,
+2011,Onboard,25,7/27/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,6,2,4,0,34.17,31.83,522.33,
+2011,Onboard,26,7/30/2011,,,,Coyote,Linea experimental,,Lutjanus guttatus,12,7,5,0,33.29,31.13,503.50,
+2011,Dockside,28,8/8/2011,,Na,Erick/andy/allan,coyote,Bottom longline,1000,Lutjanus guttatus,25,0,0,25,35.16,32.82,,0.025
+2011,Dockside,29,8/8/2011,Santa Fe,gerardo r,Erick/andy/allan,coyote,Bottom longline,1000,Lutjanus guttatus,141,40,46,55,41.86,39.02,844.42,0.141
+2011,Dockside,30,8/8/2011,Santa Fe,amado -,Erick/andy/allan,coyote,Bottom longline,1000,Lutjanus guttatus,65,0,0,65,35.79,33.52,,0.065
+2011,Dockside,31,8/9/2011,Santa Fe,amado -,Erick/andy/allan,coyote,Bottom longline,1000,Lutjanus guttatus,64,2,3,59,38.10,35.36,1164.00,0.064
+2011,Dockside,32,8/12/2011,Santa Fe,Amado Quiros hijo,Erick Lopez,coyote,Bottom longline,1500,Lutjanus guttatus,17,11,6,0,48.44,45.12,,0.011333333
+2011,Dockside,33,8/17/2011,Mary R,ronal rojas,erick,coyote,Bottom longline,1000,Lutjanus guttatus,29,17,12,0,37.38,34.88,659.31,0.029
+2011,Dockside,34,8/17/2011,Santa Fe,amado,erick,coyote,Bottom longline,1000,Lutjanus guttatus,40,15,24,1,34.66,32.59,577.00,0.04
+2011,Dockside,35,8/19/2011,Mary R,pichirilo,erick- allan,coyote,Bottom longline,1000,Lutjanus guttatus,106,5,25,76,39.20,36.44,713.67,0.106
+2011,Dockside,36,8/24/2011,Santa Fe,NA,erick,coyote,Bottom longline,1000,Lutjanus guttatus,43,5,35,3,43.14,40.21,960.50,0.043
+2011,Dockside,37,9/15/2011,Karina,Junior,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,40,18,22,0,35.07,33.25,0.53,0.04
+2011,Dockside,38,9/16/2011,Karina,Junior,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,42,22,20,0,34.54,32.58,0.53,0.042
+2011,Dockside,39,9/17/2011,Silvia M,Junior,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,12,6,6,0,44.79,41.46,1.05,0.012
+2011,Dockside,40,9/21/2011,Malibu,Sopero,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,36,15,21,0,36.42,34.14,0.59,0.036
+2011,Dockside,41,9/22/2011,Santa Fe,Cuajada,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,22,8,14,0,35.17,33.34,,0.022
+2011,Dockside,42,9/24/2011,Santa Fe,Cuajada,Balles,Coyote,Bottom longline,1000,Lutjanus guttatus,14,4,10,0,29.39,27.71,0.40,0.014
+2011,Dockside,43,10/5/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,23,16,7,0,40.24,37.43,803.04,
+2011,Dockside,44,10/5/2011,SINAI,Roy,Erick,coyote,Bottom longline,600,Lutjanus guttatus,23,16,7,0,40.24,37.43,802.61,0.038333333
+2011,Dockside,45,10/6/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,24,10,11,3,35.50,33.16,511.58,
+2011,Dockside,46,10/6/2011,Santa Fe,amado,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,60,13,35,12,43.63,40.51,1007.44,0.06
+2011,Dockside,47,10/6/2011,Santa Fe,amado,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,0,0,0,0,,,,0
+2011,Dockside,48,10/7/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,48,0,0,48,38.41,35.68,,
+2011,Dockside,49,10/7/2011,,NA,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,0,0,0,0,,,,0
+2011,Dockside,50,10/23/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,53,0,0,53,51.11,47.65,,
+2011,Dockside,51,10/23/2011,Santa Fe,amado,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,14,0,0,14,49.66,46.32,,0.014
+2011,Dockside,52,10/23/2011,,NA,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,53,0,0,53,51.11,47.65,,0.053
+2011,Dockside,53,11/29/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,53,23,29,1,48.33,45.01,581.12,
+2011,Dockside,54,11/29/2011,Santa Fe,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,45,18,26,1,48.07,44.74,,0.045
+2011,Dockside,55,11/29/2011,Mi Rey,Tiburon,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,8,5,3,0,49.81,46.50,,0.008
+2011,Dockside,56,12/6/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,17,5,12,0,34.91,32.47,517.11,
+2011,Dockside,57,12/6/2011,Santa Fe,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,17,5,12,0,34.91,32.47,,0.017
+2011,Dockside,58,12/7/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,11,5,6,0,39.04,36.55,677.69,
+2011,Dockside,59,12/7/2011,Santa Fe,Amado,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,11,5,6,0,39.04,36.55,,0.011
+2011,Dockside,60,12/8/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,17,11,6,0,48.44,44.59,,
+2011,Dockside,61,12/13/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,145,16,16,113,37.03,34.45,619.03,
+2011,Dockside,62,12/13/2011,Evelyn,Donald,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,110,12,8,90,38.03,35.28,,0.11
+2011,Dockside,63,12/13/2011,Mi Rey,Tiburon,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,35,4,8,23,35.38,33.08,,0.035
+2011,Dockside,64,12/16/2011,,,,Coyote,Bottom longline,,Lutjanus guttatus,16,8,8,0,33.41,31.16,464.21,
+2011,Dockside,65,12/16/2011,Mi Rey,Tiburon,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,16,8,8,0,33.41,31.16,,0.016
+2012,Dockside,1,1/4/2012,Mi Rey,Tiburon,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,20,2,5,13,49.21,45.93,,0.02
+2012,Dockside,2,1/4/2012,,Junior,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,16,0,0,16,49.50,46.06,,0.016
+2012,Dockside,3,1/9/2012,Santa Fe,Amado,Erick/Sharon,Coyote,Bottom longline,1000,Lutjanus guttatus,50,25,20,5,40.97,37.39,,0.05
+2012,Dockside,4,1/17/2012,Mi Rey,Tiburon,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,52,7,11,34,48.36,44.89,,
+2012,Dockside,5,1/18/2012,,Chobi,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,114,5,4,105,50.63,47.08,,
+2012,Dockside,6,1/18/2012,Mi Rey,Tiburon,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,20,3,4,13,53.36,49.50,,
+2012,Dockside,7,1/19/2012,,Chobi,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,26,3,3,20,51.40,48.10,1498.60,
+2012,Dockside,8,1/19/2012,Santa Fe,Luis,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,41,3,4,34,51.86,48.86,1552.14,
+2012,Dockside,9,1/26/2012,Santa Fe,Luis,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,23,8,15,0,55.28,51.39,1847.83,
+2012,Dockside,10,1/31/2012,Santa Fe,Amado,"Daniel, Sharon",Coyote,Bottom longline,1000,Lutjanus guttatus,31,4,4,23,51.88,48.63,1587.50,0.031
+2012,Dockside,11,2/1/2012,Santa Fe,Amado,"Daniel, Sharon",Coyote,Bottom longline,,Lutjanus guttatus,22,3,8,11,44.86,41.82,1018.18,
+2012,Dockside,12,2/3/2012,Santa Fe,Amado,"Daniel, Sharon",Coyote,Bottom longline,,Lutjanus guttatus,41,5,8,28,42.27,39.23,892.31,
+2012,Dockside,13,2/9/2012,Santa Fe,Amado,"Erick, Daniel",Coyote,Bottom longline,,Lutjanus guttatus,43,16,27,0,36.37,33.91,589.06,
+2012,Dockside,14,2/14/2012,Mi Rey,Tiburon,"Erick, Daniel",Coyote,Bottom longline,,Lutjanus guttatus,36,22,14,0,34.46,32.07,473.34,
+2012,Dockside,15,2/15/2012,,Lesney,"Erick, Sharon, Daniel",Coyote,Bottom longline,,,15,0,0,15,44.80,41.73,,
+2012,Dockside,16,2/15/2012,Chelonia,Amado,"Chris, Alexis",Coyote,Bottom longline,,Lutjanus guttatus,3,1,2,0,43.50,40.50,892.30,
+2012,Dockside,17,2/16/2012,Chelonia,Amado,"Chris, Alexis",Coyote,Bottom longline,,Lutjanus guttatus,3,2,1,0,47.00,43.83,1106.20,
+2012,Dockside,18,2/16/2012,Ave Phenix,Chimuelo,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,66,0,0,66,35.80,33.23,,
+2012,Dockside,19,2/21/2012,Santa Fe,Luis,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,14,6,1,7,43.50,40.29,925.38,
+2012,Dockside,20,2/29/2012,Santa Fe,Chobi,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,40,3,7,30,40.75,37.85,753.14,
+2012,Dockside,21,3/2/2012,Pamela,Roy,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,21,13,8,0,45.36,42.24,1127.81,
+2012,Dockside,22,3/2/2012,Mi Rey,Tiburon,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,84,5,10,69,46.00,42.60,1145.17,
+2012,Dockside,23,3/3/2012,Santa Fe,Luis,Erick/Sharon,Coyote,Bottom longline,,Lutjanus guttatus,29,4,17,8,44.07,41.10,970.44,
+2012,Onboard,4,3/3/2012,Santa Fe,Luis Quiros,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,52,35,11,6,40.53,37.66,755.48,0.052
+2012,Dockside,24,3/4/2012,Santa Fe,Luis,Erick/Sharon,Coyote,Bottom longline,1000,Lutjanus guttatus,56,35,11,10,40.53,37.66,755.48,0.056
+2012,Onboard,6,3/21/2012,Santa Fe,Oldemar( urraca -pito),Erick Lopez,coyote,Bottom longline,1000,Lutjanus guttatus,2,1,1,0,52.75,49.50,1750.00,0.002
+2012,Dockside,25,3/30/2012,Santa Fe,Luis Quiros,Erick Lopez,coyote,Bottom longline,1000,Lutjanus guttatus,11,6,4,1,33.86,31.06,440.09,0.011
+2012,Dockside,26,4/10/2012,Santa Fe,luis,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,25,10,15,0,34.48,32.24,530.36,0.025
+2012,Dockside,27,4/11/2012,,junior,erick,coyote,Bottom longline,,Lutjanus guttatus,68,8,3,57,43.45,41.36,945.90,
+2012,Dockside,28,4/11/2012,,Zorra,erick,coyote,Bottom longline,,Lutjanus guttatus,30,5,7,18,45.38,42.33,1106.50,
+2012,Dockside,29,4/12/2012,Capitan Chobi,Chobi,erick,coyote,Bottom longline,1000,Lutjanus guttatus,109,5,7,97,45.38,42.58,1011.20,0.109
+2012,Dockside,30,4/13/2012,,Ballardo,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,123,7,7,109,46.70,43.75,1176.22,0.123
+2012,Dockside,31,4/13/2012,Capitan Jerry,Donald,Erick,coyote,Bottom longline,1000,Lutjanus guttatus,81,8,8,65,44.85,41.36,963.51,0.081
+2012,Dockside,32,4/27/2012,Santa Fe,amado,erick,coyote,Bottom longline,1000,Lutjanus guttatus,13,8,5,0,37.04,34.96,607.80,0.013
+2012,Onboard,5,5/17/2012,Santa Fe,Amdo Quiros,Erick - Wilson,coyote,Bottom longline,1000,Lutjanus guttatus,13,3,9,1,37.24,34.55,632.23,0.013
+2012,Dockside,33,5/30/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,25,11,8,6,35.01,32.68,539.11,0.03125
+2012,Dockside,34,6/6/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,9,5,4,0,53.89,50.78,1593.22,0.01125
+2012,Dockside,35,6/6/2012,Mariel H,ND,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,10,5,5,0,52.90,49.80,1.54,0.0125
+2012,Dockside,36,6/7/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,35,9,5,21,38.19,35.57,669.43,0.04375
+2012,Dockside,37,6/7/2012,Mariel H,Juanci,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,35,9,5,21,38.18,35.61,0.67,0.04375
+2012,Dockside,38,6/14/2012,Mariel H,NA,Coky,Bejuco,Bottom longline,,Lutjanus guttatus,15,6,9,0,38.97,35.90,729.53,
+2012,Dockside,39,6/14/2012,Mariel H,ND,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,15,6,9,0,39.03,35.90,0.73,0.01875
+2012,Dockside,40,6/26/2012,Luna,Michael,"Jossy, Nefer",Bejuco,Bottom longline,800,Lutjanus guttatus,32,8,3,21,38.81,36.21,745.60,0.04
+2012,Dockside,41,6/26/2012,Capitan Gucho,NA,"Jossy, Nefer",Bejuco,Bottom longline,800,Lutjanus guttatus,17,7,8,2,31.49,29.41,376.29,0.02125
+2012,Dockside,42,6/27/2012,Valeria,Fran,"Jossy, Nefer",Bejuco,Bottom longline,800,Lutjanus guttatus,83,5,6,72,47.92,44.30,1298.86,0.10375
+2012,Dockside,43,6/27/2012,Josefina,Juance,"Jossy, Nefer",Bejuco,Bottom longline,800,Lutjanus guttatus,60,13,10,37,34.84,32.55,544.52,0.075
+2012,Dockside,44,6/29/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,62,0,0,62,44.90,42.05,1.09,0.0775
+2012,Dockside,45,6/30/2012,Pamela,Maikol,"Jossy, Nefer",Coyote,Bottom longline,1100,Lutjanus guttatus,56,0,1,55,45.27,41.29,1078.20,0.050909091
+2012,Dockside,46,6/30/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,25,11,8,6,35.01,32.68,0.59,0.03125
+2012,Dockside,47,6/30/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,27,5,7,15,44.29,42.11,1.02,0.03375
+2012,Dockside,48,7/1/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,22,14,4,4,42.22,39.47,0.99,0.0275
+2012,Dockside,49,7/2/2012,Nicolleat,Junior y Roy,"Jossy, Nefer",Coyote,Bottom longline,1100,Lutjanus guttatus,48,6,5,37,31.95,29.31,391.55,0.043636364
+2012,Dockside,50,7/3/2012,Karina,Mechas,"Jossy, Nefer",Coyote,Bottom longline,1100,Lutjanus guttatus,96,5,7,84,31.78,29.69,427.42,0.087272727
+2012,Dockside,51,7/3/2012,Mirey K,Donald,"Jossy, Nefer",Coyote,Bottom longline,1100,Lutjanus guttatus,69,5,5,59,38.75,36.30,724.60,0.062727273
+2012,Dockside,52,7/4/2012,Karina,Mechas y Luis Angel,"Jossy, Nefer",Coyote,Bottom longline,1100,Lutjanus guttatus,39,10,6,23,35.61,32.94,557.13,0.035454545
+2012,Dockside,53,7/7/2012,Nicolleat,Junior,"Jossy, Nefer",Coyote,Bottom longline,950,Lutjanus guttatus,56,0,0,56,39.51,36.74,,0.058947368
+2012,Dockside,54,7/8/2012,Santa Fe,Amado,"Jossy, Nefer",Coyote,Bottom longline,1000,Lutjanus guttatus,108,21,5,82,37.10,34.29,652.85,0.108
+2012,Dockside,55,7/8/2012,SINAI-P9340,Chimuelo,"Jossy, Nefer",Coyote,Bottom longline,1000,Lutjanus guttatus,69,1,6,62,38.36,36.86,666.86,0.069
+2012,Dockside,56,7/10/2012,Santa Fe,Amado,"Jossy, Nefer",Coyote,Bottom longline,1400,Lutjanus guttatus,71,21,10,40,39.28,37.24,741.90,0.050714286
+2012,Dockside,57,7/10/2012,SINAI-P9340,Maikol,"Jossy, Nefer",Coyote,Bottom longline,1400,Lutjanus guttatus,34,15,9,10,38.75,35.95,676.54,0.024285714
+2012,Dockside,58,7/10/2012,Mirey K,Donal,"Nefer, Jossy",Coyote,Bottom longline,1100,Lutjanus guttatus,119,5,6,108,36.13,33.85,578.64,0.108181818
+2012,Dockside,59,7/10/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,9,2,7,0,33.33,31.22,0.46,0.01125
+2012,Dockside,60,7/10/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,72,1,11,60,38.76,36.10,0.73,0.09
+2012,Onboard,1,7/11/2012,Santa Fe,Amado,"Jossy, Nefer",Coyote,Bottom longline,1500,Lutjanus guttatus,95,46,49,0,31.42,29.35,381.34,0.063333333
+2012,Dockside,61,7/12/2012,Santa Fe,Amado,"Jossy, Nefer",Coyote,Bottom longline,1500,Lutjanus guttatus,117,46,49,22,31.42,29.35,381.34,0.078
+2012,Dockside,62,7/12/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,13,8,5,0,35.63,33.28,0.54,0.01625
+2012,Dockside,63,7/12/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,13,9,4,0,37.95,35.22,0.65,0.01625
+2012,Dockside,64,7/13/2012,Malibu,Sopero,"Jossy, Nefer",Coyote,Bottom longline,1200,Lutjanus guttatus,153,6,4,143,40.26,37.05,695.50,0.1275
+2012,Dockside,65,7/13/2012,Santa Fe,Amado,"Jossy, Nefer",Coyote,Bottom longline,1500,Lutjanus guttatus,221,17,6,198,40.64,37.74,748.13,0.147333333
+2012,Dockside,66,7/13/2012,Mirek,Donald,"Jossy, Nefer",Coyote,Bottom longline,1100,Lutjanus guttatus,273,6,2,265,44.16,42.41,1064.50,0.248181818
+2012,Dockside,67,7/14/2012,Santa Fe,Amado,"Jossy, Nefer",Coyote,Bottom longline,1500,Lutjanus guttatus,171,19,15,137,41.92,38.92,842.00,0.114
+2012,Dockside,68,7/15/2012,Santa Fe,Amado,"Jossy, Nefer",Coyote,Bottom longline,1500,Lutjanus guttatus,177,8,6,163,38.18,35.49,644.00,0.118
+2012,Dockside,69,7/15/2012,Erika,Mechas,"Jossy, Nefer",Coyote,Bottom longline,1200,Lutjanus guttatus,166,5,6,155,38.95,36.45,661.27,0.138333333
+2012,Dockside,70,7/17/2012,Malibu,Sopero,"Jossy, Nefer",Coyote,Bottom longline,1200,Lutjanus guttatus,104,11,5,88,39.67,36.24,673.13,0.086666667
+2012,Dockside,71,7/18/2012,Erika,Mechas,"Jossy, Nefer",Coyote,Bottom longline,1200,Lutjanus guttatus,69,9,3,57,40.79,37.80,765.00,0.0575
+2012,Dockside,72,7/18/2012,Mirey K,Donald,"Jossy, Nefer",Coyote,Bottom longline,1100,Lutjanus guttatus,39,2,8,29,43.37,40.54,926.10,0.035454545
+2012,Dockside,73,7/21/2012,Mirey K,Donal,Nefer,Coyote,Bottom longline,1100,Lutjanus guttatus,82,8,5,69,39.58,36.72,702.23,0.074545455
+2012,Dockside,74,7/21/2012,Nicolleat,Junior,Nefer,Coyote,Bottom longline,1100,Lutjanus guttatus,142,4,2,136,44.08,40.83,903.00,0.129090909
+2012,Dockside,75,7/25/2012,Santa Fe,Amado,Jeffry & Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,17,12,4,1,39.33,36.04,0.77,0.011333333
+2012,Dockside,76,7/27/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,15,9,6,0,35.11,32.70,0.50,0.01875
+2012,Dockside,77,7/27/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,12,6,6,0,37.90,35.11,0.65,0.015
+2012,Dockside,78,7/28/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,107,12,3,92,42.46,39.60,0.90,0.13375
+2012,Dockside,79,7/28/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,163,11,4,148,38.71,36.13,0.70,0.20375
+2012,Onboard,2,8/3/2012,Santa Fe,Amado,Erick Lopez,Coyote,Bottom longline,1000,Lutjanus guttatus,52,10,19,23,43.63,40.39,970.25,0.052
+2012,Dockside,80,8/4/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,59,8,7,44,38.95,36.21,0.70,0.07375
+2012,Onboard,3,8/8/2012,Santa Fe,Luis y Milton,Erick Lopez,Coyote,Bottom longline,1100,Lutjanus guttatus,153,15,27,111,39.09,36.13,632.60,0.139090909
+2012,Dockside,81,8/8/2012,Santa Fe,Luis,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,139,14,7,118,40.60,37.76,835.95,0.126363636
+2012,Dockside,82,8/9/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,17,10,7,0,44.22,41.39,0.99,0.02125
+2012,Dockside,83,8/10/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,11,5,6,0,50.09,45.72,1.41,0.01375
+2012,Dockside,84,8/10/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,70,11,5,54,44.16,41.11,0.98,0.0875
+2012,Dockside,85,8/11/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,24,6,5,13,40.26,37.42,0.77,0.03
+2012,Dockside,86,8/21/2012,Santa Fe,Amado,Erick,Coyote,Bottom longline,1100,Lutjanus guttatus,65,37,28,0,34.31,32.15,517.15,0.059090909
+2012,Dockside,87,8/22/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,12,4,8,0,40.02,37.30,0.80,0.015
+2012,Dockside,88,8/22/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,100,6,11,83,42.91,40.02,0.91,0.125
+2012,Dockside,89,8/25/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,110,6,10,94,40.57,37.98,0.79,0.1375
+2012,Dockside,90,8/26/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,15,10,5,0,42.33,39.33,0.84,0.01875
+2012,Dockside,91,8/27/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,110,12,5,93,43.49,40.59,0.96,0.1375
+2012,Dockside,92,8/28/2012,Capitan Gucho,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,11,5,6,0,47.75,44.57,1.27,0.01375
+2012,Dockside,93,8/30/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,12,6,6,0,49.76,47.12,1.48,0.015
+2012,Dockside,94,8/31/2012,Mariel H,,Coky,Bejuco,Bottom longline,800,Lutjanus guttatus,15,8,7,0,48.22,44.93,1.25,0.01875
+2012,Dockside,95,9/11/2012,Santa Fe,Luiz Quiros,Erick,Coyote,Bottom longline,1650,Lutjanus guttatus,63,9,3,51,42.61,39.75,882.00,0.038181818
+2012,Dockside,96,9/12/2012,Capitan Jerry,Donald Lopez,Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,48,14,19,15,35.67,33.47,554.03,0.048
+2012,Dockside,97,9/18/2012,Recibidor,Donald Lopez,erick,coyote,Bottom longline,,Lutjanus guttatus,23,0,0,23,33.30,31.57,,
+2012,Dockside,98,9/18/2012,,Donald Lopez,erick,coyote,Bottom longline,1150,Lutjanus guttatus,38,9,7,22,50.77,47.35,1572.19,0.033043478
+2012,Dockside,100,9/25/2012,Capitan Gucho,,,Bejuco,Bottom longline,,Lutjanus guttatus,40,15,24,1,34.67,32.28,504.85,
+2012,Dockside,99,9/25/2012,Mariel H,,,Bejuco,Bottom longline,,Lutjanus guttatus,72,29,42,1,38.82,36.17,715.50,
+2012,Dockside,101,9/25/2012,,,,Bejuco,Bottom longline,,Lutjanus guttatus,14,11,3,0,42.51,40.16,932.93,
+2012,Dockside,102,10/1/2012,Santa Fe,Luiz Quiros,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,6,2,1,3,53.63,49.85,1829.33,0.004
+2012,Dockside,103,10/4/2012,Santa Fe,Luiz Quiros,Erick,Coyote,Bottom longline,1500,Lutjanus guttatus,11,0,0,11,39.88,37.61,,0.007333333
+2012,Dockside,104,10/4/2012,Capitan Jerry,Donald Lopez,erick,coyote,Bottom longline,1150,Lutjanus guttatus,27,2,1,24,49.06,46.00,1299.50,0.023478261
+2012,Dockside,105,10/30/2012,,chimuelo,erick/ diego,coyote,Bottom longline,850,Lutjanus guttatus,2,0,2,0,38.90,36.70,748.00,0.002352941
+2012,Dockside,106,10/30/2012,,gerardo rojas,erick/ diego,coyote,Bottom longline,900,Lutjanus guttatus,3,3,0,0,44.57,41.60,962.00,0.003333333
+2012,Dockside,107,10/31/2012,,recibidor,"erick,diego",Coyote,,,Lutjanus guttatus,64,0,0,64,47.61,44.49,,
+2012,Dockside,108,11/3/2012,,,erick/diego,coyote,Bottom longline,,Lutjanus guttatus,56,19,6,31,40.08,37.11,735.40,
+2012,Dockside,109,11/3/2012,,,,Bejuco,Bottom longline,,Lutjanus guttatus,25,19,6,0,40.07,37.12,735.40,
+2012,Dockside,110,11/6/2012,Karina,cuerpito,diego,coyote,Bottom longline,800,Lutjanus guttatus,11,6,5,0,39.25,36.82,726.55,0.01375
+2012,Dockside,111,11/7/2012,Karina,cuerpito,dieg ramires,Coyote,Bottom longline,800,Lutjanus guttatus,8,3,5,0,33.46,31.14,487.00,0.01
+2012,Dockside,112,11/7/2012,Karina,Soza,,Bejuco,Bottom longline,800,Lutjanus guttatus,9,3,6,0,35.24,31.88,520.56,0.01125
+2012,Dockside,113,11/7/2012,,Roy,,Coyote,Bottom longline,1000,Lutjanus guttatus,9,6,3,0,43.39,40.26,990.78,0.009
+2012,Dockside,114,11/11/2012,Mi Rey,Cuajada,DR-EL,Coyote,Bottom longline,1000,Lutjanus guttatus,34,0,0,34,42.54,39.26,867.94,0.034
+2012,Dockside,115,11/13/2012,Capitan Gucho,jimmy,diego/erick,bejuco,Bottom longline,800,Lutjanus guttatus,84,0,0,84,40.10,37.33,,0.105
+2012,Dockside,116,11/13/2012,Mariel,Michael,Diego-Erick,Bejco,Bottom longline,800,Lutjanus guttatus,23,0,0,23,37.66,35.00,723.74,0.02875
+2012,Dockside,117,11/16/2012,SINAI,chimuelo,DR-EL,coyote,Bottom longline,750,Lutjanus guttatus,9,0,9,0,45.32,42.11,941.78,0.012
+2012,Dockside,118,11/17/2012,Mi Rey,Cuajada,DR-EL,coyote,Bottom longline,1000,Lutjanus guttatus,14,0,1,13,45.76,42.51,,0.014
+2012,Dockside,119,11/20/2012,Karina,Cuerpito,DR-EL,coyote,Bottom longline,1200,Lutjanus guttatus,27,5,1,21,48.53,45.25,1457.67,0.0225
+2012,Dockside,120,11/20/2012,Malibu,sopero,DR-EL,coyote,Bottom longline,1500,Lutjanus guttatus,46,0,0,46,41.02,38.15,,0.030666667
+2012,Dockside,121,11/20/2012,Mi Rey,cuajada,DR-EL,coyote,Bottom longline,1100,Lutjanus guttatus,21,0,0,21,42.13,39.73,,0.019090909
+2012,Dockside,122,11/21/2012,,Juansi,Diego-Erick,Bejuco,Bottom longline,1000,Lutjanus guttatus,25,0,0,25,39.42,36.69,,0.025
+2012,Dockside,123,11/27/2012,Pamela,cuerpito,diego/erick,coyote,Bottom longline,1200,Lutjanus guttatus,32,0,0,32,36.88,33.34,596.41,0.026666667
+2012,Dockside,124,11/28/2012,Mi Rey,Cuajada,Diego-Erick,Coyote,Bottom longline,1000,Lutjanus guttatus,45,7,9,29,31.22,29.02,387.27,0.045
+2012,Dockside,125,11/28/2012,Evelyn,Cristian,Diego-Erick,Coyote,Bottom longline,900,Lutjanus guttatus,24,0,0,24,44.08,41.17,,0.026666667
+2012,Dockside,126,12/5/2012,Mi Rey,Amado,,Coyote,Bottom longline,1200,Lutjanus guttatus,50,16,32,2,36.14,33.78,622.43,0.041666667
+2012,Dockside,127,12/8/2012,,Roy,,Coyote,Bottom longline,1130,Lutjanus guttatus,19,5,14,0,35.82,47.06,585.21,0.016814159
+2012,Dockside,128,12/13/2012,Santa Fe,Luis,,Coyote,Bottom longline,1500,Lutjanus guttatus,42,27,13,2,41.26,46.07,871.55,0.028
+2012,Dockside,129,12/19/2012,,,,coyote,Bottom longline,,Lutjanus guttatus,53,0,0,53,47.85,44.78,1.06,
+2012,Dockside,130,12/23/2012,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,18,10,8,0,34.48,31.64,490.67,0.0225
+2013,Dockside,1,1/3/2013,Capitan Jerry,Donal,,Coyote,Bottom longline,,Lutjanus guttatus,69,0,0,69,35.77,34.33,,
+2013,Dockside,2,1/3/2013,Karina,Sosa,,Coyote,Bottom longline,,Lutjanus guttatus,45,31,14,0,,,,
+2013,Dockside,3,1/4/2013,Malibu,Alexander,,Coyote,Bottom longline,,Lutjanus guttatus,14,8,5,1,,,,
+2013,Dockside,4,1/4/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,40,0,0,40,35.89,33.79,515.70,0.05
+2013,Dockside,5,1/4/2013,Karina,Soza,,Bejuco,Bottom longline,1200,Lutjanus guttatus,37,25,12,0,36.82,34.37,601.32,0.030833333
+2013,Dockside,6,1/8/2013,Capitan Jerry,Donal,,Coyote,Bottom longline,,Lutjanus guttatus,64,0,0,64,,,,
+2013,Dockside,7,1/10/2013,Santa Fe,Luis,,Coyote,Bottom longline,,Lutjanus guttatus,24,15,9,0,38.37,35.97,675.33,
+2013,Dockside,8,1/15/2013,,Christian,,Coyote,Bottom longline,,Lutjanus guttatus,30,0,0,30,48.35,45.06,,
+2013,Dockside,9,1/15/2013,Mariel H,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,18,13,5,0,48.37,45.20,1293.25,0.0225
+2013,Dockside,10,1/16/2013,Santa Fe,Luis,,Coyote,Bottom longline,,Lutjanus guttatus,18,3,15,0,,,,
+2013,Dockside,11,1/16/2013,,Christian,,Coyote,Bottom longline,,Lutjanus guttatus,5,0,5,0,,,,
+2013,Dockside,12,1/16/2013,Capitan Jerry,Donal,,Coyote,Bottom longline,,Lutjanus guttatus,5,1,2,2,,,,
+2013,Dockside,13,1/16/2013,Deilyn Lucia,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,3,12,0,52.76,49.07,1580.00,0.01875
+2013,Dockside,14,1/17/2013,Deilyn Lucia,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,50,0,0,50,40.04,37.26,,0.0625
+2013,Dockside,15,1/20/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,6,9,0,45.74,42.71,1134.13,0.01875
+2013,Dockside,16,1/22/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,23,0,0,23,42.49,39.77,,0.02875
+2013,Dockside,17,1/23/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,18,10,8,0,49.81,46.33,1387.83,0.0225
+2013,Dockside,18,1/24/2013,Mariel H,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,18,3,15,0,43.12,40.12,1002.94,0.0225
+2013,Dockside,19,1/25/2013,Mariel H,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,16,9,7,0,45.40,41.94,1110.81,0.02
+2013,Dockside,20,1/30/2013,Mirey K,Gerardo,,Coyote,Bottom longline,,Lutjanus guttatus,0,0,0,0,,,,
+2013,Dockside,21,2/2/2013,Sofi Gabriela,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,11,5,6,0,42.78,39.92,986.09,0.01375
+2013,Dockside,22,2/5/2013,Capitan Jerry,Donal,,Coyote,Bottom longline,,Lutjanus guttatus,16,6,10,0,,,,
+2013,Dockside,23,2/6/2013,Deilyn Lucia,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,6,9,0,49.50,46.30,1292.40,0.01875
+2013,Dockside,24,2/7/2013,Deilyn Lucia,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,8,2,6,0,49.03,45.79,1293.38,0.01
+2013,Dockside,25,2/8/2013,Deilyn Lucia,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,33,3,12,18,49.10,45.63,1319.47,0.04125
+2013,Dockside,26,4/4/2013,Maria,Roy,,Coyote,Bottom longline,900,Lutjanus guttatus,4,2,2,0,39.63,37.33,746.75,0.004444444
+2013,Dockside,27,4/5/2013,Sarra,Junior,,Coyote,Bottom longline,1400,Lutjanus guttatus,14,6,8,0,49.38,45.30,1346.79,0.01
+2013,Dockside,28,4/9/2013,Santa Fe,Luis,,Coyote,Gillnet,,Lutjanus guttatus,10,0,0,10,45.11,41.94,981.60,
+2013,Dockside,29,4/10/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,26,12,14,0,46.04,43.10,1238.15,0.0325
+2013,Dockside,30,4/11/2013,Zorra,Junior,,Coyote,Bottom longline,1300,Lutjanus guttatus,32,16,16,0,35.32,33.08,548.47,0.024615385
+2013,Dockside,31,4/12/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,7,7,1,35.82,33.47,575.13,0.01875
+2013,Dockside,32,4/17/2013,Santa Fe,Luis,,Coyote,Gillnet,,Lutjanus guttatus,10,4,6,0,51.28,48.74,1494.89,
+2013,Dockside,33,4/19/2013,Cachorro,Roy,,Coyote,Bottom longline,1000,Lutjanus guttatus,25,16,9,0,48.85,46.31,1366.12,0.025
+2013,Dockside,34,4/20/2013,Santa Fe,Luis,,Coyote,Gillnet,,Lutjanus guttatus,18,2,16,0,46.21,42.12,1115.17,
+2013,Dockside,35,4/21/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,16,6,10,0,40.88,38.05,814.13,0.02
+2013,Dockside,36,4/24/2013,Maria,Roy,,Coyote,Bottom longline,600,Lutjanus guttatus,90,0,0,90,37.94,35.31,591.01,0.15
+2013,Dockside,37,4/25/2013,Capitan Jerry,Armado,,Coyote,Bottom longline,1100,Lutjanus guttatus,9,4,5,0,46.98,44.11,1208.00,0.008181818
+2013,Dockside,38,4/25/2013,Zorra,Junior,,Coyote,Bottom longline,900,Lutjanus guttatus,35,20,15,0,40.09,37.19,749.66,0.038888889
+2013,Dockside,39,4/26/2013,Mariel H,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,18,14,4,0,40.17,37.42,760.83,0.0225
+2013,Dockside,40,4/27/2013,Zorra,Junior,,Coyote,Bottom longline,1200,Lutjanus guttatus,18,14,4,0,37.72,35.12,634.06,0.015
+2013,Dockside,41,4/28/2013,Capitan Jerry,Armado,,Coyote,Bottom longline,1100,Lutjanus guttatus,43,32,11,0,36.99,34.43,609.49,0.039090909
+2013,Dockside,42,5/1/2013,Malibu,Alexander,,Coyote,Bottom longline,1200,Lutjanus guttatus,18,12,6,0,47.36,44.33,1276.71,0.015
+2013,Dockside,43,5/5/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,10,5,0,40.03,37.27,755.07,0.01875
+2013,Dockside,44,5/8/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,14,9,5,0,42.44,39.64,921.64,0.0175
+2013,Dockside,45,5/9/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,17,10,6,1,41.31,38.39,857.12,0.02125
+2013,Dockside,46,5/12/2013,Capitan Gucho,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,9,6,0,44.37,41.35,1034.20,0.01875
+2013,Dockside,47,5/14/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,13,12,1,0,41.44,38.48,827.77,0.01625
+2013,Dockside,48,5/15/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,18,12,6,0,41.77,2368.86,819.61,0.0225
+2013,Dockside,49,5/15/2013,Santa Fe,Armado,,Coyote,Bottom longline,1100,Lutjanus guttatus,13,8,5,0,36.32,33.66,584.08,0.011818182
+2013,Dockside,50,5/17/2013,Nicole,Junior,,Coyote,Bottom longline,900,Lutjanus guttatus,10,9,1,0,38.88,36.36,726.90,0.011111111
+2013,Dockside,51,5/17/2013,Santa Fe,Armado,,Coyote,Bottom longline,,Lutjanus guttatus,12,5,7,0,32.25,29.88,442.83,
+2013,Dockside,52,5/23/2013,Nicole,Junior,,Coyote,Bottom longline,1000,Lutjanus guttatus,18,9,9,0,36.13,33.47,553.61,0.018
+2013,Dockside,53,5/26/2013,Nicole,Junior,,Coyote,Bottom longline,1000,Lutjanus guttatus,24,8,16,0,38.51,35.49,676.33,0.024
+2013,Dockside,54,5/29/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,16,13,3,0,43.64,43.49,1055.44,0.02
+2013,Dockside,55,5/30/2013,Mariel H,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,38,22,16,0,47.27,44.37,1281.89,0.0475
+2013,Dockside,56,5/31/2013,Mariel H,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,16,7,9,0,51.01,47.78,1618.88,0.02
+2013,Dockside,57,6/2/2013,Santa Fe,Amado,Nefer,Coyote,Gillnet,,Lutjanus guttatus,26,2,8,16,48.60,45.65,1288.00,
+2013,Dockside,58,6/5/2013,Erika,Junior,,Coyote,Bottom longline,1200,Lutjanus guttatus,18,13,5,0,45.48,41.81,1189.76,0.015
+2013,Dockside,59,6/11/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,16,10,6,0,50.06,46.87,1493.13,0.02
+2013,Dockside,60,6/11/2013,Maria,Roy,,Coyote,Bottom longline,1100,Lutjanus guttatus,24,16,8,0,33.72,31.94,503.13,0.021818182
+2013,Dockside,61,6/12/2013,Maria,Junior,,Coyote,Bottom longline,1100,Lutjanus guttatus,18,10,8,0,35.27,32.87,560.00,0.016363636
+2013,Dockside,62,6/12/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,29,15,14,0,51.87,48.50,1651.52,0.03625
+2013,Dockside,63,6/13/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,30,13,17,0,46.62,65.49,1226.70,0.0375
+2013,Dockside,64,6/14/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,5,10,0,47.97,44.97,1342.13,0.01875
+2013,Dockside,65,6/26/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,14,4,10,0,44.49,41.71,1107.79,0.0175
+2013,Dockside,66,6/27/2013,Jenny,Koki,,Bejuco,Bottom longline,800,Lutjanus guttatus,15,8,7,0,38.37,35.74,706.47,0.01875
+2013,Dockside,67,7/3/2013,Santa Fe,Armado,,Coyote,Gillnet,,Lutjanus guttatus,6,4,2,0,43.38,40.77,1091.17,
+2013,Onboard,1,7/3/2013,Santa Fe,Amado ,Nefer,Coyote,Gillnet,,Lutjanus guttatus,9,1,2,6,45.64,44.60,837.33,
+2013,Dockside,69,7/4/2013,Santa Fe,Armado,,Coyote,Gillnet,,Lutjanus guttatus,16,3,7,6,48.29,45.27,1260.13,
+2013,Onboard,2,7/4/2013,Santa Fe,Amado,Nefer,Coyote,Gillnet,,Lutjanus guttatus,35,3,5,27,45.55,42.53,1137.50,
+2013,Dockside,3,7/5/2013,Santa Fe,Amado,Nefer,Coyote,Gillnet,,Lutjanus guttatus,3,1,2,0,43.67,41.13,1046.67,
+2013,Dockside,4,7/6/2013,Santa Fe,Amado,Nefer,Coyote,Gillnet,,Lutjanus guttatus,1,0,1,0,52.20,49.00,1400.00,
+2013,Dockside,5,7/8/2013,Santa Fe,Zorra,Nefer,Coyote,Gillnet,,Lutjanus guttatus,8,4,3,1,50.56,49.11,1494.29,
+2013,Dockside,6,7/9/2013,Zorra,Zorra,Nefer,Coyote,Gillnet,,Lutjanus guttatus,3,0,0,3,,,,
+2013,Dockside,7,7/9/2013,Zorra,Zorra,Nefer,Coyote,Gillnet,,Lutjanus guttatus,19,3,1,15,47.00,43.50,1243.75,
+2013,Dockside,8,7/10/2013,Santa Fe,Donald,Nefer,Coyote,Gillnet,,Lutjanus guttatus,19,0,0,19,,,,
+2013,Dockside,9,7/11/2013,Santa Fe,Donald,Nefer,Coyote,Gillnet,,Lutjanus guttatus,16,0,0,16,,,,
+2013,Dockside,10,7/12/2013,Santa Fe,Donald,Nefer,Coyote,Gillnet,,Lutjanus guttatus,14,0,0,14,39.00,36.60,,
+2013,Dockside,11,7/12/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,17,0,0,17,,,,
+2013,Dockside,12,7/13/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,0,0,0,0,,,,
+2013,Dockside,13,7/13/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,9,1,3,5,43.63,40.68,996.25,
+2013,Dockside,14,7/14/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,3,0,0,3,41.00,38.40,,
+2013,Dockside,15,7/14/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,4,3,1,0,52.38,49.13,1620.00,
+2013,Dockside,16,7/15/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,0,0,0,0,,,,
+2013,Dockside,17,7/15/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,12,3,1,8,49.58,46.35,1407.75,
+2013,Dockside,18,7/16/2013,Santa Fe,Donald,Nefer y Gail,Coyote,Gillnet,,Lutjanus guttatus,1,0,0,1,,,,
+2013,Dockside,19,7/20/2013,Santa Fe,Donald,Nefer ,Coyote,Gillnet,,Lutjanus guttatus,18,6,3,9,47.99,41.86,1280.00,
+2013,Onboard,20,7/24/2013,,Juansi,,Bejuco,Bottom longline,800,Lutjanus guttatus,72,0,0,72,,,,0.09
+2013,Onboard,21,7/25/2013,,Juansi,,Bejuco,Bottom longline,800,Lutjanus guttatus,67,0,0,67,,,,0.08375
+2013,Onboard,22,7/27/2013,,Juansi,,Bejuco,Bottom longline,800,Lutjanus guttatus,90,0,0,90,,,,0.1125
+2013,Onboard,23,8/1/2013,,Juansi,,Bejuco,Bottom longline,800,Lutjanus guttatus,25,0,0,25,,,,0.03125
+2013,Onboard,24,8/5/2013,,Juansi,,Bejuco,Bottom longline,800,Lutjanus guttatus,100,0,0,100,,,,0.125
+2013,Onboard,25,8/6/2013,,Juansi,,Bejuco,Bottom longline,800,Lutjanus guttatus,80,0,0,80,,,,0.1
+2013,Onboard,26,10/10/2013,,Junior,Lucas; Erick,Coyote,Bottom longline,1300,Lutjanus guttatus,22,13,8,1,32.29,29.94,413.59,0.016923077
