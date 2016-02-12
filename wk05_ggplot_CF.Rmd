@@ -12,5 +12,22 @@ library(readxl)
 library(tidyr)
 library(ggplot2)
 library(lubridate)
+
+getwd()
+
+PargoGD=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path='fm_data/incopesca.xlsx' )) %>%
+  bind_rows() %>%
+  filter(Species == "PARGO") %>%
+  gather("Month" , "Catch", 4:16 ) %>%
+  filter(Month == "Total")
+  
+
+PargoGraph <- ggplot(PargoGD, aes(x = Region, y = Catch, col = as.factor(Year))) +
+  geom_point() +
+  theme_bw()
+  
+
+
+PargoGraph
 ```
 
