@@ -48,10 +48,40 @@ View(snapper)
 
 snapper[snapper == 0] <- NA
 
-meansnapper <- snapper %>% 
+sumsnapper <- snapper %>% 
   group_by(Year,month) %>% 
-  summarise(mean = mean(catch, na.rm = TRUE))
-View(meansnapper)
+  summarise(sum = sum(catch, na.rm = TRUE))
+
+View(sumsnapper)
+
+sumyearsnapper <- snapper %>%
+  group_by(Year) %>%
+  summarise(sum = sum(catch, na.rm = TRUE)) %>%
+  ggplot(aes(Year, sum)) +
+  geom_point(alpha = 1, color = 'orange', size = 4)
+sumyearsnapper
+
+View(sumyearsnapper)
 
 library(xlsx)
-write.xlsx(x = snapper, file= "snappertest.xlsx", sheetName = "test", row.names = FALSE)
+write.xlsx(x = snapper, file= "snappermeans.xlsx", sheetName = "test", row.names = FALSE)
+
+write.csv(snapper, file = "snappertest.csv")
+
+write.csv(snapper, file = "snappertest.csv")
+# meangraph<-
+ # ggplot(meansnapper, x = 'Year', y = 'catch')
+
+##### prices
+
+datprice <- ldply(read_excel_allsheets('prices.xlsx')) %>%
+  select(-.id)
+
+View(datprice)
+
+meanprice <- datprice %>%
+  group_by(Year, Month) %>%
+  summarise(mean = mean(Price, na.rm = TRUE))
+View(meanprice)
+
+
