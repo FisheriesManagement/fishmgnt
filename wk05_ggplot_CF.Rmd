@@ -1,0 +1,16 @@
+---
+title: "wk05_ggplot_CF"
+author: "Caio Faro"
+date: "February 11, 2016"
+output: html_document
+---
+
+```{r, warning=FALSE, message=FALSE}
+library(plyr)
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+```
+
