@@ -1,0 +1,40 @@
+---
+title: "Methods for model"
+author: "Juliana Herrera, Serena Lomonico, Kat Millage, Iris Shin"
+date: "February 3, 2016"
+output: word_document
+---
+
+Using the observed catch (Kg) data for Guanacaste between 1990 and 2013, and the observed CPUE (Kg/trip) data for Coyote and Bejuco between 2007 and 2013, we used a logistic model to predict biomass (B) of the whole stock for each year (1990 - 2013)
+
+$$B_1990=K*(1-Initial Depletion)$$                 
+
+and
+
+$$B_t+1=B_t + rB_t * \left(1-\frac{N_t}{K}\right) - C_t$$
+
+Where K is the carrying capacity of the population, and r is the intrinsic rate of our population (Coyote/Bejuco fishery). 
+Based on the predicted biomass, we predicted CPUE since
+
+$$C = qEB$$
+
+therefore, 
+
+$$\frac{C}{E} = qB$$
+
+where C is catch, E is effort in kg/trip and q is the catchability coefficient. 
+
+In order to assess the fit of our model, we will compare observed CPUE with model predicted CPUE between 2007 and 2013 through 
+
+$$L = \frac{1}{\sqrt{2\pi\sigma^2}}\exp \left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
+
+$$-lnL = 0.5ln(2\pi) + ln\sigma + \frac{(x-\mu)^2}{2\sigma^2}$$
+
+where -lnN is the Negative Log Likelihood (NLL).
+
+When we minimize NLL, we can also omit the constant term $$0.5ln(2\pi)$$ 
+and since our uncertainty is fixed we can also omit the term $$ln\sigma$$
+therefore,
+
+$$NLL= \frac{(x-\mu)^2}{2\sigma^2}$$
+
