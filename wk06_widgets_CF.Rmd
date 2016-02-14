@@ -1,0 +1,37 @@
+---
+title: "wk06_widgets_CF"
+author: "Caio Faro"
+date: "February 13, 2016"
+output: html_document
+---
+
+
+```{r warning=FALSE, message=FALSE}
+
+require(ggplot2)
+require(leaflet)
+require(readr)
+require(tidyr)
+require(dplyr)
+
+
+Pargo <-  read_csv('./data/For CRSeafood code/catches.csv') %>%
+  gather("Month", "Catch", 4:16) %>%
+  filter(Species == c("Pargo", "Pargo Seda") & Month == "Total" & Region != "Mar Caribe") %>%
+  group_by(Region, Year) %>%
+  summarise(TCatch = sum(Catch))
+  
+          
+
+PargoMap <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=8.623588, lng=-83.162973, popup = "Golfito") %>%
+  addMarkers(lat=9.414501, lng=-84.175904, popup = "Quepos") %>%
+  addMarkers(lat=9.965930, lng=-84.889331, popup = "Golfo de Nicoya") %>%
+  addMarkers(lat=10.667990, lng=-85.751037, popup = "Guanacaste")
+
+  
+  
+PargoMap
+  
+```
