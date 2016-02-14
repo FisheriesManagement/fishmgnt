@@ -60,7 +60,9 @@ dygraph(Tprices) %>%
    dyRangeSelector()
 ```
 
-## #### `gvisMotionChart`
+
+
+## Regional Catch Data MotionChart (1990-2013)
 
 ```{r googlevis library, results='asis', warning=F, include=F}
 suppressPackageStartupMessages({
