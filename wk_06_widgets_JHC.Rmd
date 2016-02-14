@@ -4,6 +4,7 @@ author: "Juliana Herrera, Alexandra Smith"
 date: "February 12, 2016"
 output: html_document
 ---
+## dygraphs: time series
 Ex-vessel prices through time from 1993 until 2013. Mean values for snapper in Costa Rica.
 ```{r, echo=FALSE, include =FALSE}
 #==PART 1===========================================================
