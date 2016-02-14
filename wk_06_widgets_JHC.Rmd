@@ -61,9 +61,11 @@ dygraph(Tprices) %>%
    dyRangeSelector()
 ```
 
-## #### `gvisMotionChart`
 
-```{r googlevis library, results='asis', warning=F}
+
+## Regional Catch Data MotionChart (1990-2013)
+
+```{r googlevis library, results='asis', warning=F, include=F}
 suppressPackageStartupMessages({
   library(googleVis)  # install.packages('googleVis')
 })
@@ -75,7 +77,7 @@ op <- options(gvis.plot.tag='chart')
 ```
 
 
-```{r motion data only}
+```{r motion data only, include=F}
 
 motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
   distinct() %>%
@@ -87,7 +89,7 @@ motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
 
 ```
 
-```{r MotionChartCatch Data, results='asis', tidy=FALSE}
+```{r MotionChartCatch Data, results='asis', tidy=FALSE, echo=F}
 
 
 C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=600,    height=500), sizevar = 'Annual_Catch')
