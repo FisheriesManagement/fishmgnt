@@ -34,4 +34,4 @@ M <- gvisMotionChart(Fruits, 'Fruit', 'Year',
          options=list(width=400, height=350))
 plot(M)
 ```
-```
+
