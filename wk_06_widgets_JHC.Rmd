@@ -5,7 +5,7 @@ date: "February 12, 2016"
 output: html_document
 ---
 Ex-vessel prices through time from 1993 until 2013. Mean values for snapper in Costa Rica.
-```{r, echo=FALSE}
+```{r, echo=FALSE, include =FALSE}
 #==PART 1===========================================================
 # loading packages
 library(readr)
@@ -46,6 +46,10 @@ head(yrprices) # corrected prices for inflation. Baseline year = 2013
 #   theme_bw()
 # p
 
+
+```
+
+```{r, echo=F}
 ## Using dygraphs
 Tprices <-  yrprices %>% 
   select(-meanprice, -cpi) %>% 
@@ -58,7 +62,7 @@ dygraph(Tprices) %>%
 
 ## #### `gvisMotionChart`
 
-```{r googlevis library, results='asis'}
+```{r googlevis library, results='asis', warning=F}
 suppressPackageStartupMessages({
   library(googleVis)  # install.packages('googleVis')
 })
