@@ -1,0 +1,37 @@
+---
+title: "wk_06_widgets_AS"
+author: "Alex Smith"
+date: "February 13, 2016"
+output: html_document
+---
+
+### `googleVis`: ..., geo, pie, tree, motion, ...
+
+The `googleVis` package ports most of the [Google charts](https://developers.google.com/chart/interactive/docs/gallery) functionality.
+
+For every R chunk must set option `results='asis'`, and once before any googleVis plots, set `op <- options(gvis.plot.tag='chart')`.
+
+- [Rmarkdown and googleVis](https://cran.r-project.org/web/packages/googleVis/vignettes/Using_googleVis_with_knitr.html)
+
+- [googleVis examples](https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html)
+
+#### `gvisLineChart`
+
+Please note that the Motion Chart is only displayed when hosted on a
+web server, or if placed in a directory which has been added to the 
+trusted sources in the [security settings of Macromedia]
+(http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html). 
+See the googleVis package vignette for more details. 
+
+```{r gvisLineChart, results='asis'}
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
+#### `gvisMotionChart`
+
+```{r MotionChartExample, results='asis', tidy=FALSE}
+M <- gvisMotionChart(Fruits, 'Fruit', 'Year',
+         options=list(width=400, height=350))
+plot(M)
+```
+```
