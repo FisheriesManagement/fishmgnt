@@ -18,46 +18,13 @@ library(tidyr)
 # must set this option for googleVis charts to show up
 op <- options(gvis.plot.tag='chart')
 
-df=data.frame(
-  country = c("US", "GB", "BR"), 
-  val1    = c(10, 13, 14), 
-  val2    = c(23, 12, 32))
-Line <- gvisLineChart(df)
-plot(Line)
 ```
 
 
-line chart examples:
-
-- [What's Really Warming the World? Climate deniers blame natural factors; NASA data proves otherwise](http://www.bloomberg.com/graphics/2015-whats-warming-the-world/)
-- [**A Year in Search 2015,, - Google Trends](https://www.google.com/trends/story/2015_US): subtle sparklines
-
-
-#### `gvisTreeMap`
-
-```{r gvisTreeMap, results='asis'}
-Tree <- gvisTreeMap(Regions,  
-                    "Region", "Parent", 
-                    "Val", "Fac", 
-                    options=list(fontSize=16))
-plot(Tree)
-```
-
-- treemap example: [The President's 2016 Budget Proposal | Visual.ly](http://visual.ly/presidents-2016-budget-proposal?view=true)
 
 #### `gvisMotionChart`
 
-Please note that the Motion Chart is only displayed when hosted on a
-web server, or if placed in a directory which has been added to the 
-trusted sources in the [security settings of Macromedia]
-(http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html). 
-See the googleVis package vignette for more details. 
 
-```{r MotionChartExample, results='asis', tidy=FALSE}
-# M <- gvisMotionChart(Fruits, 'Fruit', 'Year',
-#          options=list(width=400, height=350))
-# plot(M)
-```
 
 ```{r motion data}
 
@@ -73,7 +40,8 @@ motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
 
 ```{r MotionChartCatch Data, results='asis', tidy=FALSE}
 
-C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=500,    height=450), sizevar = 'Annual_Catch', colorvar = 'Region')
+
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=500,    height=450), sizevar = 'Annual_Catch')
 
 plot(C)
 
