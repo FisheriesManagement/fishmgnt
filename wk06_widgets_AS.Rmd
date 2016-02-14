@@ -64,17 +64,16 @@ See the googleVis package vignette for more details.
 motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
   distinct() %>%
   group_by(Region,Year) %>%
- 
   summarise(
     
-    annualSUM=sum(Catch)
+    Annual_Catch=sum(Catch)
   )
 
 ```
 
 ```{r MotionChartCatch Data, results='asis', tidy=FALSE}
 
-C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=400,    height=350))
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=500,    height=450), sizevar = 'Annual_Catch', colorvar = 'Region')
 
 plot(C)
 
