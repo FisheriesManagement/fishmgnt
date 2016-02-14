@@ -1,0 +1,49 @@
+---
+title: "wk_06_widgets_AS"
+author: "Alex Smith"
+date: "February 13, 2016"
+output: html_document
+---
+#### `gvisLineChart`
+
+```{r gvisLineChart, results='asis'}
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
+library(readr)
+library(plyr)
+library(dplyr)
+library(tidyr)
+
+# must set this option for googleVis charts to show up
+op <- options(gvis.plot.tag='chart')
+
+```
+
+
+
+#### `gvisMotionChart`
+
+
+
+```{r motion data}
+
+motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
+  distinct() %>%
+  group_by(Region,Year) %>%
+  summarise(
+    
+    Annual_Catch=sum(Catch)
+  )
+
+```
+
+```{r MotionChartCatch Data, results='asis', tidy=FALSE}
+
+
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=600,    height=500), sizevar = 'Annual_Catch')
+
+plot(C)
+
+```
+
