@@ -14,6 +14,7 @@ library(ggplot2)
 library(plyr)
 library(dplyr)
 library(tidyr)
+library(dygraphs)
 
 #==PART 2===========================================================
 # Loading data from excel and correction for inflation based on the Consumer Price Index (CPI)
@@ -23,7 +24,9 @@ data <- read_excel('prices.xlsx')
 colnames(data) <- tolower(colnames(data))
 CPI <- read_excel('CPI2.xlsx') # Consumer Price Index - source: World Bank
 # CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
-# Biomass <- read_csv()
+catch <- read_excel('./For CRSeafood code/catches.xlsx') %>%
+  gather()
+  
  
 yrprices <- (data) %>%
   select(-fishery, -spp) %>%
@@ -38,5 +41,11 @@ head(yrprices) # corrected prices for inflation. Baseline year = 2013
 #   geom_line(aes(x=year, y=corrected, colour ='corrected')) +
 #   theme_bw()
 # p
+
+## Using dygraphs
+Tprices <-  yrprices %>% 
+  select(-meanprice, -cpi)
+dygraph(Tprices) %>% 
+   dyRangeSelector()
 ```
 
