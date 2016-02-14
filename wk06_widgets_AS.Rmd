@@ -4,18 +4,44 @@ author: "Alex Smith"
 date: "February 13, 2016"
 output: html_document
 ---
-
-### `googleVis`: ..., geo, pie, tree, motion, ...
-
-The `googleVis` package ports most of the [Google charts](https://developers.google.com/chart/interactive/docs/gallery) functionality.
-
-For every R chunk must set option `results='asis'`, and once before any googleVis plots, set `op <- options(gvis.plot.tag='chart')`.
-
-- [Rmarkdown and googleVis](https://cran.r-project.org/web/packages/googleVis/vignettes/Using_googleVis_with_knitr.html)
-
-- [googleVis examples](https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html)
-
 #### `gvisLineChart`
+
+```{r gvisLineChart, results='asis'}
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
+
+# must set this option for googleVis charts to show up
+op <- options(gvis.plot.tag='chart')
+
+df=data.frame(
+  country = c("US", "GB", "BR"), 
+  val1    = c(10, 13, 14), 
+  val2    = c(23, 12, 32))
+Line <- gvisLineChart(df)
+plot(Line)
+```
+
+
+line chart examples:
+
+- [What's Really Warming the World? Climate deniers blame natural factors; NASA data proves otherwise](http://www.bloomberg.com/graphics/2015-whats-warming-the-world/)
+- [**A Year in Search 2015,, - Google Trends](https://www.google.com/trends/story/2015_US): subtle sparklines
+
+
+#### `gvisTreeMap`
+
+```{r gvisTreeMap, results='asis'}
+Tree <- gvisTreeMap(Regions,  
+                    "Region", "Parent", 
+                    "Val", "Fac", 
+                    options=list(fontSize=16))
+plot(Tree)
+```
+
+- treemap example: [The President's 2016 Budget Proposal | Visual.ly](http://visual.ly/presidents-2016-budget-proposal?view=true)
+
+#### `gvisMotionChart`
 
 Please note that the Motion Chart is only displayed when hosted on a
 web server, or if placed in a directory which has been added to the 
@@ -23,15 +49,8 @@ trusted sources in the [security settings of Macromedia]
 (http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html). 
 See the googleVis package vignette for more details. 
 
-```{r gvisLineChart, results='asis'}
-suppressPackageStartupMessages({
-  library(googleVis)  # install.packages('googleVis')
-})
-#### `gvisMotionChart`
-
 ```{r MotionChartExample, results='asis', tidy=FALSE}
 M <- gvisMotionChart(Fruits, 'Fruit', 'Year',
          options=list(width=400, height=350))
 plot(M)
 ```
-
