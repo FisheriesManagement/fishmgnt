@@ -25,14 +25,16 @@ colnames(data) <- tolower(colnames(data))
 CPI <- read_excel('CPI2.xlsx') # Consumer Price Index - source: World Bank
 # CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
 catch <- read_excel('./For CRSeafood code/catches.xlsx') %>%
-  gather()
+  gather('month','catch',Jan:Dec) %>%
+  select(-catch, -month) %>% 
+  filter(Region != 'Mar Caribe', Species == 'Pargo')
   
  
 yrprices <- (data) %>%
   select(-fishery, -spp) %>%
   group_by(year) %>% 
   summarize(meanprice = mean(price, na.rm=T)) %>% 
-  left_join(CPI, by = 'year') %>% 
+  left_join(CPI, by = 'year') %>%
   mutate(corrected = meanprice/cpi*cpi[24])
 head(yrprices) # corrected prices for inflation. Baseline year = 2013
 
