@@ -36,7 +36,7 @@ catchTotals= filter(catchALL, Month=="Total")
 ```{r boxplots}
 library(ggplot2)
 
-ggplot(data=subset(catchMonth, catchMonth$Year>= 2000), aes(x= Year, y=Catch, group=Year))+
+ggplot(data=subset(catchMonth, catchMonth$Year>= 1990), aes(x= Year, y=Catch, group=Year))+
   geom_boxplot() +
   labs(x = "Year", y=" monthly catch (kg) pargo")+
    theme_bw()+
@@ -58,5 +58,20 @@ new=data.frame(catchTotals,percentchg)
 
 ggplot(subset(new, Year>2000), aes(x=Year, y=percentchg))+
   geom_point()
+```
+
+```{r}
+
+> tmp = match(catchALL$Month, month.abb)
+> unique(catchALL$Month)
+ [1] "Jan"   "Feb"   "March" "April" "May"   "June"  "July"  "Aug"   "Sept"  "Oct"   "Nov"   "Dec"  
+[13] "Total"
+> month.abb
+ [1] "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"
+> month.abb.mine = month.abb
+> month.abb.mine[3]="March"
+> month.abb.mine[4]="April"
+> 
+
 ```
 
