@@ -1,6 +1,6 @@
 ---
 title: "Prices through time"
-author: "Juliana Herrera"
+author: "Juliana Herrera, Alexandra Smith"
 date: "February 12, 2016"
 output: html_document
 ---
@@ -20,11 +20,11 @@ library(dygraphs)
 # Loading data from excel and correction for inflation based on the Consumer Price Index (CPI)
 #===================================================================
 
-data <- read_excel('prices.xlsx') 
+data <- read_excel('./data/prices.xlsx') 
 colnames(data) <- tolower(colnames(data))
-CPI <- read_excel('CPI2.xlsx') # Consumer Price Index - source: World Bank
+CPI <- read_excel('./data/CPI2.xlsx') # Consumer Price Index - source: World Bank
 # CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
-catch <- read_excel('./For CRSeafood code/catches.xlsx') %>%
+catch <- read_excel('./data/For CRSeafood code/catches.xlsx') %>%
   gather('month','catch',Jan:Dec) %>%
   select(-catch, -month) %>% 
   filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
@@ -56,3 +56,37 @@ dygraph(Tprices) %>%
    dyRangeSelector()
 ```
 
+## #### `gvisMotionChart`
+
+```{r googlevis library, results='asis'}
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
+
+
+# must set this option for googleVis charts to show up
+op <- options(gvis.plot.tag='chart')
+
+```
+
+
+```{r motion data only}
+
+motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
+  distinct() %>%
+  group_by(Region,Year) %>%
+  summarise(
+    
+    Annual_Catch=sum(Catch)
+  )
+
+```
+
+```{r MotionChartCatch Data, results='asis', tidy=FALSE}
+
+
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=600,    height=500), sizevar = 'Annual_Catch')
+
+plot(C)
+
+```
