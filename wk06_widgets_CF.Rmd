@@ -14,6 +14,17 @@ require(readr)
 require(tidyr)
 require(dplyr)
 
+Golfito <- c(8.623588, -83.162973)
+Quepos <- c(9.414501, -84.175904)
+Golfo_de_Nicoya <- c(9.965930, -84.889331)
+Guanacaste <- c(10.667990, -85.751037)
+
+
+CRCoord <- rbind(Golfito, Quepos, Golfo_de_Nicoya, Guanacaste)
+
+colnames(CRCoord) <- c("Lat", "Long")
+
+
 
 Pargo <-  read_csv('./data/For CRSeafood code/catches.csv') %>%
   gather("Month", "Catch", 4:16) %>%
@@ -21,16 +32,18 @@ Pargo <-  read_csv('./data/For CRSeafood code/catches.csv') %>%
   group_by(Region, Year) %>%
   summarise(TCatch = sum(Catch))
   
-          
+Year <- Pargo$Year          
 
-PargoMap <- leaflet() %>%
+PargoMap <- leaflet(Pargo) %>%
   addTiles() %>%
   addMarkers(lat=8.623588, lng=-83.162973, popup = "Golfito") %>%
   addMarkers(lat=9.414501, lng=-84.175904, popup = "Quepos") %>%
   addMarkers(lat=9.965930, lng=-84.889331, popup = "Golfo de Nicoya") %>%
-  addMarkers(lat=10.667990, lng=-85.751037, popup = "Guanacaste")
+  addMarkers(lat=10.667990, lng=-85.751037, popup = "Guanacaste") %>%
+  addLayersControl(overlayGroups = c("Year")) #%>%
+  #addCircles()
 
-  
+
   
 PargoMap
   

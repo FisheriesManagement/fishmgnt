@@ -79,6 +79,17 @@ require(readr)
 require(tidyr)
 require(dplyr)
 
+Golfito &lt;- c(8.623588, -83.162973)
+Quepos &lt;- c(9.414501, -84.175904)
+Golfo_de_Nicoya &lt;- c(9.965930, -84.889331)
+Guanacaste &lt;- c(10.667990, -85.751037)
+
+
+CRCoord &lt;- rbind(Golfito, Quepos, Golfo_de_Nicoya, Guanacaste)
+
+colnames(CRCoord) &lt;- c(&quot;Lat&quot;, &quot;Long&quot;)
+
+
 
 Pargo &lt;-  read_csv('./data/For CRSeafood code/catches.csv') %&gt;%
   gather(&quot;Month&quot;, &quot;Catch&quot;, 4:16) %&gt;%
@@ -86,20 +97,22 @@ Pargo &lt;-  read_csv('./data/For CRSeafood code/catches.csv') %&gt;%
   group_by(Region, Year) %&gt;%
   summarise(TCatch = sum(Catch))
   
-          
+Year &lt;- Pargo$Year          
 
-PargoMap &lt;- leaflet() %&gt;%
+PargoMap &lt;- leaflet(Pargo) %&gt;%
   addTiles() %&gt;%
   addMarkers(lat=8.623588, lng=-83.162973, popup = &quot;Golfito&quot;) %&gt;%
   addMarkers(lat=9.414501, lng=-84.175904, popup = &quot;Quepos&quot;) %&gt;%
   addMarkers(lat=9.965930, lng=-84.889331, popup = &quot;Golfo de Nicoya&quot;) %&gt;%
-  addMarkers(lat=10.667990, lng=-85.751037, popup = &quot;Guanacaste&quot;)
+  addMarkers(lat=10.667990, lng=-85.751037, popup = &quot;Guanacaste&quot;) %&gt;%
+  addLayersControl(overlayGroups = c(&quot;Year&quot;)) #%&gt;%
+  #addCircles()
+
 
   
-  
 PargoMap</code></pre>
-<p><div id="htmlwidget-7729" style="width:672px;height:480px;" class="leaflet"></div>
-<script type="application/json" data-for="htmlwidget-7729">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addMarkers","args":[8.623588,-83.162973,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Golfito",null,null]},{"method":"addMarkers","args":[9.414501,-84.175904,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Quepos",null,null]},{"method":"addMarkers","args":[9.96593,-84.889331,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Golfo de Nicoya",null,null]},{"method":"addMarkers","args":[10.66799,-85.751037,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Guanacaste",null,null]}],"limits":{"lat":[8.623588,10.66799],"lng":[-85.751037,-83.162973]}},"evals":[]}</script></p>
+<p><div id="htmlwidget-7219" style="width:672px;height:480px;" class="leaflet"></div>
+<script type="application/json" data-for="htmlwidget-7219">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addMarkers","args":[8.623588,-83.162973,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Golfito",null,null]},{"method":"addMarkers","args":[9.414501,-84.175904,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Quepos",null,null]},{"method":"addMarkers","args":[9.96593,-84.889331,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Golfo de Nicoya",null,null]},{"method":"addMarkers","args":[10.66799,-85.751037,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Guanacaste",null,null]},{"method":"addLayersControl","args":[[],"Year",{"collapsed":true,"autoZIndex":true,"position":"topright"}]}],"limits":{"lat":[8.623588,10.66799],"lng":[-85.751037,-83.162973]}},"evals":[]}</script></p>
 
 
 </div>
