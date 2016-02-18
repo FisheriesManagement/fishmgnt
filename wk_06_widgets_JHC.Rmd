@@ -105,9 +105,9 @@ motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
 ```{r MotionChartCatch Data, results='asis', tidy=FALSE, echo=F}
 
 
-C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  options=list(width=600,    height=500), sizevar = 'Annual_Catch')
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch',  options=list(state='{"playDuration":15000,"xLambda":1,"yAxisOption":"2","iconType":"BUBBLE","xAxisOption":"_TIME","xZoomedDataMax":1356998400000,"yZoomedDataMin":506,"orderedByX":false,"yZoomedIn":false,"sizeOption":"2","yLambda":0,"uniColorForNonSelected":false,"showTrails":true,"iconKeySettings":[],"xZoomedDataMin":631152000000,"orderedByY":false,"nonSelectedAlpha":0.4,"duration":{"multiplier":1,"timeUnit":"Y"},"colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"time":"1990","xZoomedIn":false,"yZoomedDataMax":634463};'))
                    
-#                    list(colors="['#FF0000', '#00A08A', '#F2AD00', '#F98400']" ))
+                   
 
 plot(C)
 
