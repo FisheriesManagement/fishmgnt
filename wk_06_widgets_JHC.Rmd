@@ -56,9 +56,15 @@ Tprices <-  yrprices %>%
   select(-meanprice, -cpi) %>% 
   left_join(catch, by = "year") %>% 
   spread(region, sum)
+colnames(Tprices) <- toupper(colnames(Tprices))
 
 dygraph(Tprices) %>% 
-   dyRangeSelector()
+   dyRangeSelector() %>% 
+  dySeries("CORRECTED", axis="y2") %>% 
+ dyAxis("y", label = "Total catch (kg)") %>% 
+  dyAxis("y2", label = "Mean price (colones/kg)") %>% 
+  dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
+
 ```
 
 
