@@ -4,7 +4,6 @@ author: "Juliana Herrera, Alexandra Smith"
 date: "February 12, 2016"
 output: html_document
 ---
-## dygraphs: time series
 Ex-vessel prices through time from 1993 until 2013. Mean values for snapper in Costa Rica.
 ```{r, echo=FALSE, include =FALSE}
 #==PART 1===========================================================
@@ -92,7 +91,7 @@ motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
 ```{r MotionChartCatch Data, results='asis', tidy=FALSE, echo=F}
 
 
-C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', options=list(width=600,    height=500), sizevar = 'Annual_Catch')
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year', colorvar = ' options=list(width=600,    height=500), sizevar = 'Annual_Catch')
 
 plot(C)
 
