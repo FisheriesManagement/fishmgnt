@@ -79,27 +79,66 @@ require(readr)
 require(tidyr)
 require(dplyr)
 
+regions = read_csv(
+'region,lat,lng
+Golfito,8.623588,-83.162973
+Quepos,9.414501,-84.175904
+Golfo de Nicoya,9.965930,-84.889331
+Guanacaste,10.667990,-85.751037')
 
-Pargo &lt;-  read_csv('./data/For CRSeafood code/catches.csv') %&gt;%
+# show regions as markers
+leaflet(regions) %&gt;%
+  addTiles() %&gt;%
+  addMarkers(~lng,~lat)</code></pre>
+<p><div id="htmlwidget-5675" style="width:672px;height:480px;" class="leaflet"></div>
+<script type="application/json" data-for="htmlwidget-5675">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addMarkers","args":[[8.623588,9.414501,9.96593,10.66799],[-83.162973,-84.175904,-84.889331,-85.751037],null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null]}],"limits":{"lat":[8.623588,10.66799],"lng":[-85.751037,-83.162973]}},"evals":[]}</script></p>
+<pre class="r"><code>#problems(read_csv('./data/For CRSeafood code/catches.csv'))
+catches =  read_csv('./data/For CRSeafood code/catches.csv') %&gt;%
   gather(&quot;Month&quot;, &quot;Catch&quot;, 4:16) %&gt;%
   filter(Species == c(&quot;Pargo&quot;, &quot;Pargo Seda&quot;) &amp; Month == &quot;Total&quot; &amp; Region != &quot;Mar Caribe&quot;) %&gt;%
   group_by(Region, Year) %&gt;%
-  summarise(TCatch = sum(Catch))
-  
-          
+  summarise(catch = sum(Catch)) %&gt;%
+  select(region=Region, year=Year, catch) %&gt;%
+  mutate(
+    radius = catch / max(catch) * 10)
 
-PargoMap &lt;- leaflet() %&gt;%
+
+rc = regions %&gt;%
+  left_join(catches, by='region')
+
+# for a single year of catch
+leaflet(
+  rc %&gt;%
+    filter(year==1992)) %&gt;%
   addTiles() %&gt;%
-  addMarkers(lat=8.623588, lng=-83.162973, popup = &quot;Golfito&quot;) %&gt;%
-  addMarkers(lat=9.414501, lng=-84.175904, popup = &quot;Quepos&quot;) %&gt;%
-  addMarkers(lat=9.965930, lng=-84.889331, popup = &quot;Golfo de Nicoya&quot;) %&gt;%
-  addMarkers(lat=10.667990, lng=-85.751037, popup = &quot;Guanacaste&quot;)
+  addCircles(lng=~lng, lat=~lat, radius=~catch)</code></pre>
+<p><div id="htmlwidget-6699" style="width:672px;height:480px;" class="leaflet"></div>
+<script type="application/json" data-for="htmlwidget-6699">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addCircles","args":[[8.623588,9.414501,9.96593,10.66799],[-83.162973,-84.175904,-84.889331,-85.751037],[22839,31618,1602,490567],null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null]}],"limits":{"lat":[8.623588,10.66799],"lng":[-85.751037,-83.162973]}},"evals":[]}</script></p>
+<pre class="r"><code># now with multiple years of catch
+leaflet() %&gt;%
+  addTiles() %&gt;%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1992), group='1992') %&gt;%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1993), group='1993') %&gt;%
+  addLayersControl(
+    overlayGroups = c('1992','1993'),
+    options = layersControlOptions(collapsed = FALSE)) %&gt;%
+  hideGroup('1993')</code></pre>
+<p><div id="htmlwidget-3398" style="width:672px;height:480px;" class="leaflet"></div>
+<script type="application/json" data-for="htmlwidget-3398">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addCircles","args":[[8.623588,9.414501,9.96593,10.66799],[-83.162973,-84.175904,-84.889331,-85.751037],[5.57171086336025,2.81667305105431,0.261824600398784,7.73200328466751],null,"1992",{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null]},{"method":"addCircles","args":[[8.623588,9.414501,9.96593,10.66799],[-83.162973,-84.175904,-84.889331,-85.751037],[6.46849308384767,3.40240349923833,0.261661164318635,10],null,"1993",{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null]},{"method":"addLayersControl","args":[[],["1992","1993"],{"collapsed":false,"autoZIndex":true,"position":"topright"}]},{"method":"hideGroup","args":["1993"]}],"limits":{"lat":[8.623588,10.66799],"lng":[-85.751037,-83.162973]}},"evals":[]}</script></p>
+<pre class="r"><code>library(manipulate)
 
+yrs = setNames(unique(rc$year), unique(rc$year))
+
+manipulate({
   
+  # filter to year
+  d = filter(rc, year==yr)
   
-PargoMap</code></pre>
-<p><div id="htmlwidget-7729" style="width:672px;height:480px;" class="leaflet"></div>
-<script type="application/json" data-for="htmlwidget-7729">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addMarkers","args":[8.623588,-83.162973,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Golfito",null,null]},{"method":"addMarkers","args":[9.414501,-84.175904,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Quepos",null,null]},{"method":"addMarkers","args":[9.96593,-84.889331,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Golfo de Nicoya",null,null]},{"method":"addMarkers","args":[10.66799,-85.751037,null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Guanacaste",null,null]}],"limits":{"lat":[8.623588,10.66799],"lng":[-85.751037,-83.162973]}},"evals":[]}</script></p>
+  # plot map
+  leaflet() %&gt;%
+    addTiles() %&gt;%
+    addCircles(lng=~lng, lat=~lat, radius=~catch, data=d)
+}, yr = picker(c(1992,1993)))</code></pre>
 
 
 </div>
