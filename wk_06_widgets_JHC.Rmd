@@ -53,18 +53,21 @@ head(yrprices) # corrected prices for inflation. Baseline year = 2013
 ```{r, echo=F}
 ## Using dygraphs
 Tprices <-  yrprices %>% 
-  select(-meanprice, -cpi) %>% 
-  left_join(catch, by = "year") %>% 
-  spread(region, sum)
+  select(-cpi) %>% 
 colnames(Tprices) <- toupper(colnames(Tprices))
 
+# Interactive graph for prices only
 dygraph(Tprices) %>% 
    dyRangeSelector() %>% 
-  dySeries("CORRECTED", axis="y2") %>% 
- dyAxis("y", label = "Total catch (kg)") %>% 
-  dyAxis("y2", label = "Mean price (colones/kg)") %>% 
-  dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
+  dyAxis("y", label = "Price (colones/kg)") %>% 
+  dySeries('CORRECTED', strokeWidth = 3) %>% 
+  dySeries('MEANPRICE', strokeWidth = 3)
+  # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
 
+#interactive graph for catches of the 4 regions
+regioncatch <- catch %>% 
+  spread(region, sum)
+   
 ```
 
 
