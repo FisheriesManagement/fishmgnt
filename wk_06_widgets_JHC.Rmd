@@ -64,7 +64,7 @@ dygraph(Tprices) %>%
   # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
 
 #interactive graph for catches of the 4 regions
-regioncatch <- catch %>% 
+regioncatch <-  catch %>% 
   spread(region, sum)
    
 ```
