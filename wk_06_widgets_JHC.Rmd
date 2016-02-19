@@ -52,7 +52,7 @@ head(yrprices) # corrected prices for inflation. Baseline year = 2013
 ```{r, echo=F}
 ## Using dygraphs
 Tprices <-  yrprices %>% 
-  select(-cpi) %>% 
+  select(-cpi)
 colnames(Tprices) <- toupper(colnames(Tprices))
 
 # Interactive graph for prices only
@@ -64,8 +64,8 @@ dygraph(Tprices) %>%
   # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
 
 #interactive graph for catches of the 4 regions
-regioncatch <-  catch %>% 
-  spread(region, sum)
+# regioncatch <-  catch %>% 
+#   spread(region, sum)
    
 ```
 
