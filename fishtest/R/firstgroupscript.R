@@ -13,7 +13,8 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-
+library(devtools)
+library(roxygen2)
 
 library(plyr)
 library(dplyr)
