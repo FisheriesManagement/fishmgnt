@@ -5,13 +5,12 @@ date: "February 12, 2016"
 output: html_document
 ---
 Ex-vessel prices through time from 1993 until 2013. Mean values for snapper in Costa Rica.
-```{r, echo=FALSE, include =FALSE}
+```{r load, echo=FALSE, include =FALSE}
 #==PART 1===========================================================
 # loading packages
 library(readr)
 library(readxl)
 library(ggplot2)
-library(plyr)
 library(dplyr)
 library(tidyr)
 library(dygraphs)
@@ -29,9 +28,9 @@ catch <- read_excel('./data/For CRSeafood code/catches.xlsx') %>%
   select(-catch, -month) %>% 
   filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
   group_by(Region, Year) %>% 
-  summarise(sum=sum(Total)) # total catch of pargo and pargo seda per region and year
-colnames(catch) <- toupper(colnames(catch))
-  
+  summarise(sum=sum(Total)) %>% # total catch of pargo and pargo seda per region and year
+  select(region=Region, year=Year, sum)
+
 yrprices <- (data) %>%
   select(-fishery, -spp) %>%
   group_by(year) %>% 
@@ -49,7 +48,7 @@ head(yrprices) # corrected prices for inflation. Baseline year = 2013
 
 ```
 
-```{r, echo=F}
+```{r spread, echo=F}
 ## Using dygraphs
 Tprices <-  yrprices %>% 
   select(-cpi)
@@ -64,9 +63,15 @@ dygraph(Tprices) %>%
   # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
 
 #interactive graph for catches of the 4 regions
+names(catch) = c('site','year','sum')
 regioncatch <-  catch %>% 
-  spread(REGION, SUM)
-   
+  spread(region, sum)
+
+dygraph(regioncatch) %>% 
+   dyRangeSelector() %>% 
+  dyAxis("y", label = "Catch (kg)") %>% 
+  dySeries('CORRECTED', strokeWidth = 3) %>% 
+  dySeries('MEANPRICE', strokeWidth = 3) 
 ```
 
 
