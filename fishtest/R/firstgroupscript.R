@@ -13,6 +13,23 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
+library(devtools)
+library(roxygen2)
+
+library(plyr)
+library(dplyr)
+library(tidyr)
+
+#inputs for regions need to be in ''
+#EX: 'Pargo'
+
+select.catches <- function(data,species, region) {
+                      out <- data %>%
+                        gather('month','catch',Jan:Dec) %>%
+                        select(-catch, -month) %>%
+                        filter( Species == species & Region==region)
+            #             group_by(Region, Year) %>%
+            #             summarise(sum=sum(Total))
+
+                      return(out)
 }
