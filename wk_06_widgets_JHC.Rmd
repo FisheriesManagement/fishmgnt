@@ -30,7 +30,7 @@ catch <- read_excel('./data/For CRSeafood code/catches.xlsx') %>%
   filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
   group_by(Region, Year) %>% 
   summarise(sum=sum(Total)) # total catch of pargo and pargo seda per region and year
-colnames(catch) <- tolower(colnames(catch))
+colnames(catch) <- toupper(colnames(catch))
   
 yrprices <- (data) %>%
   select(-fishery, -spp) %>%
@@ -64,8 +64,8 @@ dygraph(Tprices) %>%
   # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
 
 #interactive graph for catches of the 4 regions
-# regioncatch <-  catch %>% 
-#   spread(region, sum)
+regioncatch <-  catch %>% 
+  spread(REGION, SUM)
    
 ```
 
