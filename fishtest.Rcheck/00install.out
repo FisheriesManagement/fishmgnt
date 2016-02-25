@@ -1,0 +1,9 @@
+* installing *source* package ‘fishtest’ ...
+** R
+** data
+*** moving datasets to lazyload DB
+** preparing package for lazy loading
+Error in eval(expr, envir, enclos) : object 'Package' not found
+Error : unable to load R code in package ‘fishtest’
+ERROR: lazy loading failed for package ‘fishtest’
+* removing ‘/Users/alexandrasmith/Documents/R/Informatics/fishmgt.github.io/fishtest.Rcheck/fishtest’
