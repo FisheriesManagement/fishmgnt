@@ -64,6 +64,7 @@ dygraph(Tprices) %>%
 
 #interactive graph for catches of the 4 regions
 # names(catch) = c('site','year','sum')
+<<<<<<< HEAD
 # regioncatch <-  catch %>% 
 #   spread(site, sum)
 # 
@@ -72,6 +73,16 @@ dygraph(Tprices) %>%
 #   dyAxis("y", label = "Catch (kg)") %>% 
 #   dySeries('CORRECTED', strokeWidth = 3) %>% 
 #   dySeries('MEANPRICE', strokeWidth = 3) 
+=======
+# regioncatch <-  catch %>%
+#   spread(region, sum)
+# 
+# dygraph(regioncatch) %>%
+#    dyRangeSelector() %>%
+#   dyAxis("y", label = "Catch (kg)") %>%
+#   dySeries('CORRECTED', strokeWidth = 3) %>%
+#   dySeries('MEANPRICE', strokeWidth = 3)
+>>>>>>> 319cff1e5a05cbaaf29d7487740ef39def60d4f1
 ```
 
 
@@ -116,4 +127,67 @@ C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'An
 
 plot(C)
 
+```
+
+
+
+## Interactive Catches Map
+
+```{r leafletFinal, warning=FALSE, message=FALSE}
+require(ggplot2)
+require(leaflet)
+require(readr)
+require(tidyr)
+require(dplyr)
+
+regions = read_csv(
+'region,lat,lng
+Golfito,8.623588,-83.162973
+Quepos,9.414501,-84.175904
+Golfo de Nicoya,9.965930,-84.889331
+Guanacaste,10.667990,-85.751037')
+
+
+
+#problems(read_csv('./data/For CRSeafood code/catches.csv'))
+catches =  read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
+  group_by(Region, Year) %>%
+  summarise(catch = sum(Catch)) %>%
+  select(region=Region, year=Year, catch) %>%
+  mutate(
+    radius = catch / 10)
+
+rc = regions %>%
+  left_join(catches, by='region')
+
+# now with multiple years of catch
+leaflet() %>%
+  addTiles() %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1990), group='1990') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1991), group='1991') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1992), group='1992') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1993), group='1993') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1994), group='1994') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1995), group='1995') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1996), group='1996') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1997), group='1997') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1998), group='1998') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1999), group='1999') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2000), group='2000') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2001), group='2001') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2002), group='2002') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2003), group='2003') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2004), group='2004') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2005), group='2005') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2006), group='2006') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2007), group='2007') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2008), group='2008') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2009), group='2009') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2010), group='2010') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2011), group='2011') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2012), group='2012') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2013), group='2013') %>%
+  addLayersControl(
+    overlayGroups = c('1990', '1991', '1992','1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013'),
+    options = layersControlOptions(collapsed = TRUE))
 ```
