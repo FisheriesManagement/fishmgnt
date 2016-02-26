@@ -20,7 +20,7 @@ library(plyr)
 library(dplyr)
 library(tidyr)
 
-#inputs for regions need to be in ''
+#inputs for species and region need to be in ''
 #EX: 'Pargo'
 
 select.catches <- function(data,species, region) {
