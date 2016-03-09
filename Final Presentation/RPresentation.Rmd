@@ -3,7 +3,6 @@ title: "Using Informatics in the Exploration of Red Snapper Catches in Costa Ric
 author: "Fisheries Management Group"
 date: "March 11, 2016"
 output: ioslides_presentation
-incremental: true
 ---
 
 ```{r setup, include=FALSE}
