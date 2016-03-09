@@ -39,6 +39,8 @@ yrprices <- (data) %>%
   mutate(corrected = meanprice/cpi*cpi[24])
 head(yrprices) # corrected prices for inflation. Baseline year = 2013
 
+write.csv(yrprices, file = "prices.csv")
+
 # p <-ggplot(yrprices) + ## Graph of corrected prices per year
 #   geom_line(aes(x=year, y=meanprice, colour = 'meanprice')) +
 #   geom_line(aes(x=year, y=corrected, colour ='corrected')) +

@@ -1,6 +1,6 @@
 ---
-title: "Using Informatics in the Exploration of Red Snapper Catches in Costa Rica"
-author: "Fisheries Management Group"
+title: "Exploring Costa Rican Red Snapper landings through time"
+author: "Fisheries Management Group - Caio Faro, Alex Smith, Juliana Herrera"
 date: "March 11, 2016"
 output: ioslides_presentation
 ---
@@ -9,19 +9,29 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+## Introduction: Fisheries Management
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+###**Interactive Examples**
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+Sea Around Us  <http://rmarkdown.rstudio.com>.
 
-## Slide with Bullets
+## Introduction: Costa Rica
+Caio's map without bubles
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+##Introduction: Fisheries in Costa Rica
+Caios map with bubbles, talk about the landing sites
 
-## Slide with R Output
+## Objective
+
+- Analize the changes in landings of Red Snapper through time
+- Explore the relationship between prices and landings through time 
+
+
+## Data Sources
+
+- INCOPESCA
+  - Landings
+  - Prices
 
 ```{r cars, echo = TRUE}
 summary(cars)
