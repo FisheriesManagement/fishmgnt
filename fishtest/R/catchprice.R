@@ -1,19 +1,21 @@
 
 #' Catch prices
+#'
 #' Function to calculate price per catch of a given species,  year and region
-#' @parameter data, dataframe to be cleaned
-#' @parameter price, value or series of values
-#' @parameter  species, charater or strem of characters
-#' @parameter year, value or series of values
-#' @parameter region, charater or strem of characters
+#'
+#' @param data, dataframe to be cleaned
+#' @param price, value or series of values
+#' @param  species, charater or strem of characters
+#' @param year, value or series of values
+#' @param region, charater or strem of characters
+#' @examples
+#' catchprice(catches, 2000, 'Cabrilla', c(1990, 1995), c('Guanacaste'))
 
+# library(devtools)
+# library(roxygen2)
+# library(dplyr)
+# library(tidyr)
 
-library(devtools)
-library(roxygen2)
-library(dplyr)
-library(tidyr)
-
-load_all()
 
 catchprice <- function(data, price, species, year, region){
 
@@ -30,6 +32,6 @@ catchprice <- function(data, price, species, year, region){
   return(pkg)
 }
 
-catchprice(catches, 2000, 'Cabrilla', c(1990, 1995), c('Guanacaste'))
+
 
 
