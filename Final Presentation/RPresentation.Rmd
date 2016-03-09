@@ -37,9 +37,19 @@ Caios map with bubbles, talk about the landing sites
 summary(cars)
 ```
 
-## Slide with Plot
+## Methods
 
+add function to filter data set (ALEX)
 ```{r pressure}
 plot(pressure)
 ```
 
+## Results
+Landings and prices (interactive plots JULI)
+
+## Results
+Regional chart data motion -bubble graph ALEX
+
+## Challenges
+
+## Shiny!
