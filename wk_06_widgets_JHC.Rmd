@@ -64,6 +64,16 @@ dygraph(Tprices) %>%
 
 #interactive graph for catches of the 4 regions
 # names(catch) = c('site','year','sum')
+<<<<<<< HEAD
+# regioncatch <-  catch %>% 
+#   spread(site, sum)
+# 
+# dygraph(regioncatch) %>% 
+#    dyRangeSelector() %>% 
+#   dyAxis("y", label = "Catch (kg)") %>% 
+#   dySeries('CORRECTED', strokeWidth = 3) %>% 
+#   dySeries('MEANPRICE', strokeWidth = 3) 
+=======
 # regioncatch <-  catch %>%
 #   spread(region, sum)
 # 
@@ -72,6 +82,7 @@ dygraph(Tprices) %>%
 #   dyAxis("y", label = "Catch (kg)") %>%
 #   dySeries('CORRECTED', strokeWidth = 3) %>%
 #   dySeries('MEANPRICE', strokeWidth = 3)
+>>>>>>> 319cff1e5a05cbaaf29d7487740ef39def60d4f1
 ```
 
 
@@ -85,7 +96,6 @@ suppressPackageStartupMessages({
 library(readr)
 library(readxl)
 library(ggplot2)
-library(plyr)
 library(dplyr)
 library(tidyr)
 
@@ -110,7 +120,7 @@ motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
 ```{r MotionChartCatch Data, results='asis', tidy=FALSE, echo=F}
 
 
-C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch',  options=list(state='{"playDuration":15000,"xLambda":1,"yAxisOption":"2","iconType":"BUBBLE","xAxisOption":"_TIME","xZoomedDataMax":1356998400000,"yZoomedDataMin":506,"orderedByX":false,"yZoomedIn":false,"sizeOption":"2","yLambda":0,"uniColorForNonSelected":false,"showTrails":true,"iconKeySettings":[],"xZoomedDataMin":631152000000,"orderedByY":false,"nonSelectedAlpha":0.4,"duration":{"multiplier":1,"timeUnit":"Y"},"colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"time":"1990","xZoomedIn":false,"yZoomedDataMax":634463};'))
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch', options=list(state='{"playDuration":15000,"xLambda":1,"yAxisOption":"2","iconType":"BUBBLE","xAxisOption":"_TIME","xZoomedDataMax":1356998400000,"yZoomedDataMin":506,"orderedByX":false,"yZoomedIn":false,"sizeOption":"2","yLambda":0,"uniColorForNonSelected":false,"showTrails":true,"iconKeySettings":[],"xZoomedDataMin":631152000000,"orderedByY":false,"nonSelectedAlpha":0.4,"duration":{"multiplier":1,"timeUnit":"Y"},"colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"time":"1990","xZoomedIn":false,"yZoomedDataMax":634463};'))
                    
                    
 
