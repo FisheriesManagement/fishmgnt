@@ -56,11 +56,11 @@ Landings and prices (interactive plots JULI)
 # Loading data from excel and correction for inflation based on the Consumer Price Index (CPI)
 #===================================================================
 
-data <- read_excel('./data/prices.xlsx') 
+data <- read_excel('../data/prices.xlsx') 
 colnames(data) <- tolower(colnames(data))
-CPI <- read_excel('./data/CPI2.xlsx') # Consumer Price Index - source: World Bank
+CPI <- read_excel('../data/CPI2.xlsx') # Consumer Price Index - source: World Bank
 # CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
-catch <- read_excel('./data/For CRSeafood code/catches.xlsx') %>%
+catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
   gather('month','catch',Jan:Dec) %>%
   select(-catch, -month) %>% 
   filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
