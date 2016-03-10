@@ -1,5 +1,5 @@
 ---
-title: "Exploring Costa Rican Snapper landings through time"
+title: "Exploring Costa Rican Snapper Landings Through Time"
 author: "Fisheries Management Group - Caio Faro, Alex Smith, Juliana Herrera"
 date: "March 11, 2016"
 output: ioslides_presentation
@@ -26,7 +26,11 @@ suppressPackageStartupMessages({
 
 ## Introduction: Fisheries Management
 
+<<<<<<< HEAD
 
+=======
+Engaging the public
+>>>>>>> d4a2fee383577a877151342aa5b8fa9e12371123
 
 ###**Interactive Examples**
 
@@ -34,8 +38,10 @@ suppressPackageStartupMessages({
 
 [Ocean Health Index](http://www.oceanhealthindex.org/region-scores)
 
+The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
+
 ## Introduction: Costa Rica
-Caio's map without bubles
+Caio's map without bubbles
 
 ##Introduction: Fisheries in Costa Rica
 Caios map with bubbles, talk about the landing sites
