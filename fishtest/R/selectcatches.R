@@ -19,16 +19,15 @@ library(dplyr)
 library(tidyr)
 
 
-#' Filters our catches data by species, region, and a range of years. Will provide summary data by
-#' of catches grouped by Region, species, and year
+#' selectcatches:
+#' Filters our catches data by species, region, and a range of years. Will provide summary data byof catches grouped by Region, species, and year
 #'
 #' @param data A dataframe.
 #' @param species A character or string of characters.
 #' @param region A character or string of characters.
 #' @param function to be applied to groups of Reion and year
 #' @return dataframe filtered by specicies and region and return of 'FUN'
-#' @examples
-#' select.catches(catches, c('Pargo', 'Pargo Seda'), 'Golfito', mean)
+#' @examples selectcatches(catches, c('Pargo', 'Pargo Seda'), 'Golfito', mean)
 
 
 selectcatches <- function( data, species, region, fxn, startyear=1990, endyear=2013) {

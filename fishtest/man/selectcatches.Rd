@@ -2,7 +2,11 @@
 % Please edit documentation in R/selectcatches.R
 \name{selectcatches}
 \alias{selectcatches}
+<<<<<<< HEAD
+\title{Filters our catches data by species, region, and a range od years. Will provide summary data by 
+=======
 \title{Filters our catches data by species, region, and a range of years. Will provide summary data by
+>>>>>>> 3956a2643df8faf684760c1b1271fd98b4800e68
 of catches grouped by Region, species, and year}
 \usage{
 selectcatches(data, species, region, fxn, startyear = 1990, endyear = 2013)
@@ -20,7 +24,11 @@ selectcatches(data, species, region, fxn, startyear = 1990, endyear = 2013)
 dataframe filtered by specicies and region and return of 'FUN'
 }
 \description{
+<<<<<<< HEAD
+Filters our catches data by species, region, and a range od years. Will provide summary data by 
+=======
 Filters our catches data by species, region, and a range of years. Will provide summary data by
+>>>>>>> 3956a2643df8faf684760c1b1271fd98b4800e68
 of catches grouped by Region, species, and year
 }
 \examples{

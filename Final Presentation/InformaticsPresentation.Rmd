@@ -51,6 +51,9 @@ Landings and prices (interactive plots JULI)
 Regional chart data motion -bubble graph ALEX
 
 ## Challenges
+that thing with plyr
+
+bubble plot html problem (ALEX)
 
 ## Shiny!
 
