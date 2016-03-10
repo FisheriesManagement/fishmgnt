@@ -1,0 +1,58 @@
+---
+title: "Exploring Costa Rican Red Snapper landings through time"
+author: "Fisheries Management Group - Caio Faro, Alex Smith, Juliana Herrera"
+date: "March 11, 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction: Fisheries Management
+
+###**Interactive Examples**
+
+Sea Around Us  <http://www.seaaroundus.org/data/#/spatial-catch>.
+
+## Introduction: Costa Rica
+Caio's map without bubles
+
+##Introduction: Fisheries in Costa Rica
+Caios map with bubbles, talk about the landing sites
+
+## Objective
+
+- Analize the changes in landings of Red Snapper through time
+- Explore the relationship between prices and landings through time 
+
+
+## Data Sources
+
+- INCOPESCA
+  - Landings
+  - Prices
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Methods
+
+add function to filter data set (ALEX)
+```{r pressure}
+plot(pressure)
+```
+
+## Results
+Landings and prices (interactive plots JULI)
+
+## Results
+Regional chart data motion -bubble graph ALEX
+
+## Challenges
+that thing with plyr
+
+bubble plot html problem (ALEX)
+
+## Shiny!
