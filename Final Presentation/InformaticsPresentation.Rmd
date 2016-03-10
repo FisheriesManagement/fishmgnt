@@ -82,7 +82,7 @@ landings <- as.data.frame(catch)
 ```
 
 
-## Results: Price through time
+## Results:| Price through time
 
 ```{r load, echo=FALSE, include =FALSE}
 #==PART 2===========================================================
@@ -152,9 +152,24 @@ plot(C)
 
 Engaging the public
 
+<div class="notes">
+This is my *note*.
+
+Informatics and fisheries management
+-help you convey complex scientific ideas to many different audiences 
+
+***To enable presenter mode add ?presentme=true to the URL of the presentation, for example:
+
+mypresentation.html?presentme=true***
+
+</div>
+
+
 ###**Interactive Examples**
 
-[Sea Around Us](http://www.seaaroundus.org/data/#/spatial-catch).
+[Sea Around Us](http://www.seaaroundus.org/data/#/spatial-catch)
+
+[Ocean Health Index](http://www.oceanhealthindex.org/region-scores)
 
 The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
 
@@ -178,6 +193,7 @@ plot(C)
 ## Shiny!
 
 ## General problems we ALL face
+<div class="columns-2">
 - It's a parenthesis... probably
 - You're missing a comma!
 - Should that be capitalized?
@@ -187,3 +203,4 @@ plot(C)
 - Are you using plyr? it's EVIL KANIVAL
 
 ![](https://c1.staticflickr.com/5/4007/5143180652_3f23fe8d95.jpg)
+</div>
