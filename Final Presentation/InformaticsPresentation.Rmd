@@ -7,7 +7,7 @@ output: ioslides_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-<<<<<<< HEAD
+
 library(readr)
 library(readxl)
 library(ggplot2)
@@ -15,10 +15,10 @@ library(dplyr)
 library(tidyr)
 library(dygraphs)
 library(leaflet)
-=======
+
 library(ggvis)
 library(DT)
->>>>>>> 4a1443bf18eec0efaa0372d06dd9db2d26d86946
+
 ```
 
 ## Introduction: Fisheries Management
@@ -54,9 +54,10 @@ summary(cars)
 add function to filter data set (ALEX)
 ```{r html data table ALEX}
 
-catch=read.csv('../data/For CRSeafood code/catches.csv')
+catch=read.csv('../data/For CRSeafood code/motioncatch.csv')
+filt=list(position = 'top', clear = TRUE, plain = FALSE)
 
-datatable(catch, options = list(dom = 'tp'))
+datatable(catch, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
 ```
 
 ## Results: Price through time
@@ -129,3 +130,5 @@ bubble plot html problem (ALEX)
 - did you load the library?
 - Is your object the right class?
 - Are you using plyr? it's EVIL KANIVAL
+
+!(https://c1.staticflickr.com/5/4007/5143180652_3f23fe8d95.jpg)
