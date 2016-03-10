@@ -60,6 +60,28 @@ filt=list(position = 'top', clear = TRUE, plain = FALSE)
 datatable(catch, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
 ```
 
+## Results: Landings through time
+
+```{r, echo=FALSE, warning=FALSE}
+
+catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
+  gather('month','catch',Jan:Dec) %>%
+  select(-catch, -month) %>% 
+  filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
+  group_by(Region, Year) %>% 
+  summarise(sum=sum(Total)) %>% # total catch of pargo and pargo seda per region and year
+  select(region=Region, year=Year, sum)
+
+landings <- as.data.frame(catch)
+
+ ggplot(landings, aes(x = year, y = sum, col = region)) +
+  geom_line(size=1.5) +
+  ylab("Total Landings (kg)")+
+  xlab("Year")+
+  theme_bw()
+
+```
+
 ## Results: Price through time
 
 ```{r load, echo=FALSE, include =FALSE}
@@ -103,21 +125,6 @@ dygraph(Tprices) %>%
   dyAxis("y", label = "Price (colones/kg)") %>% 
   dySeries('CORRECTED', strokeWidth = 3) %>% 
   dySeries('MEANPRICE', strokeWidth = 3)
-```
-## Results: Landings through time
-```{r, echo=FALSE}
-
-catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
-  gather('month','catch',Jan:Dec) %>%
-  select(-catch, -month) %>% 
-  filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
-  group_by(Region, Year) %>% 
-  summarise(sum=sum(Total)) %>% # total catch of pargo and pargo seda per region and year
-  select(region=Region, year=Year, sum)
-landings <- as.data.frame(catch)
-
-#dygraph(landings) %>% 
- # dyRangeSelector()
 ```
 
 ## Results
