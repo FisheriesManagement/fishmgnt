@@ -53,3 +53,12 @@ Regional chart data motion -bubble graph ALEX
 ## Challenges
 
 ## Shiny!
+
+## General problems we ALL face
+- It's a parenthesis... probably
+- You're missing a comma!
+- Should that be capitalized?
+- Check your working directory
+- did you load the library?
+- Is your object the right class?
+- Are you using plyr? it's EVIL KANIVAL
