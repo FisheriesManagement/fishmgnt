@@ -24,27 +24,15 @@ suppressPackageStartupMessages({
 
 ```
 
-## Introduction: Fisheries Management
-
-Engaging the public
-
-###**Interactive Examples**
-
-[Sea Around Us](http://www.seaaroundus.org/data/#/spatial-catch).
-
-The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
-
-## Introduction: Costa Rica
-Caio's map without bubbles
-
-##Introduction: Fisheries in Costa Rica
+## Fisheries in Costa Rica
 Caios map with bubbles, talk about the landing sites
 
-## Objective
+## Objectives
 
-- Analize the changes in landings of Red Snapper through time
+- Analize the changes in landings of Snapper through time
 - Explore the relationship between prices and landings through time 
 
+![]()
 
 ## Data Sources
 
@@ -155,6 +143,16 @@ plot(C)
 
 
 ```
+
+##Informatics and Fisheries Management
+
+Engaging the public
+
+###**Interactive Examples**
+
+[Sea Around Us](http://www.seaaroundus.org/data/#/spatial-catch).
+
+The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
 
 ## Challenges
 that thing with plyr
