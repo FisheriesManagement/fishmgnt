@@ -7,6 +7,7 @@ output: ioslides_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+<<<<<<< HEAD
 library(readr)
 library(readxl)
 library(ggplot2)
@@ -14,6 +15,10 @@ library(dplyr)
 library(tidyr)
 library(dygraphs)
 library(leaflet)
+=======
+library(ggvis)
+library(DT)
+>>>>>>> 4a1443bf18eec0efaa0372d06dd9db2d26d86946
 ```
 
 ## Introduction: Fisheries Management
@@ -47,8 +52,11 @@ summary(cars)
 ## Methods
 
 add function to filter data set (ALEX)
-```{r pressure}
-plot(pressure)
+```{r html data table ALEX}
+
+catch=read.csv('../data/For CRSeafood code/catches.csv')
+
+datatable(catch, options = list(dom = 'tp'))
 ```
 
 ## Results: Price through time
