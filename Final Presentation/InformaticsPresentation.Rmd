@@ -7,6 +7,13 @@ output: ioslides_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(readr)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(dygraphs)
+library(leaflet)
 ```
 
 ## Introduction: Fisheries Management
@@ -44,18 +51,18 @@ add function to filter data set (ALEX)
 plot(pressure)
 ```
 
-## Results
-Landings and prices (interactive plots JULI)
+## Results: Price through time
+
 ```{r load, echo=FALSE, include =FALSE}
 #==PART 2===========================================================
 # Loading data from excel and correction for inflation based on the Consumer Price Index (CPI)
 #===================================================================
 
-data <- read_excel('./data/prices.xlsx') 
+data <- read_excel('../data/prices.xlsx') 
 colnames(data) <- tolower(colnames(data))
-CPI <- read_excel('./data/CPI2.xlsx') # Consumer Price Index - source: World Bank
+CPI <- read_excel('../data/CPI2.xlsx') # Consumer Price Index - source: World Bank
 # CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
-catch <- read_excel('./data/For CRSeafood code/catches.xlsx') %>%
+catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
   gather('month','catch',Jan:Dec) %>%
   select(-catch, -month) %>% 
   filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
