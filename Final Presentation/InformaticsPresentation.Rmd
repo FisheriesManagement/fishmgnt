@@ -15,9 +15,12 @@ library(dplyr)
 library(tidyr)
 library(dygraphs)
 library(leaflet)
-
 library(ggvis)
 library(DT)
+
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
 
 ```
 
@@ -44,21 +47,20 @@ Caios map with bubbles, talk about the landing sites
 - INCOPESCA
   - Landings
   - Prices
-
-```{r cars, echo = TRUE}
-summary(cars)
-```
-
-## Methods
-
-add function to filter data set (ALEX)
+  
+## Our Data
+Annual Catch Data for ***Pargo*** and ***Pargo Seda*** in 4 Pacfic Regions (1990-2013)
 ```{r html data table ALEX}
 
-catch=read.csv('../data/For CRSeafood code/motioncatch.csv')
+catchT=read.csv('../data/For CRSeafood code/motioncatch.csv')
 filt=list(position = 'top', clear = TRUE, plain = FALSE)
 
-datatable(catch, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
+datatable(catchT, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
 ```
+
+Data source: INCOPESCA
+
+## Methods
 
 ## Results: Price through time
 
@@ -114,11 +116,41 @@ dygraph(Tprices) %>%
 
 ## Results
 Regional chart data motion -bubble graph ALEX
+```{r bubble chart, echo=FALSE}
+op <- options(gvis.plot.tag='chart')  
+
+motioncatch=group_by(catchT, Region,Year) %>%
+              summarise(
+                
+                Annual_Catch=sum(Catch)
+              ) 
+
+InitialState='{"playDuration":15000,"xLambda":1,"yAxisOption":"2","iconType":"BUBBLE","xAxisOption":"_TIME","xZoomedDataMax":1356998400000,"yZoomedDataMin":506,"orderedByX":false,"yZoomedIn":false,"sizeOption":"2","yLambda":0,"uniColorForNonSelected":false,"showTrails":true,"iconKeySettings":[],"xZoomedDataMin":631152000000,"orderedByY":false,"nonSelectedAlpha":0.4,"duration":{"multiplier":1,"timeUnit":"Y"},"colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"time":"1990","xZoomedIn":false,"yZoomedDataMax":634463};'
+
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch', colorvar = 'Region',  options=list(state=InitialState))
+
+
+plot(C)
+
+
+```
 
 ## Challenges
 that thing with plyr
 
 bubble plot html problem (ALEX)
+```{r bubble problem ALEX, eval=FALSE, echo=TRUE, collapse=T, tidy=T}
+
+
+InitialState='{"playDuration":15000,"xLambda":1,"yAxisOption":"2","iconType":"BUBBLE","xAxisOption":"_TIME","xZoomedDataMax":1356998400000,"yZoomedDataMin":506,"orderedByX":false,"yZoomedIn":false,"sizeOption":"2","yLambda":0,"uniColorForNonSelected":false,"showTrails":true,"iconKeySettings":[],"xZoomedDataMin":631152000000,"orderedByY":false,"nonSelectedAlpha":0.4,"duration":{"multiplier":1,"timeUnit":"Y"},"colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"time":"1990","xZoomedIn":false,"yZoomedDataMax":634463};'
+
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch', colorvar = 'Region',  options=list(state=InitialState))
+
+
+plot(C)
+
+
+```
 
 ## Shiny!
 
@@ -127,7 +159,7 @@ bubble plot html problem (ALEX)
 - You're missing a comma!
 - Should that be capitalized?
 - Check your working directory
-- did you load the library?
+- Did you load the library?
 - Is your object the right class?
 - Are you using plyr? it's EVIL KANIVAL
 
