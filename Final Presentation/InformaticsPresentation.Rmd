@@ -24,30 +24,11 @@ suppressPackageStartupMessages({
 
 ```
 
-<<<<<<< HEAD
-## Introduction: Fisheries Management
 
-<<<<<<< HEAD
 
-=======
-Engaging the public
->>>>>>> d4a2fee383577a877151342aa5b8fa9e12371123
 
-###**Interactive Examples**
-
-[Sea Around Us](http://www.seaaroundus.org/data/#/spatial-catch)
-
-[Ocean Health Index](http://www.oceanhealthindex.org/region-scores)
-
-The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
-
-## Introduction: Costa Rica
-Caio's map without bubbles
-
-##Introduction: Fisheries in Costa Rica
-=======
 ## Fisheries in Costa Rica
->>>>>>> c5edd92bed93dae134e8fad047a8b892774a7db6
+
 Caios map with bubbles, talk about the landing sites
 
 ## Objectives
@@ -73,7 +54,7 @@ filt=list(position = 'top', clear = TRUE, plain = FALSE)
 datatable(catchT, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
 ```
 
-<<<<<<< HEAD
+
 Data source: INCOPESCA
 
 ## Methods
@@ -99,7 +80,7 @@ landings <- as.data.frame(catch)
   theme_bw()
 
 ```
->>>>>>> 74a6bce5b38f9b48cb950ce9916e01979ee32a0c
+
 
 ## Results: Price through time
 
@@ -205,4 +186,4 @@ plot(C)
 - Is your object the right class?
 - Are you using plyr? it's EVIL KANIVAL
 
-!(https://c1.staticflickr.com/5/4007/5143180652_3f23fe8d95.jpg)
+![](https://c1.staticflickr.com/5/4007/5143180652_3f23fe8d95.jpg)
