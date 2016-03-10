@@ -7,13 +7,25 @@ output: ioslides_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+library(readr)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(dygraphs)
+library(leaflet)
+
+library(ggvis)
+library(DT)
+
 ```
 
 ## Introduction: Fisheries Management
 
 ###**Interactive Examples**
 
-Sea Around Us  <http://www.seaaroundus.org/data/#/spatial-catch>.
+[Sea Around Us](http://www.seaaroundus.org/data/#/spatial-catch).
 
 ## Introduction: Costa Rica
 Caio's map without bubles
@@ -40,16 +52,83 @@ summary(cars)
 ## Methods
 
 add function to filter data set (ALEX)
-```{r pressure}
-plot(pressure)
+```{r html data table ALEX}
+
+catch=read.csv('../data/For CRSeafood code/motioncatch.csv')
+filt=list(position = 'top', clear = TRUE, plain = FALSE)
+
+datatable(catch, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
 ```
 
-## Results
-Landings and prices (interactive plots JULI)
+## Results: Price through time
+
+```{r load, echo=FALSE, include =FALSE}
+#==PART 2===========================================================
+# Loading data from excel and correction for inflation based on the Consumer Price Index (CPI)
+#===================================================================
+
+data <- read_excel('../data/prices.xlsx') 
+colnames(data) <- tolower(colnames(data))
+CPI <- read_excel('../data/CPI2.xlsx') # Consumer Price Index - source: World Bank
+# CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
+catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
+  gather('month','catch',Jan:Dec) %>%
+  select(-catch, -month) %>% 
+  filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
+  group_by(Region, Year) %>% 
+  summarise(sum=sum(Total)) %>% # total catch of pargo and pargo seda per region and year
+  select(region=Region, year=Year, sum)
+
+yrprices <- (data) %>%
+  select(-fishery, -spp) %>%
+  group_by(year) %>% 
+  summarize(meanprice = mean(price, na.rm=T)) %>% 
+  left_join(CPI, by = 'year') %>%
+  mutate(corrected = meanprice/cpi*cpi[24])
+head(yrprices) # corrected prices for inflation. Baseline year = 2013
+
+write.csv(yrprices, file = "prices.csv")
+
+# p <-ggplot(yrprices) + ## Graph of corrected prices per year
+#   geom_line(aes(x=year, y=meanprice, colour = 'meanprice')) +
+#   geom_line(aes(x=year, y=corrected, colour ='corrected')) +
+#   theme_bw()
+# p
+
+
+```
+
+```{r spread, echo=F}
+## Using dygraphs
+Tprices <-  yrprices %>% 
+  select(-cpi)
+colnames(Tprices) <- toupper(colnames(Tprices))
+
+# Interactive graph for prices only
+dygraph(Tprices) %>% 
+   dyRangeSelector() %>% 
+  dyAxis("y", label = "Price (colones/kg)") %>% 
+  dySeries('CORRECTED', strokeWidth = 3) %>% 
+  dySeries('MEANPRICE', strokeWidth = 3)
+```
 
 ## Results
 Regional chart data motion -bubble graph ALEX
 
 ## Challenges
+that thing with plyr
+
+bubble plot html problem (ALEX)
 
 ## Shiny!
+
+## General problems we ALL face
+- It's a parenthesis... probably
+- You're missing a comma!
+- Should that be capitalized?
+- Check your working directory
+- did you load the library?
+- Is your object the right class?
+- Are you using plyr? it's EVIL KANIVAL
+
+!(https://c1.staticflickr.com/5/4007/5143180652_3f23fe8d95.jpg)
