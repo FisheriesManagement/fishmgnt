@@ -1,5 +1,5 @@
 ---
-title: "Exploring Costa Rican Red Snapper landings through time"
+title: "Exploring Costa Rican Snapper landings through time"
 author: "Fisheries Management Group - Caio Faro, Alex Smith, Juliana Herrera"
 date: "March 11, 2016"
 output: ioslides_presentation
@@ -71,13 +71,6 @@ data <- read_excel('../data/prices.xlsx')
 colnames(data) <- tolower(colnames(data))
 CPI <- read_excel('../data/CPI2.xlsx') # Consumer Price Index - source: World Bank
 # CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
-catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
-  gather('month','catch',Jan:Dec) %>%
-  select(-catch, -month) %>% 
-  filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
-  group_by(Region, Year) %>% 
-  summarise(sum=sum(Total)) %>% # total catch of pargo and pargo seda per region and year
-  select(region=Region, year=Year, sum)
 
 yrprices <- (data) %>%
   select(-fishery, -spp) %>%
@@ -110,6 +103,21 @@ dygraph(Tprices) %>%
   dyAxis("y", label = "Price (colones/kg)") %>% 
   dySeries('CORRECTED', strokeWidth = 3) %>% 
   dySeries('MEANPRICE', strokeWidth = 3)
+```
+## Results: Landings through time
+```{r, echo=FALSE}
+
+catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
+  gather('month','catch',Jan:Dec) %>%
+  select(-catch, -month) %>% 
+  filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
+  group_by(Region, Year) %>% 
+  summarise(sum=sum(Total)) %>% # total catch of pargo and pargo seda per region and year
+  select(region=Region, year=Year, sum)
+landings <- as.data.frame(catch)
+
+#dygraph(landings) %>% 
+ # dyRangeSelector()
 ```
 
 ## Results
