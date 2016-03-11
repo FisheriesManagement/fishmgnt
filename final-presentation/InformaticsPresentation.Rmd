@@ -1,6 +1,6 @@
 ---
-title: "Exploring Costa Rican Snapper Landings Through Time"
-author: "Fisheries Management Group - Caio Faro, Alex Smith, Juliana Herrera"
+title: "Exploring Costa Rican Snapper Landings"
+author: "Fisheries Management Group - Caio Faro, Juliana Herrera, Alex Smith"
 date: "March 11, 2016"
 output: ioslides_presentation
 ---
@@ -29,12 +29,8 @@ suppressPackageStartupMessages({
 
 
 ## Fisheries in Costa Rica
-
-<<<<<<< HEAD
-=======
 Landing sites
 
->>>>>>> 3a07c61a0dcbc684c5a2ff58aac267f86c716054
 ```{r leafletFinal, warning=FALSE, message=FALSE}
 
 regions = read_csv(
@@ -100,12 +96,12 @@ leaflet() %>%
 
 
 ## Data Sources
-<div class="columns-2">
-- INCOPESCA
+
+
 - Landings
 - Prices
-
-<img src="fish.jpg" width=200 height=400>
+<div align = "right">
+<img src="fish.jpg" width=300 height=400>
 </div>
 
 ## Our Data
@@ -118,9 +114,10 @@ filt=list(position = 'top', clear = TRUE, plain = FALSE)
 datatable(catchT, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
 ```
 
-Graphs 
+Results
 =======
-## Results: Landings through time
+## Results 
+Landings through time
 
 ```{r, echo=FALSE, warning=FALSE}
 
@@ -144,7 +141,8 @@ landings <- as.data.frame(catch)
 ```
 
 
-## Results:| Price through time
+## Results
+Price through time
 
 ```{r load, echo=FALSE, include =FALSE}
 #==PART 2===========================================================
@@ -210,6 +208,15 @@ plot(C)
 
 ```
 
+## Challenges {.smaller}
+
+
+
+<div align="center">
+<img src="challenge1.png" width=600 height=500>
+</div>
+
+
 ##Informatics and Fisheries Management
 
 Engaging the public
@@ -234,16 +241,6 @@ mypresentation.html?presentme=true***
 [Ocean Health Index](http://www.oceanhealthindex.org/region-scores)
 
 The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
-
-## Challenges {.smaller}
-
-
-
-<div align="center">
-<img src="challenge1.png" width=600 height=500>
-</div>
-
-
 
 
 ## Shiny!
