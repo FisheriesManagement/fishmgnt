@@ -24,6 +24,8 @@ It is estimated that more than 14,000 fishers live on the coasts and islands of 
 
 ### Objectives
 
+The main objective of this project was to learn how to manipulate large data sets through collaborative coding. In order to address this, we developed specific objectives based off available data on fish landings from Costa Rica. 
+These specific objectives were to, analyze the changes in landings of Snapper through time, and exploring the relationship between prices and landings between 1990 and 2013.
 
 ### Data
 
@@ -127,7 +129,7 @@ dygraph(Tprices) %>%
 
 ## Results - Graphs
 
-The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since. 
+The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since ()
 
 ```{r results_price_graph}
 Tprices <-  yrprices %>% 
@@ -160,4 +162,4 @@ Palacios J.A. 2007 El estado de explotación de las pesquerías de escama en el 
 
 Villalobos C. 1982. Animales y plantas comunes de las costas de Costa Rica. EUNED. Costa Rica.
 
-INCOPESCA, Costa Rican Governmental Institute in Charge of Fisheries Management  (https://www.incopesca.go.cr/publicaciones/estadiscticas/historico.html)
+Instituto Costarricense de Pesca y Acuicultura (INCOPESCA). 2014. Archivo histórico de estadísticas pesqueras. Retrieved from https://www.incopesca.go.cr/publicaciones/estadiscticas/historico.html. 
