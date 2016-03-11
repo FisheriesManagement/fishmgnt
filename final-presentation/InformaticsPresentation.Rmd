@@ -30,8 +30,6 @@ suppressPackageStartupMessages({
 
 ## Fisheries in Costa Rica
 
-Caios map with bubbles, talk about the landing sites
-
 ```{r leafletFinal, warning=FALSE, message=FALSE}
 require(ggplot2)
 require(leaflet)
