@@ -129,7 +129,7 @@ dygraph(Tprices) %>%
 
 ## Results - Graphs
 
-The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since ()
+The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since in the whole Pacific coast (Fig. 2 and 3). Guanacaste presented the highest landing values in comparisson to the other regions, nevertheless, the landings for Guanacaste are reported at a province-level, while the other regions are specific ports along the coast. Therefore, it is uncertain whether there is unreported fish along the coast. 
 
 ### Informatics
 
