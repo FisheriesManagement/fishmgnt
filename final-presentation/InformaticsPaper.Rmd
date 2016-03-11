@@ -105,7 +105,7 @@ catchprice <- function(data, price, species, year, region){
 
 ### Visualization
 
-We used many interactive graphic tools to help decide the best way to visualize our data. The interactivity facilitated quick subsetting of data and trend identification. Below is a sample of our interactive graph
+We used many interactive graphic tools to help decide the best way to visualize our data. The interactivity facilitated quick subsetting of data and trend identification. Below the code for one of our interactive graphs that included a slider to limit the range of years shown in the plot.
 ```{r spread, echo=T, eval=F}
 ## Using dygraphs
 Tprices <-  yrprices %>% 
