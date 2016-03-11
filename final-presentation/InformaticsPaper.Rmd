@@ -42,7 +42,7 @@ Topics on this course included  basic computing environment (hardware and operat
 
 Our orignal data had landings data recorded on an individual sheet for each year. With the **readxl** package, we were able to load all of the sheet in at the same time and combine them into a single dataframe with the bind_rows function. We then filtered out our species and regions of interest. 
 
-```{r import data, eval=F, echo=T}
+```{r methods_reading, eval=F, echo=T}
 #Read all sheets in an excel workbook
 library(plyr)
 library(dplyr)
@@ -70,7 +70,7 @@ catchTotals= filter(catchALL, Month=="Total")
 ###Data Wrangling
 We wrote the following two functions to filter out our price and catch data sets. They combine useful data wrangling functions from the tidyr and dplyr package. By building these functions, we were able to quickly pull up different subsets of our data with basic summary information attached.
 
-```{r functions_and_sorting1, eval=F, echo=T}
+```{r methods_wrangling1, eval=F, echo=T}
 #Function to filter through our catch data
 selectcatches <- function( data, species, region, fxn, startyear=1990, endyear=2013) {
 
@@ -86,7 +86,7 @@ selectcatches <- function( data, species, region, fxn, startyear=1990, endyear=2
 
 ```
 
-```{r functions_and_sorting2, eval=F, echo=T}
+```{r methods_wrangling2, eval=F, echo=T}
 #Function to filter through our price data
 catchprice <- function(data, price, species, year, region){
 
@@ -108,7 +108,7 @@ catchprice <- function(data, price, species, year, region){
 ### Visualization
 
 We used many interactive graphic tools to help decide the best way to visualize our data. The interactivity facilitated quick subsetting of data and trend identification. Below the code for one of our interactive graphs that included a slider to limit the range of years shown in the plot.
-```{r spread, echo=T, eval=F}
+```{r methods_visualization, echo=T, eval=F}
 ## Using dygraphs
 Tprices <-  yrprices %>% 
   select(-cpi)
@@ -129,9 +129,24 @@ dygraph(Tprices) %>%
 
 The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since. 
 
+```{r results_price_graph}
+Tprices <-  yrprices %>% 
+  select(-cpi)
+colnames(Tprices) <- toupper(colnames(Tprices))
+
+# Interactive graph for prices only
+dygraph(Tprices) %>% 
+   dyRangeSelector() %>% 
+  dyAxis("y", label = "Price (colones/kg)") %>% 
+  dySeries('CORRECTED', strokeWidth = 3) %>% 
+  dySeries('MEANPRICE', strokeWidth = 3)
+
+```
+
+
 ### Informatics
 
-This course was an excellent opportunity to learn all the available resources there are to manage large datasets. 
+This course was an excellent opportunity to learn all the available resources there are to manage large datasets. The focus on effectively creating visualization is essential to communicating complex information to various audiences. This always a challenge in fisheries management and these tools are a great way to approach it. 
 
 ## References
 
