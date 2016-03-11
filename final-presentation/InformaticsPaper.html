@@ -87,9 +87,88 @@ img {
 <h2>Methods</h2>
 <p>Data reading, wrangling, visualization and management were developed with packages, functions and tools covered in the Environmental Informatics course from the Bren School of Environmental Science &amp; Management.</p>
 <p>Topics on this course included basic computing environment (hardware and operating systems); programming language concepts; program design; data organization; software tools; generic analytical techniques (relational algebra, graphics &amp; visualization, etc.); and specific characteristics of environmental information.</p>
+<div id="reading-data" class="section level3">
+<h3>Reading Data</h3>
+<p>Our orignal data had landings data recorded on an individual sheet for each year. With the <strong>readxl</strong> package, we were able to load all of the sheet in at the same time and combine them into a single dataframe with the bind_rows function. We then filtered out our species and regions of interest.</p>
+<pre class="r"><code>#Read all sheets in an excel workbook
+library(plyr)
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+
+getwd()
+
+
+catchALL=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path='fm_data/incopesca.xlsx' )) %&gt;%
+    bind_rows()  %&gt;%
+    filter(Region==&quot;Gulf of Nicoya&quot; &amp; Species== &quot;PARGO&quot; | Region== &quot;Golfo de Nicoya&quot;&amp; Species== &quot;PARGO&quot;) %&gt;%
+       gather(&quot;Month&quot;,  &quot;Catch&quot;, 4:16) 
+
+catchMonth=filter(catchALL, !Month==&quot;Total&quot;)
+
+catchTotals= filter(catchALL, Month==&quot;Total&quot;) </code></pre>
+</div>
+<div id="data-wrangling" class="section level3">
+<h3>Data Wrangling</h3>
+<p>We wrote the following two functions to filter out our price and catch datasets. They combine useful data wrangling functions from the tidyr and dplyr package. By building these functions, we were able to quickly pull up different subsets of our data with basic summary information attached.</p>
+<pre class="r"><code>#Function to filter through our catch data
+selectcatches &lt;- function( data, species, region, fxn, startyear=1990, endyear=2013) {
+
+  data %&gt;%
+    gather('month','catch', Jan:Dec) %&gt;%
+    select(-catch, -month) %&gt;%
+    filter( Species == c(species) &amp; Region==c(region)) %&gt;%
+    filter(Year&gt;=startyear &amp; Year &lt;= endyear )%&gt;%
+    group_by(Region, Year, Species) %&gt;%
+    summarise(fxn=fxn(Total))
+
+}</code></pre>
+<pre class="r"><code>#Function to filter through our price data
+catchprice &lt;- function(data, price, species, year, region){
+
+  d=data %&gt;%
+    gather('month','catch', Jan:Dec) %&gt;%
+    select(-catch, -month) %&gt;%
+    filter(Species == species &amp; Year == c(year) &amp; Region == c(region)) %&gt;%
+    group_by(Year, Species) %&gt;%
+    summarize(meancatch = mean(Total, na.rm=T))
+
+  p = price
+  pkg &lt;- d$meancatch*p
+
+  return(pkg)
+}</code></pre>
+</div>
+<div id="visualization" class="section level3">
+<h3>Visualization</h3>
+<p>We used many interactive graphic tools to help decide the best way to visualize our data. The interactiviy facilitated quick subseting of data and trend identification. Below is a sample of our interactive graph</p>
+<pre class="r"><code>## Using dygraphs
+Tprices &lt;-  yrprices %&gt;% 
+  select(-cpi)
+colnames(Tprices) &lt;- toupper(colnames(Tprices))
+
+# Interactive graph for prices only
+dygraph(Tprices) %&gt;% 
+   dyRangeSelector() %&gt;% 
+  dyAxis(&quot;y&quot;, label = &quot;Price (colones/kg)&quot;) %&gt;% 
+  dySeries('CORRECTED', strokeWidth = 3) %&gt;% 
+  dySeries('MEANPRICE', strokeWidth = 3)
+  # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)</code></pre>
+</div>
 </div>
 <div id="results---graphs" class="section level2">
 <h2>Results - Graphs</h2>
+</div>
+<div id="discussion" class="section level2">
+<h2>Discussion</h2>
+<div id="our-project" class="section level3">
+<h3>Our project</h3>
+</div>
+<div id="informatics" class="section level3">
+<h3>Informatics</h3>
+</div>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>

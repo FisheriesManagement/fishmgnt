@@ -33,6 +33,93 @@ Data reading, wrangling, visualization and management were developed with packag
 
 Topics on this course included  basic computing environment (hardware and operating systems); programming language concepts; program design; data organization; software tools; generic analytical techniques (relational algebra, graphics & visualization, etc.); and specific characteristics of environmental information.
 
+###Reading Data
+
+Our orignal data had landings data recorded on an individual sheet for each year. With the **readxl** package, we were able to load all of the sheet in at the same time and combine them into a single dataframe with the bind_rows function. We then filtered out our species and regions of interest. 
+
+```{r import data, eval=F, echo=T}
+#Read all sheets in an excel workbook
+library(plyr)
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+
+getwd()
+
+
+catchALL=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path='fm_data/incopesca.xlsx' )) %>%
+    bind_rows()  %>%
+    filter(Region=="Gulf of Nicoya" & Species== "PARGO" | Region== "Golfo de Nicoya"& Species== "PARGO") %>%
+       gather("Month",  "Catch", 4:16) 
+
+catchMonth=filter(catchALL, !Month=="Total")
+
+catchTotals= filter(catchALL, Month=="Total") 
+  
+      
+
+```
+
+###Data Wrangling
+We wrote the following two functions to filter out our price and catch data sets. They combine useful data wrangling functions from the tidyr and dplyr package. By building these functions, we were able to quickly pull up different subsets of our data with basic summary information attached.
+
+```{r functions_and_sorting1, eval=F, echo=T}
+#Function to filter through our catch data
+selectcatches <- function( data, species, region, fxn, startyear=1990, endyear=2013) {
+
+  data %>%
+    gather('month','catch', Jan:Dec) %>%
+    select(-catch, -month) %>%
+    filter( Species == c(species) & Region==c(region)) %>%
+    filter(Year>=startyear & Year <= endyear )%>%
+    group_by(Region, Year, Species) %>%
+    summarise(fxn=fxn(Total))
+
+}
+
+```
+
+```{r functions_and_sorting2, eval=F, echo=T}
+#Function to filter through our price data
+catchprice <- function(data, price, species, year, region){
+
+  d=data %>%
+    gather('month','catch', Jan:Dec) %>%
+    select(-catch, -month) %>%
+    filter(Species == species & Year == c(year) & Region == c(region)) %>%
+    group_by(Year, Species) %>%
+    summarize(meancatch = mean(Total, na.rm=T))
+
+  p = price
+  pkg <- d$meancatch*p
+
+  return(pkg)
+}
+
+```
+
+### Visualization
+
+We used many interactive graphic tools to help decide the best way to visualize our data. The interactivity facilitated quick subsetting of data and trend identification. Below is a sample of our interactive graph
+```{r spread, echo=T, eval=F}
+## Using dygraphs
+Tprices <-  yrprices %>% 
+  select(-cpi)
+colnames(Tprices) <- toupper(colnames(Tprices))
+
+# Interactive graph for prices only
+dygraph(Tprices) %>% 
+   dyRangeSelector() %>% 
+  dyAxis("y", label = "Price (colones/kg)") %>% 
+  dySeries('CORRECTED', strokeWidth = 3) %>% 
+  dySeries('MEANPRICE', strokeWidth = 3)
+  # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
+
+```
+
+
 ## Results - Graphs
 
 ## Discussion
