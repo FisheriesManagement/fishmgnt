@@ -35,6 +35,12 @@ Topics on this course included  basic computing environment (hardware and operat
 
 ## Results - Graphs
 
+## Discussion
+
+### Our project
+
+### Informatics
+
 ## References
 
 Herrera-Ulloa, A., Villalobos-Chacón, L., Palacios-Villegas, J., Viquez-Portuguéz, R. and Oro-Marcos, G. 2011. Coastal fisheries of Costa Rica. In S. Salas, R. Chuenpagdee, A. Charles and J.C. Seijo (eds). Coastal fisheries of Latin America and the Caribbean. FAO Fisheries and Aquaculture Technical Paper. No. 544. Rome, FAO. pp. 137-153.
