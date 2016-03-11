@@ -1,0 +1,293 @@
+---
+title: "Exploring Costa Rican Snapper Landings Through Time"
+author: "Fisheries Management Group - Caio Faro, Alex Smith, Juliana Herrera"
+date: "March 11, 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+
+library(readr)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(dygraphs)
+library(leaflet)
+library(ggvis)
+library(DT)
+
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
+
+```
+
+
+
+
+## Fisheries in Costa Rica
+
+Caios map with bubbles, talk about the landing sites
+
+```{r leafletFinal, warning=FALSE, message=FALSE}
+require(ggplot2)
+require(leaflet)
+require(readr)
+require(tidyr)
+require(dplyr)
+
+regions = read_csv(
+'region,lat,lng
+Golfito,8.623588,-83.162973
+Quepos,9.414501,-84.175904
+Golfo de Nicoya,9.965930,-84.889331
+Guanacaste,10.667990,-85.751037')
+
+
+
+#problems(read_csv('./data/For CRSeafood code/catches.csv'))
+catches =  read_csv('../data/For CRSeafood code/motioncatch.csv') %>%
+  group_by(Region, Year) %>%
+  summarise(catch = sum(Catch)) %>%
+  select(region=Region, year=Year, catch) %>%
+  mutate(
+    radius = catch / 10)
+
+rc = regions %>%
+  left_join(catches, by='region')
+
+# now with multiple years of catch
+leaflet() %>%
+  addTiles() %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1990), group='1990') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1991), group='1991') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1992), group='1992') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1993), group='1993') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1994), group='1994') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1995), group='1995') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1996), group='1996') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1997), group='1997') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1998), group='1998') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==1999), group='1999') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2000), group='2000') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2001), group='2001') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2002), group='2002') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2003), group='2003') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2004), group='2004') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2005), group='2005') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2006), group='2006') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2007), group='2007') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2008), group='2008') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2009), group='2009') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2010), group='2010') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2011), group='2011') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2012), group='2012') %>%
+  addCircles(lng=~lng, lat=~lat, radius=~radius, data=filter(rc, year==2013), group='2013') %>%
+  addLayersControl(
+    overlayGroups = c('1990', '1991', '1992','1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013'),
+    options = layersControlOptions(collapsed = TRUE))
+```
+
+## Objectives
+
+- Analize the changes in landings of Snapper through time
+- Explore the relationship between prices and landings through time 
+
+![]()
+
+## Data Sources
+
+- INCOPESCA
+  - Landings
+  - Prices
+  
+## Our Data
+Annual Catch Data for ***Pargo*** and ***Pargo Seda*** in 4 Pacfic Regions (1990-2013)
+```{r html data table ALEX}
+
+catchT=read.csv('../data/For CRSeafood code/motioncatch.csv')
+filt=list(position = 'top', clear = TRUE, plain = FALSE)
+
+datatable(catchT, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
+```
+
+
+Data source: INCOPESCA
+
+## Methods
+=======
+## Results: Landings through time
+
+```{r, echo=FALSE, warning=FALSE}
+
+catch <- read_excel('../data/For CRSeafood code/catches.xlsx') %>%
+  gather('month','catch',Jan:Dec) %>%
+  select(-catch, -month) %>% 
+  filter(Region != 'Mar Caribe', Species == c('Pargo', 'Pargo Seda')) %>% 
+  group_by(Region, Year) %>% 
+  summarise(sum=sum(Total)) %>% # total catch of pargo and pargo seda per region and year
+  select(region=Region, year=Year, sum)
+
+landings <- as.data.frame(catch)
+
+ ggplot(landings, aes(x = year, y = sum, col = region)) +
+  geom_line(size=1.5) +
+  ylab("Total Landings (kg)")+
+  xlab("Year")+
+  theme_bw()
+
+```
+
+
+## Results:| Price through time
+
+```{r load, echo=FALSE, include =FALSE}
+#==PART 2===========================================================
+# Loading data from excel and correction for inflation based on the Consumer Price Index (CPI)
+#===================================================================
+
+data <- read_excel('../data/prices.xlsx') 
+colnames(data) <- tolower(colnames(data))
+CPI <- read_excel('../data/CPI2.xlsx') # Consumer Price Index - source: World Bank
+# CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
+
+yrprices <- (data) %>%
+  select(-fishery, -spp) %>%
+  group_by(year) %>% 
+  summarize(meanprice = mean(price, na.rm=T)) %>% 
+  left_join(CPI, by = 'year') %>%
+  mutate(corrected = meanprice/cpi*cpi[24])
+head(yrprices) # corrected prices for inflation. Baseline year = 2013
+
+write.csv(yrprices, file = "prices.csv")
+
+# p <-ggplot(yrprices) + ## Graph of corrected prices per year
+#   geom_line(aes(x=year, y=meanprice, colour = 'meanprice')) +
+#   geom_line(aes(x=year, y=corrected, colour ='corrected')) +
+#   theme_bw()
+# p
+
+
+```
+
+```{r spread, echo=F}
+## Using dygraphs
+Tprices <-  yrprices %>% 
+  select(-cpi)
+colnames(Tprices) <- toupper(colnames(Tprices))
+
+# Interactive graph for prices only
+dygraph(Tprices) %>% 
+   dyRangeSelector() %>% 
+  dyAxis("y", label = "Price (colones/kg)") %>% 
+  dySeries('CORRECTED', strokeWidth = 3) %>% 
+  dySeries('MEANPRICE', strokeWidth = 3)
+```
+
+## Results
+Regional chart data motion -bubble graph ALEX
+```{r bubble chart, echo=FALSE, results='asis'}
+op <- options(gvis.plot.tag='chart')  
+
+motioncatch=group_by(catchT, Region,Year) %>%
+              summarise(
+                
+                Annual_Catch=sum(Catch)
+              ) 
+
+InitialState='{"playDuration":15000,"xLambda":1,"yAxisOption":"2","iconType":"BUBBLE","xAxisOption":"_TIME","xZoomedDataMax":1356998400000,"yZoomedDataMin":506,"orderedByX":false,"yZoomedIn":false,"sizeOption":"2","yLambda":0,"uniColorForNonSelected":false,"showTrails":true,"iconKeySettings":[],"xZoomedDataMin":631152000000,"orderedByY":false,"nonSelectedAlpha":0.4,"duration":{"multiplier":1,"timeUnit":"Y"},"colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"time":"1990","xZoomedIn":false,"yZoomedDataMax":634463};'
+
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch', colorvar = 'Region',  options=list(state=InitialState))
+
+
+plot(C)
+
+
+```
+
+##Informatics and Fisheries Management
+
+Engaging the public
+
+<div class="notes">
+This is my *note*.
+
+Informatics and fisheries management
+-help you convey complex scientific ideas to many different audiences 
+
+***To enable presenter mode add ?presentme=true to the URL of the presentation, for example:
+
+mypresentation.html?presentme=true***
+
+</div>
+
+
+###**Interactive Examples**
+
+[Sea Around Us](http://www.seaaroundus.org/data/#/spatial-catch)
+
+[Ocean Health Index](http://www.oceanhealthindex.org/region-scores)
+
+The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
+
+## Challenges {.smaller}
+
+```{r bubble problem ALEX, eval=FALSE, echo=TRUE}
+# that thing with plyr
+# bubble plot html problem (ALEX)
+
+InitialState='{
+  "playDuration":15000,
+  "xLambda":1,
+  "yAxisOption":"2",
+  "iconType":"BUBBLE",
+  "xAxisOption":"_TIME",
+  "xZoomedDataMax":1356998400000,
+  "yZoomedDataMin":506,
+  "orderedByX":false,
+  "yZoomedIn":false,
+  "sizeOption":"2",
+  "yLambda":0,
+  "uniColorForNonSelected":false,
+  "showTrails":true,
+  "iconKeySettings":[],
+  "xZoomedDataMin":631152000000,
+  "orderedByY":false,
+  "nonSelectedAlpha":0.4,
+  "duration":{
+    "multiplier":1,
+    "timeUnit":"Y"
+  },
+  "colorOption":"_UNIQUE_COLOR",
+  "dimensions":{
+    "iconDimensions":["dim0"]},
+    "time":"1990",
+    "xZoomedIn":false,
+    "yZoomedDataMax":634463
+  };'
+
+C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch', colorvar = 'Region',  options=list(state=InitialState))
+
+
+plot(C)
+
+
+```
+
+## Shiny!
+
+## General problems we ALL face
+<div class="columns-2">
+- It's a parenthesis... probably
+- You're missing a comma!
+- Should that be capitalized?
+- Check your working directory
+- Did you load the library?
+- Is your object the right class?
+- Are you using plyr? it's EVIL KANIVAL
+
+![](https://c1.staticflickr.com/5/4007/5143180652_3f23fe8d95.jpg)
+</div>
