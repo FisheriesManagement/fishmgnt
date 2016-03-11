@@ -15,11 +15,11 @@ Seafood is the main source of animal protein for many developing and transition 
 
 
 
-### Costa Rica
+### Costa Rica and its Fisheries
 
 Costa Rica is a small Central American country with a land area of approximately 51,100 km2 and coastlines on both the Pacific Ocean and Caribbean Sea (Herrera-Ulloa et al. 2011). The Pacific coastline of Costa Rica spans 1,016 km, with two large peninsulas, several bays and gulfs, many small islands, and a continental shelf area of approximately 15,600 km2 (Villalobos 1982). The Caribbean coastline is much shorter (212 km) and largely linear, with only two small islands and a continental shelf area of only 2,400 km2 (Villalobos 1982). In comparisson to the small terrestrial size, Costa Rica has a disproportionately large EEZ (589,000 km2) on the Pacific coast, due to the position of Cocos Island 644 km to the Southwest of the country.
 
-It is estimated that more than 14,000 fishers live on the coasts and islands of Costa Rica, many of whom are living in impoverished conditions due to deterioration of the fisheries, poor monetary compensation and labor conditions, weak infrastructure of the artisanal sector, and a market with an industrial bias (FECOP 2013). About 95% of Costa Rica’s fishing fleet operates in the Pacific Ocean, which can be divided into four regions (Palacios 2007): Guanacaste, Gulf of Nicoya, Central Pacific, and South Pacific (Figure apple). On the Caribbean coast, most fishing activity is centered around Limón, though there are also many small landing sites on the southern coast near Puerto Viejo (Herrera-Ulloa et al. 2011).  Between 75% and 80% of all landings in Costa Rica come from the artisanal fleet, which encompasses boats with a very wide range of characteristics.  
+It is estimated that more than 14,000 fishers live on the coasts and islands of Costa Rica, many of whom are living in impoverished conditions due to deterioration of the fisheries, poor monetary compensation and labor conditions, weak infrastructure of the artisanal sector, and a market with an industrial bias. About 95% of Costa Rica’s fishing fleet operates in the Pacific Ocean, which can be divided into four regions (Palacios 2007): Guanacaste, Gulf of Nicoya, Central Pacific, and South Pacific (Figure 1). On the Caribbean coast, most fishing activity is centered around Limón, though there are also many small landing sites on the southern coast near Puerto Viejo (Herrera-Ulloa et al. 2011).  Between 75% and 80% of all landings in Costa Rica come from the artisanal fleet, which encompasses boats with a very wide range of characteristics.  
 
 
 ### Objectives
@@ -27,7 +27,10 @@ It is estimated that more than 14,000 fishers live on the coasts and islands of 
 
 ### Data
 
-We used a time series data of landings in Costa Rica from 1990 until 2013 collected by INCOPESCA, the governmental institution in charge of fisheries management in the country. The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we focused in Guanacaste region, specifically with pargo seda and pargo.  The data is in an excel file, separated by year. 
+The data used for this analysis was obtained from the Costa Rican Governmental Institute in Charge of Fisheries Management (INCOPESCA). The data is publically available on their website, and it's updated until 2013.
+Two main data sets were used. First, a time series data of landings in Costa Rica from 1990 until 2013 The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we focused exclusively on the Pacific coast, in one species, the snapper, which is caught along all the coast. The data is in an excel file, with many sheets, each with the data of one year.
+The second data set is a time series of prices, from 1990 until 2013. The values reported are ex-vessel prices for snapper for the whole country. The data set is an excel file, where each line is one year. 
+In order to correct for inflation, the prices of snapper were corrected using the Consumer Price Index, having 2013 as the base year. 
 
 ## Methods
 
@@ -35,19 +38,111 @@ Data reading, wrangling, visualization and management were developed with packag
 
 Topics on this course included  basic computing environment (hardware and operating systems); programming language concepts; program design; data organization; software tools; generic analytical techniques (relational algebra, graphics & visualization, etc.); and specific characteristics of environmental information.
 
+###Reading Data
+
+Our orignal data had landings data recorded on an individual sheet for each year. With the **readxl** package, we were able to load all of the sheet in at the same time and combine them into a single dataframe with the bind_rows function. We then filtered out our species and regions of interest. 
+
+```{r import data, eval=F, echo=T}
+#Read all sheets in an excel workbook
+library(plyr)
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+
+getwd()
+
+
+catchALL=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path='fm_data/incopesca.xlsx' )) %>%
+    bind_rows()  %>%
+    filter(Region=="Gulf of Nicoya" & Species== "PARGO" | Region== "Golfo de Nicoya"& Species== "PARGO") %>%
+       gather("Month",  "Catch", 4:16) 
+
+catchMonth=filter(catchALL, !Month=="Total")
+
+catchTotals= filter(catchALL, Month=="Total") 
+  
+      
+
+```
+
+###Data Wrangling
+We wrote the following two functions to filter out our price and catch data sets. They combine useful data wrangling functions from the tidyr and dplyr package. By building these functions, we were able to quickly pull up different subsets of our data with basic summary information attached.
+
+```{r functions_and_sorting1, eval=F, echo=T}
+#Function to filter through our catch data
+selectcatches <- function( data, species, region, fxn, startyear=1990, endyear=2013) {
+
+  data %>%
+    gather('month','catch', Jan:Dec) %>%
+    select(-catch, -month) %>%
+    filter( Species == c(species) & Region==c(region)) %>%
+    filter(Year>=startyear & Year <= endyear )%>%
+    group_by(Region, Year, Species) %>%
+    summarise(fxn=fxn(Total))
+
+}
+
+```
+
+```{r functions_and_sorting2, eval=F, echo=T}
+#Function to filter through our price data
+catchprice <- function(data, price, species, year, region){
+
+  d=data %>%
+    gather('month','catch', Jan:Dec) %>%
+    select(-catch, -month) %>%
+    filter(Species == species & Year == c(year) & Region == c(region)) %>%
+    group_by(Year, Species) %>%
+    summarize(meancatch = mean(Total, na.rm=T))
+
+  p = price
+  pkg <- d$meancatch*p
+
+  return(pkg)
+}
+
+```
+
+### Visualization
+
+We used many interactive graphic tools to help decide the best way to visualize our data. The interactivity facilitated quick subsetting of data and trend identification. Below is a sample of our interactive graph
+```{r spread, echo=T, eval=F}
+## Using dygraphs
+Tprices <-  yrprices %>% 
+  select(-cpi)
+colnames(Tprices) <- toupper(colnames(Tprices))
+
+# Interactive graph for prices only
+dygraph(Tprices) %>% 
+   dyRangeSelector() %>% 
+  dyAxis("y", label = "Price (colones/kg)") %>% 
+  dySeries('CORRECTED', strokeWidth = 3) %>% 
+  dySeries('MEANPRICE', strokeWidth = 3)
+  # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
+
+```
+
+
 ## Results - Graphs
 
-## Discussion
-
-### Our project
+The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since. 
 
 ### Informatics
+
+This course was an excellent opportunity to learn all the available resources there are to manage large datasets. 
 
 ## References
 
 Herrera-Ulloa, A., Villalobos-Chacón, L., Palacios-Villegas, J., Viquez-Portuguéz, R. and Oro-Marcos, G. 2011. Coastal fisheries of Costa Rica. In S. Salas, R. Chuenpagdee, A. Charles and J.C. Seijo (eds). Coastal fisheries of Latin America and the Caribbean. FAO Fisheries and Aquaculture Technical Paper. No. 544. Rome, FAO. pp. 137-153.
 
+<<<<<<< HEAD
 Swartz W, Sala E, Tracey S, Watson R, Pauly D (2010) The Spatial Expansion and Ecological Footprint of Fisheries (1950 to Present). PLoS ONE 5(12): e15143. doi:10.1371/journal.pone.0015143
+=======
+Palacios J.A. 2007 El estado de explotación de las pesquerías de escama en el Pacífico de Costa Rica. Universidad Nacional, Escuela de Ciencias Biológicas
+>>>>>>> 66eb088b5ded42c9eb349b125371f6eb3aca0e74
 
 Villalobos C. 1982. Animales y plantas comunes de las costas de Costa Rica. EUNED. Costa Rica.
 
+INCOPESCA, Costa Rican Governmental Institute in Charge of Fisheries Management  (https://www.incopesca.go.cr/publicaciones/estadiscticas/historico.html)
