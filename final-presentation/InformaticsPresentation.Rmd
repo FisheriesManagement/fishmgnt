@@ -234,47 +234,14 @@ The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/e
 
 ## Challenges {.smaller}
 
-```{r bubble problem ALEX, eval=FALSE, echo=TRUE}
-# that thing with plyr
-# bubble plot html problem (ALEX)
-
-InitialState='{
-  "playDuration":15000,
-  "xLambda":1,
-  "yAxisOption":"2",
-  "iconType":"BUBBLE",
-  "xAxisOption":"_TIME",
-  "xZoomedDataMax":1356998400000,
-  "yZoomedDataMin":506,
-  "orderedByX":false,
-  "yZoomedIn":false,
-  "sizeOption":"2",
-  "yLambda":0,
-  "uniColorForNonSelected":false,
-  "showTrails":true,
-  "iconKeySettings":[],
-  "xZoomedDataMin":631152000000,
-  "orderedByY":false,
-  "nonSelectedAlpha":0.4,
-  "duration":{
-    "multiplier":1,
-    "timeUnit":"Y"
-  },
-  "colorOption":"_UNIQUE_COLOR",
-  "dimensions":{
-    "iconDimensions":["dim0"]},
-    "time":"1990",
-    "xZoomedIn":false,
-    "yZoomedDataMax":634463
-  };'
-
-C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch', colorvar = 'Region',  options=list(state=InitialState))
 
 
-plot(C)
+<div align="center">
+<img src="challenge1.png" width=600 height=500>
+</div>
 
 
-```
+
 
 ## Shiny!
 
