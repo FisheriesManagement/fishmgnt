@@ -2,8 +2,8 @@ name: CRsnapper-app
 account: alxsmith
 server: shinyapps.io
 appId: 88276
-bundleId: 392641
+bundleId: 392697
 url: https://alxsmith.shinyapps.io/CRsnapper-app/
-when: 1457664365.29811
+when: 1457671667.86287
 asMultiple: FALSE
 asStatic: FALSE

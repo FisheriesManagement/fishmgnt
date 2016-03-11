@@ -248,6 +248,12 @@ The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/e
 
 ## Shiny!
 
+r img(src='https://alxsmith.shinyapps.io/CRsnapper-app/', height=450)
+
+
+
+
+
 ## General problems we ALL face
 <div class="columns-2">
 - It's a parenthesis... probably

@@ -67,9 +67,9 @@ server <- shinyServer(function(input, output) {
     )
     
     colors <- switch(input$var, 
-                    "Total Catch" = "green",
-                    "Mean Naitonal Price" = "blue",
-                    "Trends" = "green"
+                    "Total Catch" = "forestgreen",
+                    "Mean Naitonal Price" = "skyblue",
+                    "Trends" = "forestgreen"
                     )
     ylabels <- switch(input$var, 
                       "Total Catch" = "Total Catch",
@@ -79,11 +79,11 @@ server <- shinyServer(function(input, output) {
     
     
     ggplot(AppDATA, aes(x=years, y=data))+
-            geom_line(color="blue", aes(size=1)) +
-            geom_line(data=AppDATA, aes(x=years, y=data2, size=1),color=colors)+
+            geom_line(color="skyblue", aes(size=.5)) +
+            geom_line(data=AppDATA, aes(x=years, y=data2, size=.5),color=colors)+
             theme_bw()+
             labs(x="Year", y= ylabels) +
-            # theme(legend.position="none")+
+            theme(legend.position="none")+
             scale_x_continuous(limits = c(input$range[1],input$range[2]), expand = c(0,0))
             
       
