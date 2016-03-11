@@ -1,0 +1,30 @@
+---
+title: "Exploring Costa Rican Snapper Landings Through Time"
+author: 'Fisheries Management Group: Caio Faro, Juliana Herrera, Alex Smith'
+date: "March 11, 2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+
+### Fisheries in Costa Rica
+
+
+### Objectives
+
+
+### Data
+
+We used a time series data of landings in Costa Rica from 1990 until 2013 collected by INCOPESCA, the governmental institution in charge of fisheries management in the country. The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we focused in Guanacaste region, specifically with pargo seda and pargo.  The data is in an excel file, separated by year. 
+
+## Methods
+
+Our methodology consisted in using informatics
+
+
+## Results

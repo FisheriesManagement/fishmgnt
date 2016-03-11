@@ -30,14 +30,12 @@ suppressPackageStartupMessages({
 
 ## Fisheries in Costa Rica
 
+<<<<<<< HEAD
+=======
 Landing sites
 
+>>>>>>> 3a07c61a0dcbc684c5a2ff58aac267f86c716054
 ```{r leafletFinal, warning=FALSE, message=FALSE}
-require(ggplot2)
-require(leaflet)
-require(readr)
-require(tidyr)
-require(dplyr)
 
 regions = read_csv(
 'region,lat,lng
