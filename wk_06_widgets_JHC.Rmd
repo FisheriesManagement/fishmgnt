@@ -64,27 +64,6 @@ dygraph(Tprices) %>%
   dySeries('MEANPRICE', strokeWidth = 3)
   # dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
 
-#interactive graph for catches of the 4 regions
-# names(catch) = c('site','year','sum')
-<<<<<<< HEAD
-# regioncatch <-  catch %>% 
-#   spread(site, sum)
-# 
-# dygraph(regioncatch) %>% 
-#    dyRangeSelector() %>% 
-#   dyAxis("y", label = "Catch (kg)") %>% 
-#   dySeries('CORRECTED', strokeWidth = 3) %>% 
-#   dySeries('MEANPRICE', strokeWidth = 3) 
-=======
-# regioncatch <-  catch %>%
-#   spread(region, sum)
-# 
-# dygraph(regioncatch) %>%
-#    dyRangeSelector() %>%
-#   dyAxis("y", label = "Catch (kg)") %>%
-#   dySeries('CORRECTED', strokeWidth = 3) %>%
-#   dySeries('MEANPRICE', strokeWidth = 3)
->>>>>>> 319cff1e5a05cbaaf29d7487740ef39def60d4f1
 ```
 
 
