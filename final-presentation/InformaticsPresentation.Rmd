@@ -100,11 +100,14 @@ leaflet() %>%
 
 
 ## Data Sources
-
+<div class="columns-2">
 - INCOPESCA
-  - Landings
-  - Prices
-  
+- Landings
+- Prices
+
+<img src="fish.jpg" width=200 height=400>
+</div>
+
 ## Our Data
 Annual Catch Data for ***Pargo*** and ***Pargo Seda*** in 4 Pacfic Regions (1990-2013)
 ```{r html data table ALEX}
