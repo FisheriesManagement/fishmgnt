@@ -115,10 +115,7 @@ filt=list(position = 'top', clear = TRUE, plain = FALSE)
 datatable(catchT, options = list(pageLength = 5, dom = 'tip'), filter =filt, class = "compact")
 ```
 
-
-Data source: INCOPESCA
-
-## Methods
+Graphs 
 =======
 ## Results: Landings through time
 
@@ -138,6 +135,7 @@ landings <- as.data.frame(catch)
   geom_line(size=1.5) +
   ylab("Total Landings (kg)")+
   xlab("Year")+
+  scale_colour_manual(values=c("#FF0000", "#00A08A", "#F2AD00", "#5BBCD6"))+
   theme_bw()
 
 ```
@@ -189,7 +187,7 @@ dygraph(Tprices) %>%
 ```
 
 ## Results
-Regional chart data motion -bubble graph ALEX
+
 ```{r bubble chart, echo=FALSE, results='asis'}
 op <- options(gvis.plot.tag='chart')  
 
@@ -288,7 +286,7 @@ plot(C)
 - Check your working directory
 - Did you load the library?
 - Is your object the right class?
-- Are you using plyr? it's EVIL KANIVAL
+- Are you using plyr? it's EVEL KNIEVEL
 
 ![](https://c1.staticflickr.com/5/4007/5143180652_3f23fe8d95.jpg)
 </div>
