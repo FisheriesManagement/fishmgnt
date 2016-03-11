@@ -30,14 +30,12 @@ suppressPackageStartupMessages({
 
 ## Fisheries in Costa Rica
 
-Caios map with bubbles, talk about the landing sites
+<<<<<<< HEAD
+=======
+Landing sites
 
+>>>>>>> 3a07c61a0dcbc684c5a2ff58aac267f86c716054
 ```{r leafletFinal, warning=FALSE, message=FALSE}
-require(ggplot2)
-require(leaflet)
-require(readr)
-require(tidyr)
-require(dplyr)
 
 regions = read_csv(
 'region,lat,lng
@@ -96,7 +94,10 @@ leaflet() %>%
 - Analize the changes in landings of Snapper through time
 - Explore the relationship between prices and landings through time 
 
-![]()
+<div align="center">
+<img src="image.jpg" width=500 height=400>
+</div>
+
 
 ## Data Sources
 
