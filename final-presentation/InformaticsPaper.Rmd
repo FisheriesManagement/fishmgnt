@@ -7,6 +7,21 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+
+library(readr)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(dygraphs)
+library(leaflet)
+library(ggvis)
+library(DT)
+
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
 ```
 
 ## Introduction - Fisheries Management
@@ -131,7 +146,26 @@ dygraph(Tprices) %>%
 
 The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since ()
 
-```{r results_price_graph}
+Prices decined sharply in 2008 and have failed to recover since.
+```{r results_price_graph, echo=F, message=F}
+
+data <- read_excel('../data/prices.xlsx') 
+colnames(data) <- tolower(colnames(data))
+CPI <- read_excel('../data/CPI2.xlsx') # Consumer Price Index - source: World Bank
+# CPIm <- read_excel('CPI.xlsx') # Consumer Price Index by month : World Bank
+
+yrprices <- (data) %>%
+  select(-fishery, -spp) %>%
+  group_by(year) %>% 
+  summarize(meanprice = mean(price, na.rm=T)) %>% 
+  left_join(CPI, by = 'year') %>%
+  mutate(corrected = meanprice/cpi*cpi[24])
+head(yrprices) # corrected prices for inflation. Baseline year = 2013
+
+write.csv(yrprices, file = "prices.csv")
+
+
+
 Tprices <-  yrprices %>% 
   select(-cpi)
 colnames(Tprices) <- toupper(colnames(Tprices))
