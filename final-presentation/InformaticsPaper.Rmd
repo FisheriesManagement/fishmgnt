@@ -35,11 +35,11 @@ Topics on this course included  basic computing environment (hardware and operat
 
 ## Results - Graphs
 
-## Discussion
-
-### Our project
+The snapper fishery in Costa started in the mid 80s, peaking in the 90's and showing a general decline ever since. 
 
 ### Informatics
+
+This course was an excellent opportunity to learn all the available resources there are to manage large datasets. We 
 
 ## References
 
