@@ -31,11 +31,6 @@ suppressPackageStartupMessages({
 ## Fisheries in Costa Rica
 
 ```{r leafletFinal, warning=FALSE, message=FALSE}
-require(ggplot2)
-require(leaflet)
-require(readr)
-require(tidyr)
-require(dplyr)
 
 regions = read_csv(
 'region,lat,lng
