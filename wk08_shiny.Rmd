@@ -1,0 +1,12 @@
+---
+title: "wk08_shiny"
+author: "Alex Smith"
+date: "March 10, 2016"
+output: html_document
+---
+
+```{r shiny_census_app, eval=F}
+shiny::runGitHub("<fishmgt.github.io>", "<fisgmgt>", subdir = "./CRsnapper-app/")
+```
+
+[Our App](https://alxsmith.shinyapps.io/CRsnapper-app/)
