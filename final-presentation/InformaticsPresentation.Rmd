@@ -91,7 +91,7 @@ leaflet() %>%
 
 ## Objectives
 
-- Analize the changes in landings of Snapper through time
+- Analyze the changes in landings of Snapper through time
 - Explore the relationship between prices and landings through time 
 
 <div align="center">
@@ -109,7 +109,7 @@ leaflet() %>%
 </div>
 
 ## Our Data
-Annual Catch Data for ***Pargo*** and ***Pargo Seda*** in 4 Pacfic Regions (1990-2013)
+Annual Catch Data for ***Pargo*** and ***Pargo Seda*** in 4 Pacific Regions (1990-2013)
 ```{r html data table ALEX}
 
 catchT=read.csv('../data/For CRSeafood code/motioncatch.csv')
