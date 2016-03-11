@@ -70,6 +70,7 @@ img {
 
 <div id="introduction---fisheries-management" class="section level2">
 <h2>Introduction - Fisheries Management</h2>
+<p>Seafood is the main source of animal protein for many developing and transition countries in the world. Additionally, the demand of this kind of food in developed countries have been expanding in a way that can’t be met by their own fisheires production. These factors combined have resulted in a increased fishing effort around the globe, especially in developing countries (Swartz et al. 2010), that has led to populations declines in several of the main fisheries in the world.</p>
 <div id="costa-rica-and-its-fisheries" class="section level3">
 <h3>Costa Rica and its Fisheries</h3>
 <p>Costa Rica is a small Central American country with a land area of approximately 51,100 km2 and coastlines on both the Pacific Ocean and Caribbean Sea (Herrera-Ulloa et al. 2011). The Pacific coastline of Costa Rica spans 1,016 km, with two large peninsulas, several bays and gulfs, many small islands, and a continental shelf area of approximately 15,600 km2 (Villalobos 1982). The Caribbean coastline is much shorter (212 km) and largely linear, with only two small islands and a continental shelf area of only 2,400 km2 (Villalobos 1982). In comparisson to the small terrestrial size, Costa Rica has a disproportionately large EEZ (589,000 km2) on the Pacific coast, due to the position of Cocos Island 644 km to the Southwest of the country.</p>
@@ -143,7 +144,7 @@ catchprice &lt;- function(data, price, species, year, region){
 </div>
 <div id="visualization" class="section level3">
 <h3>Visualization</h3>
-<p>We used many interactive graphic tools to help decide the best way to visualize our data. The interactivity facilitated quick subsetting of data and trend identification. Below is a sample of our interactive graph</p>
+<p>We used many interactive graphic tools to help decide the best way to visualize our data. The interactivity facilitated quick subsetting of data and trend identification. Below the code for one of our interactive graphs that included a slider to limit the range of years shown in the plot.</p>
 <pre class="r"><code>## Using dygraphs
 Tprices &lt;-  yrprices %&gt;% 
   select(-cpi)
@@ -169,6 +170,7 @@ dygraph(Tprices) %&gt;%
 <div id="references" class="section level2">
 <h2>References</h2>
 <p>Herrera-Ulloa, A., Villalobos-Chacón, L., Palacios-Villegas, J., Viquez-Portuguéz, R. and Oro-Marcos, G. 2011. Coastal fisheries of Costa Rica. In S. Salas, R. Chuenpagdee, A. Charles and J.C. Seijo (eds). Coastal fisheries of Latin America and the Caribbean. FAO Fisheries and Aquaculture Technical Paper. No. 544. Rome, FAO. pp. 137-153.</p>
+<p>Swartz W, Sala E, Tracey S, Watson R, Pauly D (2010) The Spatial Expansion and Ecological Footprint of Fisheries (1950 to Present). PLoS ONE 5(12): e15143. <a href="doi:10.1371/journal.pone.0015143" class="uri">doi:10.1371/journal.pone.0015143</a></p>
 <p>Palacios J.A. 2007 El estado de explotación de las pesquerías de escama en el Pacífico de Costa Rica. Universidad Nacional, Escuela de Ciencias Biológicas</p>
 <p>Villalobos C. 1982. Animales y plantas comunes de las costas de Costa Rica. EUNED. Costa Rica.</p>
 <p>INCOPESCA, Costa Rican Governmental Institute in Charge of Fisheries Management (<a href="https://www.incopesca.go.cr/publicaciones/estadiscticas/historico.html" class="uri">https://www.incopesca.go.cr/publicaciones/estadiscticas/historico.html</a>)</p>
