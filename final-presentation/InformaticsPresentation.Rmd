@@ -187,7 +187,7 @@ dygraph(Tprices) %>%
 
 ## Results
 Regional chart data motion -bubble graph ALEX
-```{r bubble chart, echo=FALSE}
+```{r bubble chart, echo=FALSE, results='asis'}
 op <- options(gvis.plot.tag='chart')  
 
 motioncatch=group_by(catchT, Region,Year) %>%
@@ -231,14 +231,41 @@ mypresentation.html?presentme=true***
 
 The Pew Charitable Trusts - [Importance of Predators](http://www.pewtrusts.org/en/multimedia/video/2013/fisheries-management-its-better-with-predators)
 
-## Challenges
-that thing with plyr
+## Challenges {.smaller}
 
-bubble plot html problem (ALEX)
-```{r bubble problem ALEX, eval=FALSE, echo=TRUE, collapse=T, tidy=T}
+```{r bubble problem ALEX, eval=FALSE, echo=TRUE}
+# that thing with plyr
+# bubble plot html problem (ALEX)
 
-
-InitialState='{"playDuration":15000,"xLambda":1,"yAxisOption":"2","iconType":"BUBBLE","xAxisOption":"_TIME","xZoomedDataMax":1356998400000,"yZoomedDataMin":506,"orderedByX":false,"yZoomedIn":false,"sizeOption":"2","yLambda":0,"uniColorForNonSelected":false,"showTrails":true,"iconKeySettings":[],"xZoomedDataMin":631152000000,"orderedByY":false,"nonSelectedAlpha":0.4,"duration":{"multiplier":1,"timeUnit":"Y"},"colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"time":"1990","xZoomedIn":false,"yZoomedDataMax":634463};'
+InitialState='{
+  "playDuration":15000,
+  "xLambda":1,
+  "yAxisOption":"2",
+  "iconType":"BUBBLE",
+  "xAxisOption":"_TIME",
+  "xZoomedDataMax":1356998400000,
+  "yZoomedDataMin":506,
+  "orderedByX":false,
+  "yZoomedIn":false,
+  "sizeOption":"2",
+  "yLambda":0,
+  "uniColorForNonSelected":false,
+  "showTrails":true,
+  "iconKeySettings":[],
+  "xZoomedDataMin":631152000000,
+  "orderedByY":false,
+  "nonSelectedAlpha":0.4,
+  "duration":{
+    "multiplier":1,
+    "timeUnit":"Y"
+  },
+  "colorOption":"_UNIQUE_COLOR",
+  "dimensions":{
+    "iconDimensions":["dim0"]},
+    "time":"1990",
+    "xZoomedIn":false,
+    "yZoomedDataMax":634463
+  };'
 
 C= gvisMotionChart(motioncatch, idvar='Region', timevar = 'Year',  sizevar = 'Annual_Catch', colorvar = 'Region',  options=list(state=InitialState))
 
