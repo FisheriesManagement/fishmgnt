@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Seafood is the main source of animal protein for many developing and transition countries in the world. Additionally, the demand of this kind of food in developed countries have been expanding in a way that can't be met by their own fisheires production. These factors combined have resulted in a increased fishing effort around the globe, especially in developing countries (Swartz et al. 2010), that has led to populations declines in several of the main fisheries in the world.
 
-
+Given the current trends, fisheries management is an important tool for securing food availability and alleviating the vulnerability of developing nations worldwide (Cochrane 2002. 
 
 ### Costa Rica and its Fisheries
 
@@ -135,13 +135,13 @@ This course was an excellent opportunity to learn all the available resources th
 
 ## References
 
-Herrera-Ulloa, A., Villalobos-Chacón, L., Palacios-Villegas, J., Viquez-Portuguéz, R. and Oro-Marcos, G. 2011. Coastal fisheries of Costa Rica. In S. Salas, R. Chuenpagdee, A. Charles and J.C. Seijo (eds). Coastal fisheries of Latin America and the Caribbean. FAO Fisheries and Aquaculture Technical Paper. No. 544. Rome, FAO. pp. 137-153.
+Cochrane, K.L. (ed.) 2002. A fishery managerís guidebook. Management measures and their application. FAO Fisheries Technical Paper. No. 424. Rome, FAO. 231p.
 
+Herrera-Ulloa, A., Villalobos-Chacón, L., Palacios-Villegas, J., Viquez-Portuguéz, R. and Oro-Marcos, G. 2011. Coastal fisheries of Costa Rica. In S. Salas, R. Chuenpagdee, A. Charles and J.C. Seijo (eds). Coastal fisheries of Latin America and the Caribbean. FAO Fisheries and Aquaculture Technical Paper. No. 544. Rome, FAO. pp. 137-153.
 
 Swartz W, Sala E, Tracey S, Watson R, Pauly D (2010) The Spatial Expansion and Ecological Footprint of Fisheries (1950 to Present). PLoS ONE 5(12): e15143. doi:10.1371/journal.pone.0015143
 
 Palacios J.A. 2007 El estado de explotación de las pesquerías de escama en el Pacífico de Costa Rica. Universidad Nacional, Escuela de Ciencias Biológicas
-
 
 Villalobos C. 1982. Animales y plantas comunes de las costas de Costa Rica. EUNED. Costa Rica.
 
