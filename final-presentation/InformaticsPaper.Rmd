@@ -2,7 +2,7 @@
 title: "Exploring Costa Rican Snapper Landings Through Time"
 author: 'Fisheries Management Group: Caio Faro, Juliana Herrera, Alex Smith'
 date: "March 11, 2016"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +24,8 @@ We used a time series data of landings in Costa Rica from 1990 until 2013 collec
 
 ## Methods
 
-Our methodology consisted in using informatics
+Data reading, wrangling, visualization and management were developed with packages, functions and tools covered in the Environmental Informatics course from the Bren School of Environmental Science & Management.
 
+Topics on this course included  basic computing environment (hardware and operating systems); programming language concepts; program design; data organization; software tools; generic analytical techniques (relational algebra, graphics & visualization, etc.); and specific characteristics of environmental information.
 
 ## Results
