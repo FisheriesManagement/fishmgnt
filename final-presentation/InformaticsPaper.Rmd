@@ -13,11 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-### Costa Rica
+### Costa Rica and its Fisheries
 
 Costa Rica is a small Central American country with a land area of approximately 51,100 km2 and coastlines on both the Pacific Ocean and Caribbean Sea (Herrera-Ulloa et al. 2011). The Pacific coastline of Costa Rica spans 1,016 km, with two large peninsulas, several bays and gulfs, many small islands, and a continental shelf area of approximately 15,600 km2 (Villalobos 1982). The Caribbean coastline is much shorter (212 km) and largely linear, with only two small islands and a continental shelf area of only 2,400 km2 (Villalobos 1982). In comparisson to the small terrestrial size, Costa Rica has a disproportionately large EEZ (589,000 km2) on the Pacific coast, due to the position of Cocos Island 644 km to the Southwest of the country.
 
-It is estimated that more than 14,000 fishers live on the coasts and islands of Costa Rica, many of whom are living in impoverished conditions due to deterioration of the fisheries, poor monetary compensation and labor conditions, weak infrastructure of the artisanal sector, and a market with an industrial bias (FECOP 2013). About 95% of Costa Rica’s fishing fleet operates in the Pacific Ocean, which can be divided into four regions (Palacios 2007): Guanacaste, Gulf of Nicoya, Central Pacific, and South Pacific (Figure apple). On the Caribbean coast, most fishing activity is centered around Limón, though there are also many small landing sites on the southern coast near Puerto Viejo (Herrera-Ulloa et al. 2011).  Between 75% and 80% of all landings in Costa Rica come from the artisanal fleet, which encompasses boats with a very wide range of characteristics.  
+It is estimated that more than 14,000 fishers live on the coasts and islands of Costa Rica, many of whom are living in impoverished conditions due to deterioration of the fisheries, poor monetary compensation and labor conditions, weak infrastructure of the artisanal sector, and a market with an industrial bias. About 95% of Costa Rica’s fishing fleet operates in the Pacific Ocean, which can be divided into four regions (Palacios 2007): Guanacaste, Gulf of Nicoya, Central Pacific, and South Pacific (Figure 1). On the Caribbean coast, most fishing activity is centered around Limón, though there are also many small landing sites on the southern coast near Puerto Viejo (Herrera-Ulloa et al. 2011).  Between 75% and 80% of all landings in Costa Rica come from the artisanal fleet, which encompasses boats with a very wide range of characteristics.  
 
 
 ### Objectives
@@ -25,7 +25,10 @@ It is estimated that more than 14,000 fishers live on the coasts and islands of 
 
 ### Data
 
-We used a time series data of landings in Costa Rica from 1990 until 2013 collected by INCOPESCA, the governmental institution in charge of fisheries management in the country. The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we focused in Guanacaste region, specifically with pargo seda and pargo.  The data is in an excel file, separated by year. 
+The data used for this analysis was obtained from the Costa Rican Governmental Institute in Charge of Fisheries Management (INCOPESCA). The data is publically available on their website, and it's updated until 2013.
+Two main data sets were used. First, a time series data of landings in Costa Rica from 1990 until 2013 The data set contains different species and groups of species caught in the country, and it's divided into regions. For the purpose of our project, we focused exclusively on the Pacific coast, in one species, the snapper, which is caught along all the coast. The data is in an excel file, with many sheets, each with the data of one year.
+The second data set is a time series of prices, from 1990 until 2013. The values reported are ex-vessel prices for snapper for the whole country. The data set is an excel file, where each line is one year. 
+In order to correct for inflation, the prices of snapper were corrected using the Consumer Price Index, having 2013 as the base year. 
 
 ## Methods
 
@@ -39,11 +42,14 @@ The snapper fishery in Costa started in the mid 80s, peaking in the 90's and sho
 
 ### Informatics
 
-This course was an excellent opportunity to learn all the available resources there are to manage large datasets. We 
+This course was an excellent opportunity to learn all the available resources there are to manage large datasets. 
 
 ## References
 
 Herrera-Ulloa, A., Villalobos-Chacón, L., Palacios-Villegas, J., Viquez-Portuguéz, R. and Oro-Marcos, G. 2011. Coastal fisheries of Costa Rica. In S. Salas, R. Chuenpagdee, A. Charles and J.C. Seijo (eds). Coastal fisheries of Latin America and the Caribbean. FAO Fisheries and Aquaculture Technical Paper. No. 544. Rome, FAO. pp. 137-153.
 
+Palacios J.A. 2007 El estado de explotación de las pesquerías de escama en el Pacífico de Costa Rica. Universidad Nacional, Escuela de Ciencias Biológicas
+
 Villalobos C. 1982. Animales y plantas comunes de las costas de Costa Rica. EUNED. Costa Rica.
 
+INCOPESCA, Costa Rican Governmental Institute in Charge of Fisheries Management  (https://www.incopesca.go.cr/publicaciones/estadiscticas/historico.html)
