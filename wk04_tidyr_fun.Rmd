@@ -1,0 +1,23 @@
+---
+title: "wk04_function"
+author: "Alex Smith"
+date: "March 18, 2016"
+output: html_document
+---
+```{r}
+
+select.catches <- function(data,species, region) {
+                     
+  library(dplyr)
+  library(tidyr)
+                 out <- data %>%
+                        gather('month','catch',Jan:Dec) %>%
+                        select(-catch, -month) %>%
+                        filter( Species == species & Region==region)
+          
+
+                      return(out)
+}
+
+
+```
