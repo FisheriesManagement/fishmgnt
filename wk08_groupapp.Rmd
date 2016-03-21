@@ -1,0 +1,13 @@
+---
+title: "Untitled"
+author: "Alex Smith"
+date: "March 21, 2016"
+output: html_document
+---
+
+```{r setup, eval=FALSE}
+shiny::runGitHub("<alxsmith.github.io>", "<fishmgt.github.io>", subdir = "./CRsnapper-app/")
+```
+
+
+[group app](https://alxsmith.shinyapps.io/CRsnapper-app/)
