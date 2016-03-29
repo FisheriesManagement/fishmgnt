@@ -1,0 +1,89 @@
+---
+title: "Golfo de Nicoya All species"
+author: "Alex Smith"
+date: "March 28, 2016"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r read_data}
+#Read all sheets in an excel workbook
+library(plyr)
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+
+getwd()
+
+
+catchALL=(lapply(excel_sheets('fm_data/incopesca.xlsx'),read_excel, path='fm_data/incopesca.xlsx' )) %>%
+    bind_rows()  %>%
+    filter(Region=="Gulf of Nicoya" | Region== "Golfo de Nicoya") %>%
+       gather("Month",  "Catch", 4:16) 
+       
+
+catchALL=catchALL[,c(3,2,4,5,1)]
+
+catchMonth=filter(catchALL, !Month=="Total")
+
+catchTotals= filter(catchALL, Month=="Total") %>%
+  group_by(Species, Year) %>%
+   summarise(
+    
+    Catch=sum(Catch)
+  )
+  
+      
+
+```
+
+## Gulf of Nicoya Catch Data (kg) by species MotionChart (1990-2013)
+
+```{r googlevis library, results='asis', warning=F, include=F}
+suppressPackageStartupMessages({
+  library(googleVis)  # install.packages('googleVis')
+})
+library(readr)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+# must set this option for googleVis charts to show up
+op <- options(gvis.plot.tag='chart')
+
+```
+
+
+```{r motion data only, include=F, eval=F}
+
+motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
+  distinct() %>%
+  group_by(Region,Year) %>%
+  summarise(
+    
+    Annual_Catch=sum(Catch)
+  )
+
+```
+
+```{r MotionChartCatch Data, results='asis', tidy=FALSE, echo=F}
+
+
+mystate='{"time":"2013","sizeOption":"_UNISIZE","duration":{"timeUnit":"Y","multiplier":1},"iconType":"LINE","xZoomedIn":false,"iconKeySettings":[],"orderedByY":false,"yZoomedDataMax":4000000,"yAxisOption":"2","yZoomedIn":false,"xLambda":1,"showTrails":false,"uniColorForNonSelected":false,"xZoomedDataMin":631152000000,"yZoomedDataMin":0,"xAxisOption":"_TIME","colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"playDuration":15000,"yLambda":1,"orderedByX":false,"xZoomedDataMax":1356998400000,"nonSelectedAlpha":0.4};'
+
+C= gvisMotionChart(catchTotals, idvar='Species', timevar = "Year"  ,sizevar = 'Catch',options=list(state=mystate))
+                   
+                   
+
+plot(C)
+
+
+```
+
