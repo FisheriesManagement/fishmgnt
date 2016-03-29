@@ -7,7 +7,11 @@ output: html_document
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
 ```
 
 ```{r read_data}
@@ -73,7 +77,7 @@ motioncatch=read_csv('./data/For CRSeafood code/motioncatch.csv') %>%
 
 ```
 
-```{r MotionChartCatch Data, results='asis', tidy=FALSE, echo=F}
+```{r MotionChartCatch Data, echo=F, fig.height=9, fig.width=9, results='asis', tidy=FALSE}
 
 
 mystate='{"time":"2013","sizeOption":"_UNISIZE","duration":{"timeUnit":"Y","multiplier":1},"iconType":"LINE","xZoomedIn":false,"iconKeySettings":[],"orderedByY":false,"yZoomedDataMax":4000000,"yAxisOption":"2","yZoomedIn":false,"xLambda":1,"showTrails":false,"uniColorForNonSelected":false,"xZoomedDataMin":631152000000,"yZoomedDataMin":0,"xAxisOption":"_TIME","colorOption":"_UNIQUE_COLOR","dimensions":{"iconDimensions":["dim0"]},"playDuration":15000,"yLambda":1,"orderedByX":false,"xZoomedDataMax":1356998400000,"nonSelectedAlpha":0.4};'
